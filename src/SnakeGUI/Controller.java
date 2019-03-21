@@ -75,6 +75,7 @@ public class Controller {
                     update(now);
                 }             }
         }.start();
+        // ændring
     }
 
     private void AddItems() {
