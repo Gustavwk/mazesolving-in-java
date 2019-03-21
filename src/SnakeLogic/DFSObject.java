@@ -60,8 +60,10 @@ public boolean dsf(Position root, Position goal) {
             
             if (!maze[i][j].isOccupied()){
 
-            maze[i][j] = root;
-            path.push(root);
+                maze[i][j] = root;
+                path.push(root);
+
+
 
             while (!path.empty()) {
 

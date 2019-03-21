@@ -1,10 +1,20 @@
 package SnakeGUI;
 
 
+
 public class Position implements Comparable<Position> {
+    private class Adjacents{
+        private Position pos;
+    }
 
     private int x;
     private int y;
+    /*
+    Position north;
+    Position south;
+    Position west;
+    Position east;
+    */
     private boolean occupied = false;
     String OccupiedString [] = {"Occopied", "Not Occupied"};
 
@@ -12,6 +22,19 @@ public class Position implements Comparable<Position> {
     public Position(int x, int y) {
         this.setX(x);
         this.setY(y);
+/*
+        this.north.setX(x);
+        this.north.setX(y-1);
+
+        this.south.setX(x);
+        this.south.setY(y+1);
+
+        this.west.setX(x-1);
+        this.west.setY(y);
+
+        this.east.setX(x+1);
+        this.east.setY(y);
+        */
     }
 
     public int getX() {

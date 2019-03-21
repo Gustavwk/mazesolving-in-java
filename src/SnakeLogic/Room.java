@@ -3,7 +3,7 @@ package SnakeLogic;
 import SnakeGUI.Position;
 import SnakeLogic.GameObject;
 import SnakeLogic.Wall;
-import com.sun.deploy.util.BlackList;
+
 import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 
