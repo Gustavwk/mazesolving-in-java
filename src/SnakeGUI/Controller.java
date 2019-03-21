@@ -28,19 +28,20 @@ public class Controller {
     private int gameLoopDelay = 500;
     private float refreshRate = 300;
     private KeyCode keyPressed = KeyCode.BACK_SPACE;
-    goal defaultGoal = new goal(Color.GREEN, 28,1);
-    Position[][] maze = new Position[width][height];
-    DFSObject DFS = new DFSObject(4,4, Color.RED,defaultGoal, maze);
-
-
-
-    protected Player player = new Player(5,5, Color.WHITE);
-    private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
 
 
 
 
+
+
+
+    Player player = new Player(5,5, Color.WHITE);
+    RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     ArrayList<Item> items = new ArrayList<Item>();
+    Room room = new Room();
+    goal defaultGoal = new goal(Color.GREEN, 28,1);
+    Position[][] maze = room.populate(items,width,height);
+    DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
 
     public void btnStartAction(ActionEvent event)
     {
@@ -75,7 +76,7 @@ public class Controller {
                     update(now);
                 }             }
         }.start();
-        // ændring
+
     }
 
     private void AddItems() {
@@ -85,9 +86,7 @@ public class Controller {
 
 
 
-        Room room = new Room();
-        maze = room.populate(items,width,height);
-        print2D(maze);
+
 
         //would be nice to add players and walls here.
 

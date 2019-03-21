@@ -1,9 +1,6 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
-import SnakeLogic.GameObject;
-import SnakeLogic.Item;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -13,8 +10,8 @@ public class goal implements GameObject {
 
 
     public goal(Color color, int X, int Y) {
-        this.position = new Position(X,Y);
-        this.color = color;
+        this.setPosition(new Position(X,Y));
+        this.setColor(color);
     }
 
 
@@ -22,16 +19,16 @@ public class goal implements GameObject {
 
 
     public void setX(int x) {
-        this.position.setX(x);
+        this.getPosition().setX(x);
     }
 
 
     public int getY() {
-        return this.position.getY();
+        return this.getPosition().getY();
     }
 
     public void setY(int y) {
-       this.position.setY(y);
+       this.getPosition().setY(y);
     }
 
 
@@ -50,8 +47,16 @@ public class goal implements GameObject {
 
     @Override
     public boolean drawObject(GraphicsContext g, double fieldWidth, double fieldHeight) {
-        g.setFill(this.color);
-        g.fillRoundRect(this.position.getX() * fieldWidth, this.position.getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
+        g.setFill(this.getColor());
+        g.fillRoundRect(this.getPosition().getX() * fieldWidth, this.getPosition().getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
         return true;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }

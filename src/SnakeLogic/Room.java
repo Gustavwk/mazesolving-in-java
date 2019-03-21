@@ -4,60 +4,67 @@ import SnakeGUI.Position;
 import SnakeLogic.GameObject;
 import SnakeLogic.Wall;
 import com.sun.deploy.util.BlackList;
+import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 
 import java.util.List;
 
-public class Room
-{
-    //TileTree tilesInRoom = new TileTree();
+public class Room {
 
 
-public Position[][] populate(List<Item> objects, int width, int height){
+    public Position[][] populate(List<Item> objects, int width, int height) {
 
-    Position[][] room = new Position[width][height];
+        Position[][] maze = new Position[width][height];
+        maze = initMazArray(width, height, maze);
+        mazeBoarders(width, height, objects, maze);
 
-    for (int i = 0; i < width ; i++) {
-        for (int j = 0; j < height ; j++) {
-            room[i][j] = new Position(i,j);
+
+
+        for (int i = 0; i < height / 2; i++) {
+
+            addWallToRoom(20, i, objects, maze);
+            addWallToRoom(10, i, objects, maze);
         }
-
-
+        return maze;
     }
 
-    for (int i = 0; i < width ; i++) {
-        for (int j = 0; j < height; j ++) {
+    public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
-            if(i == 0 || i == width-1) {
-
-                Wall wall = new Wall(i, j, Color.BLACK);
-                objects.add(wall);
-                room[i][j].setOccupied(true);
-
-
-            }
-
-            if(j == 0 || j == height-1) {
-
-                Wall wall = new Wall(i, j, Color.BLACK);
-                objects.add(wall);
-                room[i][j].setOccupied(true);
-            }
-        }
-    }
-    //This is a good comment to goood to be true actually
-
-    for (int i = 0; i < height/2 ; i++) {
-
-        Wall wall = new Wall(20,i,Color.BLACK);
-        Wall wall2 = new Wall(10,i,Color.BLACK);
+        Wall wall = new Wall(x, y, Color.BLACK);
         objects.add(wall);
-        objects.add(wall2);
-        room[20][i].setOccupied(true);
-        room[10][i].setOccupied(true);
+        maze[x][y].setOccupied(true);
 
-
+        return true;
     }
-    return room;
-}
+
+    public boolean mazeBoarders(int width, int height, List objects, Position[][] maze) {
+
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+
+                if (i == 0 || i == width - 1) {
+
+                    addWallToRoom(i, j, objects, maze);
+
+                }
+
+                if (j == 0 || j == height - 1) {
+
+                    addWallToRoom(i, j, objects, maze);
+                }
+            }
+        }
+        return true;
+    }
+
+    public Position[][] initMazArray(int width, int height, Position[][] maze) {
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                maze[i][j] = new Position(i, j);
+            }
+
+
+        }
+        return maze;
+    }
 }
