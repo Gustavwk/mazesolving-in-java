@@ -3,39 +3,42 @@ package SnakeGUI;
 
 
 public class Position implements Comparable<Position> {
-    private class Adjacents{
-        private Position pos;
-    }
+
 
     private int x;
     private int y;
-    /*
-    Position north;
-    Position south;
-    Position west;
-    Position east;
-    */
+
+    private Position north = null;
+    private Position south = null;
+    private Position west = null;
+    private Position east = null;
+
     private boolean occupied = false;
-    String OccupiedString [] = {"Occopied", "Not Occupied"};
+    private String[] OccupiedString  = {"Occopied", "Not Occupied"};
 
 
     public Position(int x, int y) {
         this.setX(x);
         this.setY(y);
-/*
-        this.north.setX(x);
-        this.north.setX(y-1);
 
-        this.south.setX(x);
-        this.south.setY(y+1);
 
-        this.west.setX(x-1);
-        this.west.setY(y);
+            try {
+                this.getNorth().setX(x);
+                this.getNorth().setX(y - 1);
 
-        this.east.setX(x+1);
-        this.east.setY(y);
-        */
-    }
+                this.getSouth().setX(x);
+                this.getSouth().setY(y + 1);
+
+                this.getWest().setX(x - 1);
+                this.getWest().setY(y);
+
+                this.getEast().setX(x + 1);
+                this.getEast().setY(y);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+
 
     public int getX() {
         return x;
@@ -84,12 +87,12 @@ public class Position implements Comparable<Position> {
     @Override
     public String toString() {
         int s;
-        if (this.occupied){
+        if (this.isOccupied()){
             s = 0;
         }else{
             s = 1;
         }
-        return "X Coordinat: (" + this.x + ") Y Coordinat (" + this.y + ") and it is " + OccupiedString[s];
+        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s];
     }
     @Override
     public boolean equals(Object otherObject) {
@@ -99,7 +102,7 @@ public class Position implements Comparable<Position> {
             Position otherObject1 = (Position)otherObject;
 
             //return whether x == x and y == y.
-            return (otherObject1.x == this.x && otherObject1.y == this.y);
+            return (otherObject1.getX() == this.getX() && otherObject1.getY() == this.getY());
 
         }catch (ClassCastException e){
 
@@ -108,5 +111,45 @@ public class Position implements Comparable<Position> {
         }
 
 
+    }
+
+    public Position getNorth() {
+        return north;
+    }
+
+    public void setNorth(Position north) {
+        this.north = north;
+    }
+
+    public Position getSouth() {
+        return south;
+    }
+
+    public void setSouth(Position south) {
+        this.south = south;
+    }
+
+    public Position getWest() {
+        return west;
+    }
+
+    public void setWest(Position west) {
+        this.west = west;
+    }
+
+    public Position getEast() {
+        return east;
+    }
+
+    public void setEast(Position east) {
+        this.east = east;
+    }
+
+    public String[] getOccupiedString() {
+        return OccupiedString;
+    }
+
+    public void setOccupiedString(String[] occupiedString) {
+        OccupiedString = occupiedString;
     }
 }
