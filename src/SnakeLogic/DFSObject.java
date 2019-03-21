@@ -36,6 +36,7 @@ public class DFSObject implements GameObject {
         this.maze = maze;
         this.witdh = width;
         this.height = height;
+        System.out.println(dsf(this.position, goal.getPosition()));
 
 
 
@@ -45,37 +46,44 @@ public class DFSObject implements GameObject {
 
     @Override
     public void update() {
+
+
     }
 
 
-public boolean dsf(Position root, Position goal){
+public boolean dsf(Position root, Position goal) {
 
-        /**
-     * 1  procedure DFS-iterative(G,v):
-     * 2      let S be a stack
-     * 3      S.push(v)
-     * 4      while S is not empty
-     * 5          v = S.pop()
-     * 6          if v is not labeled as discovered:
-     * 7              label v as discovered
-     * 8              for all edges from v to w in G.adjacentEdges(v) do
-     * 9                  S.push(w)
-     */
+    LinkedList<Position> visited = new LinkedList<>();
+    Stack path = new Stack();
+    for (int i = 0; i < witdh; i++) {
+        for (int j = 0; j < height; j++) {
+            
+            if (!maze[i][j].isOccupied()){
 
+            maze[i][j] = root;
+            path.push(root);
 
-        Stack path = new Stack();
-        LinkedList<Position> visited = new LinkedList<>();
+            while (!path.empty()) {
 
+                root = (Position) path.pop();
+                visited.add(root);
 
-        path.push(root);
+                if (!visited.contains(goal)) {
 
-        while (!path.empty()){
-            root = (Position) path.pop();
-            if (!visited.contains(goal)){
-                
+                    System.out.println(root);
+
+                } else {
+                    return true;
+
+                }
+
+            }
             }
         }
 
+    }
+return false;
+}
 
 
 
@@ -121,8 +129,8 @@ public boolean dsf(Position root, Position goal){
 
             }
         }*/
-    return false;
-    }
+
+
 
 
 

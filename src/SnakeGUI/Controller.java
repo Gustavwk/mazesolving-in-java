@@ -105,7 +105,7 @@ public class Controller {
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
-            System.out.println(ranRam);
+            //System.out.println(ranRam);
             DFS.update();
             defaultGoal.update();
 
