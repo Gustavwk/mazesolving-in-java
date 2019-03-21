@@ -12,10 +12,12 @@ public class DFSObject implements GameObject {
     private Color color;
     private goal goal;
     Position[][] maze;
+    private int witdh;
+    private int height;
 
 
-    Stack path = new Stack();
-    LinkedList<Position> visited = new LinkedList<>();
+
+
 
     /**
      * 1. Add root node to the stack.
@@ -32,7 +34,8 @@ public class DFSObject implements GameObject {
         this.color = color;
         this.goal = goal;
         this.maze = maze;
-        path.push(this.position);
+        this.witdh = width;
+        this.height = height;
 
 
 
@@ -42,31 +45,35 @@ public class DFSObject implements GameObject {
 
     @Override
     public void update() {
-if (!occupiedAhead()){
-    this.position.setX(this.position.getX()+1);
-    this.position.setX(this.position.getX()+1);
-} else {
-    this.position.setX(this.position.getX()-1);
-    this.position.setX(this.position.getX()-1);
+    }
 
-}
 
-        while (!path.isEmpty()){
-            visited.add((Position) path.pop());
-            this.position = (Position) path.pop();
-            for (int i = 0; i < path.size() ; i++) {
-                if (!visited.contains(path.peek())){
-                    if (this.position.equals(goal.getPosition())){
-                        System.out.println("Succes");
-                        this.position = goal.getPosition();
-                    } else if(!this.position.equals(goal.getPosition())) {
-                        path.push(this.position);
-                    } else{
-                        System.out.println("path not available");
-                    }
-                }
+public boolean dsf(Position root, Position goal){
+
+        /**
+     * 1  procedure DFS-iterative(G,v):
+     * 2      let S be a stack
+     * 3      S.push(v)
+     * 4      while S is not empty
+     * 5          v = S.pop()
+     * 6          if v is not labeled as discovered:
+     * 7              label v as discovered
+     * 8              for all edges from v to w in G.adjacentEdges(v) do
+     * 9                  S.push(w)
+     */
+
+
+        Stack path = new Stack();
+        LinkedList<Position> visited = new LinkedList<>();
+
+
+        path.push(root);
+
+        while (!path.empty()){
+            root = (Position) path.pop();
+            if (!visited.contains(goal)){
+                
             }
-
         }
 
 
@@ -74,7 +81,53 @@ if (!occupiedAhead()){
 
 
 
+
+
+
+
+    /*for (int i = 0; i < witdh ; i++) {
+        for (int j = 0; j < height; j++) {
+
+            if (!maze[i][j].isOccupied()) {
+
+                path.push(maze[i][j]);
+
+                while (!path.isEmpty()) {
+
+                    visited.add((Position) path.pop());
+                    this.position = (Position) path.pop();
+
+                    for (int k = 0; k < path.size(); k++) {
+
+                        if (!visited.contains(path.peek())) {
+
+                            if (this.position.equals(goal.getPosition())) {
+                                System.out.println("Succes");
+                                this.position = goal.getPosition();
+                                return true;
+
+
+                            } else if (!this.position.equals(goal.getPosition())) {
+
+                                path.push(this.position);
+
+                            } else {
+                                System.out.println("path not available");
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }*/
+    return false;
     }
+
+
+
+
+
 
     @Override
     public boolean drawObject(GraphicsContext g, double fieldWidth, double fieldHeight) {
@@ -103,7 +156,7 @@ if (!occupiedAhead()){
         return getY();
     }
 
-    private boolean occupiedAhead(){
+    private boolean occupied(){
 
     if(this.maze[this.position.getX()][this.position.getY()].isOccupied()){
 
