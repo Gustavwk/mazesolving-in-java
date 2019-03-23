@@ -8,10 +8,6 @@ public class Position implements Comparable<Position> {
     private int x;
     private int y;
 
-    private Position north = null;
-    private Position south = null;
-    private Position west = null;
-    private Position east = null;
 
     private boolean occupied = false;
     private String[] OccupiedString  = {"Occopied", "Not Occupied"};
@@ -21,22 +17,6 @@ public class Position implements Comparable<Position> {
         this.setX(x);
         this.setY(y);
 
-
-            try {
-                this.getNorth().setX(x);
-                this.getNorth().setX(y - 1);
-
-                this.getSouth().setX(x);
-                this.getSouth().setY(y + 1);
-
-                this.getWest().setX(x - 1);
-                this.getWest().setY(y);
-
-                this.getEast().setX(x + 1);
-                this.getEast().setY(y);
-            } catch (Exception e) {
-                System.out.println(e);
-            }
         }
 
 
@@ -113,37 +93,6 @@ public class Position implements Comparable<Position> {
 
     }
 
-    public Position getNorth() {
-        return north;
-    }
-
-    public void setNorth(Position north) {
-        this.north = north;
-    }
-
-    public Position getSouth() {
-        return south;
-    }
-
-    public void setSouth(Position south) {
-        this.south = south;
-    }
-
-    public Position getWest() {
-        return west;
-    }
-
-    public void setWest(Position west) {
-        this.west = west;
-    }
-
-    public Position getEast() {
-        return east;
-    }
-
-    public void setEast(Position east) {
-        this.east = east;
-    }
 
     public String[] getOccupiedString() {
         return OccupiedString;

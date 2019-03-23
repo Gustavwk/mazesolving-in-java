@@ -16,19 +16,6 @@ public class DFSObject implements GameObject {
     private int height;
 
 
-
-
-
-    /**
-     * 1. Add root node to the stack.
-     * 2. Loop on the stack as long as it's not empty.
-     *     1. Get the node at the top of the stack(current), mark it as visited, and remove it.
-     *     2. For every non-visited child of the current node, do the following:
-     *         1. Check if it's the goal node, If so, then return this child node.
-     *          2. Otherwise, push it to the stack.
-     * 3. If stack is empty, then goal node was not found!
-     */
-
     public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height){
         this.position = new Position(X,Y);
         this.color = color;
