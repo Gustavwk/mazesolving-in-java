@@ -364,39 +364,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SnakeGUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SnakeLogic" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -408,7 +376,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553431042616" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553431478216" />
     <property name="dynamic.classpath" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -663,12 +631,12 @@
       <workItem from="1553101452405" duration="10137000" />
       <workItem from="1553176810282" duration="6681000" />
       <workItem from="1553184213715" duration="3764000" />
-      <workItem from="1553424260552" duration="6737000" />
+      <workItem from="1553424260552" duration="6981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96032000" />
+    <option name="totallyTimeSpent" value="96276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
