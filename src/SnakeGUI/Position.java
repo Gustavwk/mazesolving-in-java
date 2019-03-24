@@ -3,16 +3,19 @@ package SnakeGUI;
 
 public class Position implements Comparable<Position> {
 
+
     private int x;
     private int y;
     private boolean occupied = false;
-    String OccupiedString [] = {"Occopied", "Not Occupied"};
+    private boolean edge;
+    String OccupiedString[] = {"Occopied", "Not Occupied"};
 
 
     public Position(int x, int y) {
         this.setX(x);
         this.setY(y);
     }
+
 
     public int getX() {
         return x;
@@ -61,24 +64,25 @@ public class Position implements Comparable<Position> {
     @Override
     public String toString() {
         int s;
-        if (this.occupied){
+        if (this.occupied) {
             s = 0;
-        }else{
+        } else {
             s = 1;
         }
         return "X Coordinat: (" + this.x + ") Y Coordinat (" + this.y + ") and it is " + OccupiedString[s];
     }
+
     @Override
     public boolean equals(Object otherObject) {
 
-        try{
+        try {
             //cast into position to get x and y values.
-            Position otherObject1 = (Position)otherObject;
+            Position otherObject1 = (Position) otherObject;
 
             //return whether x == x and y == y.
             return (otherObject1.x == this.x && otherObject1.y == this.y);
 
-        }catch (ClassCastException e){
+        } catch (ClassCastException e) {
 
             System.out.println("ClassException!");
             return false;
@@ -86,4 +90,13 @@ public class Position implements Comparable<Position> {
 
 
     }
+
+    public void setEdge(boolean edge) {
+        this.edge = edge;
+    }
+
+    public boolean isEdge() {
+        return edge;
+    }
 }
+
