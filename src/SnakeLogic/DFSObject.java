@@ -57,7 +57,7 @@ public boolean dsf(Position root, Position goal) {
     Stack path = new Stack();
     for (int i = 0; i < witdh; i++) {
         for (int j = 0; j < height; j++) {
-            
+
             if (!maze[i][j].isOccupied()){
 
             maze[i][j] = root;
