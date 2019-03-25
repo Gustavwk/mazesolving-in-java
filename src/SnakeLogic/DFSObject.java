@@ -16,14 +16,8 @@ public class DFSObject implements GameObject {
     private int height;
 
 
-
-
-
-
-
-
-    public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height){
-        this.setPosition(new Position(X,Y));
+    public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
+        this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
@@ -32,20 +26,14 @@ public class DFSObject implements GameObject {
         System.out.println(this.getGoal().getPosition());
 
 
-
     }
-
-
-
 
 
     @Override
     public void update() {
 
-    dsf(this.position,this.goal.getPosition());
 
-
-
+        dsf(this.position, this.goal.getPosition());
 
 
     }
@@ -53,59 +41,53 @@ public class DFSObject implements GameObject {
     /**
      * 1. Add root node to the stack.
      * 2. Loop on the stack as long as it's not empty.
-     *     1. Get the node at the top of the stack(current), mark it as visited, and remove it.
-     *     2. For every non-visited child of the current node, do the following:
-     *         1. Check if it's the goal node, If so, then return this child node.
-     *          2. Otherwise, push it to the stack.
+     * 1. Get the node at the top of the stack(current), mark it as visited, and remove it.
+     * 2. For every non-visited child of the current node, do the following:
+     * 1. Check if it's the goal node, If so, then return this child node.
+     * 2. Otherwise, push it to the stack.
      * 3. If stack is empty, then goal node was not found!
      */
 
 
-public boolean dsf(Position root, Position goal) {
-    LinkedList<Position> visited = new LinkedList<>();
-    Stack path = new Stack();
-
-    for (int i = 0; i < getWitdh(); i++) {
-        for (int j = 0; j < getHeight(); j++) {
-
-            if (!getMaze()[i][j].isOccupied()){
+    public boolean dsf(Position root, Position goal) {
+        LinkedList<Position> visited = new LinkedList<>();
+        Stack path = new Stack();
+        path.push(root);
 
 
-                getMaze()[i][j] = root;
+        while (!path.empty()) {
+            for (int i = 0; i < getWitdh(); i++) {
+                for (int j = 0; j < getHeight(); j++) {
+                    if (!getMaze()[i][j].isOccupied()) {
 
-                System.out.println(root + " 1");
-
-                path.push(root);
-
-            while (!path.empty()) {
-
-                root = (Position) path.peek();
-                visited.add(root);
-                path.pop();
-
-                System.out.println(root + " 2");
+                        path.push(getMaze()[i][j]);
+                        visited.add(getMaze()[i][j]);
+                        getMaze()[i][j] = (Position) path.pop();
+                        System.out.println(root + " 2");
 
 
-                if (!visited.contains(root)) {
-                    if (root.equals(goal)){
+                        if (!visited.contains(root)) {
+                            if (getMaze()[i][j].equals(goal)) {
 
-                        System.out.println(root + " 3");
+                                System.out.println(root + " 3");
 
-                    } else {
-                        path.push(root);
-                        this.position = root;
+                            } else {
+                                path.push(getMaze()[i][j]);
+                                this.position = root;
 
-                        System.out.println(root + " 4");
+                                System.out.println(root + " 4");
+                            }
+
+
+                        }
                     }
 
-
                 }
-
-            }
             }
         }
 
-    }
+
+
 return false;
 }
 
