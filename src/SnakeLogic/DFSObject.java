@@ -27,13 +27,44 @@ public class DFSObject implements GameObject {
 
 
     }
+    public Position canMove(Position currentPosition){
+
+        Position north = maze[currentPosition.getX()][currentPosition.getY()+1];
+
+        Position east = maze[currentPosition.getX()+1][currentPosition.getY()];;
+
+        Position south = maze[currentPosition.getX()][currentPosition.getY()-1];;
+
+        Position west = maze[currentPosition.getX()-1][currentPosition.getY()];;
+
+
+        if (!west.isOccupied()) {
+            return west;
+
+        }
+         else if (!north.isOccupied()){
+            return north;
+
+        }
+         else if (!east.isOccupied() ){
+            return east;
+
+        } else if (!south.isOccupied() ){
+             return south;
+
+        } else {
+            return null;
+        }
+    }
 
 
     @Override
     public void update() {
 
+        this.position = canMove(this.position);
+        //dsf(this.position, this.goal.getPosition());
+        System.out.println(canMove(this.position));
 
-        dsf(this.position, this.goal.getPosition());
 
 
     }
@@ -139,6 +170,8 @@ return false;
 
         return false;
     }
+
+
 
     }
 
