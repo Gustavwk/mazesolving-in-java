@@ -1,6 +1,7 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
+import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 import javafx.scene.canvas.GraphicsContext;
 
@@ -27,43 +28,54 @@ public class DFSObject implements GameObject {
 
 
     }
-    public Position canMove(Position currentPosition){
+    public boolean canMove(Position currentPosition, String s) {
 
-        Position north = maze[currentPosition.getX()][currentPosition.getY()+1];
+        Position north = maze[currentPosition.getX()][currentPosition.getY() + 1];
 
-        Position east = maze[currentPosition.getX()+1][currentPosition.getY()];;
+        Position east = maze[currentPosition.getX() + 1][currentPosition.getY()];
 
-        Position south = maze[currentPosition.getX()][currentPosition.getY()-1];;
+        Position south = maze[currentPosition.getX()][currentPosition.getY() - 1];
 
-        Position west = maze[currentPosition.getX()-1][currentPosition.getY()];;
+        Position west = maze[currentPosition.getX() - 1][currentPosition.getY()];
 
+        if (s == "west") {
+            if (!west.isOccupied()) {
+                return true;
 
-        if (!west.isOccupied()) {
-            return west;
-
+            } else return false;
         }
-         else if (!north.isOccupied()){
-            return north;
+        if (s == "north") {
+            if (!north.isOccupied()) {
+                return true;
 
+            } else return false;
         }
-         else if (!east.isOccupied() ){
-            return east;
-
-        } else if (!south.isOccupied() ){
-             return south;
-
-        } else {
-            return null;
+        if (s == "east") {
+            if (!east.isOccupied()) {
+                return true;
+            } else return false;
         }
+
+        if (s == "south") {
+            if (!south.isOccupied()) {
+                return true;
+
+            }
+            else return false;
+        }
+        else return false;
     }
+
+
+
 
 
     @Override
     public void update() {
 
-        this.position = canMove(this.position);
-        //dsf(this.position, this.goal.getPosition());
-        System.out.println(canMove(this.position));
+
+        System.out.println(DFS(this.position, this.goal.getPosition()));
+
 
 
 
@@ -80,42 +92,69 @@ public class DFSObject implements GameObject {
      */
 
 
-    public boolean dsf(Position root, Position goal) {
-        LinkedList<Position> visited = new LinkedList<>();
+    public boolean DFS(Position root, Position goal) {
+
         Stack path = new Stack();
+        LinkedList<Position> visited = new LinkedList<>();
+
+
         path.push(root);
+        System.out.println("1");
+
+        while (!path.empty()){
+            Position current = (Position) path.pop();
+            System.out.println("2");
 
 
-        while (!path.empty()) {
-            for (int i = 0; i < getWitdh(); i++) {
-                for (int j = 0; j < getHeight(); j++) {
-                    if (!getMaze()[i][j].isOccupied()) {
+            if (current == goal){
+                this.position  = goal;
+                System.out.println("Succes");
+                return true;
+            }
 
-                        path.push(getMaze()[i][j]);
-                        visited.add(getMaze()[i][j]);
-                        getMaze()[i][j] = (Position) path.pop();
-                        System.out.println(root + " 2");
+            if (!visited.contains(current)){
+                visited.add(current);
+                System.out.println("3");
 
-
-                        if (!visited.contains(root)) {
-                            if (getMaze()[i][j].equals(goal)) {
-
-                                System.out.println(root + " 3");
-
-                            } else {
-                                path.push(getMaze()[i][j]);
-                                this.position = root;
-
-                                System.out.println(root + " 4");
-                            }
-
-
-                        }
-                    }
+                if (canMove(current, "east")){
+                    Position temp = maze[current.getX()+1][current.getY()];
+                    path.push(temp);
+                    visited.add(temp);
+                    System.out.println("4");
 
                 }
-            }
+                 if (canMove(current, "west")){
+                    Position temp = maze[current.getX()-1][current.getY()];
+                    path.push(temp);
+                    visited.add(temp);
+                    System.out.println("5");
+
+                }
+                  if (canMove(current, "north")){
+                    Position temp = maze[current.getX()][current.getY() + 1];
+                    path.push(temp);
+                    visited.add(temp);
+                    System.out.println("6");
+
+                }
+                 if (canMove(current, "south")){
+                    Position temp = maze[current.getX()][current.getY() -1];
+                    path.push(temp);
+                    visited.add(temp);
+                    System.out.println("7");
+
+                }
+            } else return false;
+
         }
+
+
+
+
+
+
+
+
 
 
 

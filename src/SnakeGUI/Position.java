@@ -12,8 +12,8 @@ public class Position implements Comparable<Position> {
 
 
     public Position(int x, int y) {
-        this.setX(x);
-        this.setY(y);
+        this.x = x;
+        this.y = y;
     }
 
 
