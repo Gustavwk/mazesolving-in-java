@@ -103,12 +103,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="12410" />
+          <entry key="java" value="12651" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12410" />
+          <entry key="JAVA" value="12651" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -158,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="271">
+              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#print2D#0;class#Controller#0" />
@@ -215,8 +215,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="-14">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -233,8 +233,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="125" column="22" lean-forward="true" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="131" column="42" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+              <folding>
+                <element signature="e#4820#4821#0" expanded="true" />
+                <element signature="e#4851#4852#0" expanded="true" />
+                <element signature="e#4901#4902#0" expanded="true" />
+                <element signature="e#4941#4942#0" expanded="true" />
+                <element signature="e#4973#4974#0" expanded="true" />
+                <element signature="e#4996#4997#0" expanded="true" />
+                <element signature="e#5225#5226#0" expanded="true" />
+                <element signature="e#5248#5249#0" expanded="true" />
+                <element signature="e#5279#5280#0" expanded="true" />
+                <element signature="e#5307#5308#0" expanded="true" />
+                <element signature="e#5348#5349#0" expanded="true" />
+                <element signature="e#5382#5383#0" expanded="true" />
+                <element signature="e#5422#5423#0" expanded="true" />
+                <element signature="e#5449#5450#0" expanded="true" />
+                <element signature="e#5498#5499#0" expanded="true" />
+                <element signature="e#5530#5531#0" expanded="true" />
+                <element signature="e#5567#5568#0" expanded="true" />
+                <element signature="e#5599#5600#0" expanded="true" />
+                <element signature="e#5645#5646#0" expanded="true" />
+                <element signature="e#5677#5678#0" expanded="true" />
+                <element signature="e#5706#5707#0" expanded="true" />
+                <element signature="e#5734#5735#0" expanded="true" />
+                <element signature="e#5773#5774#0" expanded="true" />
+                <element signature="e#5807#5808#0" expanded="true" />
+                <element signature="e#5837#5838#0" expanded="true" />
+                <element signature="e#5866#5867#0" expanded="true" />
+                <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#5943#5944#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -289,8 +319,8 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/TileTree.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/goal.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Room.java" />
-        <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Position.java" />
+        <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/DFSObject.java" />
       </list>
     </option>
@@ -591,12 +621,12 @@
       <workItem from="1553669717378" duration="998000" />
       <workItem from="1553671775024" duration="135000" />
       <workItem from="1553672824813" duration="120000" />
-      <workItem from="1553677062801" duration="933000" />
+      <workItem from="1553677062801" duration="2468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108955000" />
+    <option name="totallyTimeSpent" value="110490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -808,17 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#print2D#0;class#Controller#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -857,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/TileTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -871,10 +883,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#print2D#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="125" column="22" lean-forward="true" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        <state relative-caret-position="420">
+          <caret line="131" column="42" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+          <folding>
+            <element signature="e#4820#4821#0" expanded="true" />
+            <element signature="e#4851#4852#0" expanded="true" />
+            <element signature="e#4901#4902#0" expanded="true" />
+            <element signature="e#4941#4942#0" expanded="true" />
+            <element signature="e#4973#4974#0" expanded="true" />
+            <element signature="e#4996#4997#0" expanded="true" />
+            <element signature="e#5225#5226#0" expanded="true" />
+            <element signature="e#5248#5249#0" expanded="true" />
+            <element signature="e#5279#5280#0" expanded="true" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5348#5349#0" expanded="true" />
+            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5422#5423#0" expanded="true" />
+            <element signature="e#5449#5450#0" expanded="true" />
+            <element signature="e#5498#5499#0" expanded="true" />
+            <element signature="e#5530#5531#0" expanded="true" />
+            <element signature="e#5567#5568#0" expanded="true" />
+            <element signature="e#5599#5600#0" expanded="true" />
+            <element signature="e#5645#5646#0" expanded="true" />
+            <element signature="e#5677#5678#0" expanded="true" />
+            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#5734#5735#0" expanded="true" />
+            <element signature="e#5773#5774#0" expanded="true" />
+            <element signature="e#5807#5808#0" expanded="true" />
+            <element signature="e#5837#5838#0" expanded="true" />
+            <element signature="e#5866#5867#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#5943#5944#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,6 +16,7 @@ public class DFSObject implements GameObject {
     private int witdh;
     private int height;
     private LinkedList<Position> goPath = new LinkedList<>();
+    int go = 0;
 
 
     public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
@@ -31,11 +32,11 @@ public class DFSObject implements GameObject {
     }
     public boolean canMove(Position currentPosition, String s) {
 
-        Position north = maze[currentPosition.getX()][currentPosition.getY() + 1];
+        Position north = maze[currentPosition.getX()][currentPosition.getY() - 1];
 
         Position east = maze[currentPosition.getX() + 1][currentPosition.getY()];
 
-        Position south = maze[currentPosition.getX()][currentPosition.getY() - 1];
+        Position south = maze[currentPosition.getX()][currentPosition.getY() + 1];
 
         Position west = maze[currentPosition.getX() - 1][currentPosition.getY()];
 
@@ -74,8 +75,16 @@ public class DFSObject implements GameObject {
     @Override
     public void update() {
 
+        go++;
 
-        System.out.println(DFS(this.position, this.goal.getPosition()));
+        if (!this.position.equals(goal.getPosition())) {
+            System.out.println(goPath.get(go));
+            this.position = goPath.get(go);
+        }
+
+
+
+
 
 
 
@@ -100,10 +109,10 @@ public class DFSObject implements GameObject {
 
 
         path.push(root);
-        System.out.println("1");
+        //System.out.println("1");
 
         while (!path.empty()){
-            System.out.println(path.peek());
+            //System.out.println(path.peek());
             Position current = (Position) path.pop();
 
 
@@ -117,44 +126,50 @@ public class DFSObject implements GameObject {
 
             if (!visited.contains(current)){
                 visited.add(current);
-                System.out.println("3");
+                //System.out.println("3");
 
 
-                if (canMove(current, "east")){
-                    Position temp = maze[current.getX()+1][current.getY()];
+                if (canMove(current, "west")){
+                    Position temp = maze[current.getX()-1][current.getY()];
                     path.push(temp);
                     //visited.add(temp);
-                    System.out.println("4");
+                    //System.out.println("4");
 
                 }
 
                 else if (canMove(current, "south")){
-                    Position temp = maze[current.getX()][current.getY() -1];
+                    Position temp = maze[current.getX()][current.getY() +1];
                     path.push(temp);
                     //visited.add(temp);
-                    System.out.println("7");
+                    //System.out.println("7");
 
                 }
 
                  else if (canMove(current, "north")){
-                    Position temp = maze[current.getX()][current.getY() + 1];
+                    Position temp = maze[current.getX()][current.getY()-1];
                     path.push(temp);
                     //visited.add(temp);
-                    System.out.println("6");
+                    //System.out.println("6");
 
                 }
 
 
 
-               else  if (canMove(current, "west")){
-                    Position temp = maze[current.getX()-1][current.getY()];
+               else  if (canMove(current, "east")){
+                    Position temp = maze[current.getX()+1][current.getY()];
                     path.push(temp);
                     //visited.add(temp);
                     System.out.println("5");
 
+                } else {
+
                 }
-                //System.out.println(path);
-            } else return false;
+
+
+            }
+
+            else return false;
+            goPath = visited;
 
         }
 

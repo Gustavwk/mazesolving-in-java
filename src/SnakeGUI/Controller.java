@@ -57,6 +57,7 @@ public class Controller {
 
     public void initialize()
     {
+        DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
 
                 AddItems();
 
