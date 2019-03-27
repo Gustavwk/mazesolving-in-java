@@ -129,7 +129,7 @@ public class DFSObject implements GameObject {
 
             if (!visited.contains(current)){
                 visited.add(current);
-                //System.out.println("3");
+
 
 
 
@@ -137,32 +137,36 @@ public class DFSObject implements GameObject {
                 if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];
                     path.push(temp);
-                    //visited.add(temp);
-                    //System.out.println("4");
+
 
                 }
 
                 else if (canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])){
                     Position temp = maze[current.getX()][current.getY() +1];
                     path.push(temp);
-                    //visited.add(temp);
-                    //System.out.println("7");
+
 
                 }
                 else  if (canMove(current, "east")&& !visited.contains(maze[current.getX()+1][current.getY()])){
                     Position temp = maze[current.getX()+1][current.getY()];
                     path.push(temp);
-                    //visited.add(temp);
-                    //System.out.println("5");
+
 
                 }
 
                  else if (canMove(current, "north")&& !visited.contains(maze[current.getX()][current.getY()-1])){
                     Position temp = maze[current.getX()][current.getY()-1];
                     path.push(temp);
-                    //visited.add(temp);
-                    //System.out.println("6");
 
+
+                } else if (    !canMove(current, "west") && !visited.contains(maze[current.getX()-1][current.getY()])
+                            && !canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])
+                            && !canMove(current, "east") && !visited.contains(maze[current.getX()+1][current.getY()])
+                            && !canMove(current, "north") && !visited.contains(maze[current.getX()][current.getY()-1]) )
+                {
+
+                    System.out.println("blindgyde");
+                     return false;
                 }
 
 
@@ -177,7 +181,7 @@ public class DFSObject implements GameObject {
             else return false;
 
             goPath = visited;
-            
+
 
         }
 
