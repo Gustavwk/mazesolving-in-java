@@ -130,7 +130,7 @@ public class DFSObject implements GameObject {
                 //System.out.println("3");
 
 
-                if (canMove(current, "west")){
+                if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];
                     path.push(temp);
                     //visited.add(temp);
@@ -138,15 +138,22 @@ public class DFSObject implements GameObject {
 
                 }
 
-                else if (canMove(current, "south")){
+                else if (canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])){
                     Position temp = maze[current.getX()][current.getY() +1];
                     path.push(temp);
                     //visited.add(temp);
                     //System.out.println("7");
 
                 }
+                else  if (canMove(current, "east")&& !visited.contains(maze[current.getX()+1][current.getY()])){
+                    Position temp = maze[current.getX()+1][current.getY()];
+                    path.push(temp);
+                    //visited.add(temp);
+                    //System.out.println("5");
 
-                 else if (canMove(current, "north")){
+                }
+
+                 else if (canMove(current, "north")&& !visited.contains(maze[current.getX()][current.getY()-1])){
                     Position temp = maze[current.getX()][current.getY()-1];
                     path.push(temp);
                     //visited.add(temp);
@@ -156,13 +163,7 @@ public class DFSObject implements GameObject {
 
 
 
-               else  if (canMove(current, "east")){
-                    Position temp = maze[current.getX()+1][current.getY()];
-                    path.push(temp);
-                    //visited.add(temp);
-                    System.out.println("5");
-
-                } else {
+                else {
 
                 }
 
