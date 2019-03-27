@@ -75,11 +75,12 @@ public class DFSObject implements GameObject {
     @Override
     public void update() {
 
-        go++;
 
-        if (!this.position.equals(goal.getPosition())) {
-            System.out.println(goPath.get(go));
-            this.position = goPath.get(go);
+
+        if (!this.position.equals(goal.getPosition()) && go != goPath.size()-1) {
+            go++;
+          System.out.println(goPath.get(go));
+          this.position = goPath.get(go);
         }
 
 
