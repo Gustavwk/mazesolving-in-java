@@ -159,12 +159,13 @@ public class DFSObject implements GameObject {
                     path.push(temp);
 
 
-                } else if (    !canMove(current, "west") && !visited.contains(maze[current.getX()-1][current.getY()])
-                            && !canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])
-                            && !canMove(current, "east") && !visited.contains(maze[current.getX()+1][current.getY()])
-                            && !canMove(current, "north") && !visited.contains(maze[current.getX()][current.getY()-1]) )
+                } else if (    !canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()])
+                            && !canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1])
+                            && !canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()])
+                            && !canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1]) )
                 {
 
+                     
                     System.out.println("blindgyde");
                      return false;
                 }

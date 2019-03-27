@@ -17,6 +17,9 @@ public class Room {
         Position[][] maze = new Position[width][height];
         maze = initMazArray(width, height, maze);
         mazeBoarders(width, height, objects, maze);
+        addWallToRoom(1,10,objects,maze);
+        addWallToRoom(2,10,objects,maze);
+        addWallToRoom(2,9,objects,maze);
 
 
 
