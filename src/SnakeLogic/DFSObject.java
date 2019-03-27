@@ -166,11 +166,11 @@ public class DFSObject implements GameObject {
                         path.pop();
 
                     }
-                     return false;
+
                 }
             }
             else return false;
-            System.out.println(path);
+            //System.out.println(path);
             goPath = visited;
         }
 
