@@ -102,8 +102,9 @@ public class DFSObject implements GameObject {
         System.out.println("1");
 
         while (!path.empty()){
+            System.out.println(path.peek());
             Position current = (Position) path.pop();
-            System.out.println("2");
+
 
 
             if (current == goal){
@@ -116,6 +117,7 @@ public class DFSObject implements GameObject {
                 visited.add(current);
                 System.out.println("3");
 
+
                 if (canMove(current, "east")){
                     Position temp = maze[current.getX()+1][current.getY()];
                     path.push(temp);
@@ -123,27 +125,31 @@ public class DFSObject implements GameObject {
                     System.out.println("4");
 
                 }
-                 if (canMove(current, "west")){
-                    Position temp = maze[current.getX()-1][current.getY()];
-                    path.push(temp);
-                    visited.add(temp);
-                    System.out.println("5");
 
-                }
-                  if (canMove(current, "north")){
+                 else if (canMove(current, "north")){
                     Position temp = maze[current.getX()][current.getY() + 1];
                     path.push(temp);
                     visited.add(temp);
                     System.out.println("6");
 
                 }
-                 if (canMove(current, "south")){
+
+                 else if (canMove(current, "south")){
                     Position temp = maze[current.getX()][current.getY() -1];
                     path.push(temp);
                     visited.add(temp);
                     System.out.println("7");
 
                 }
+
+               else  if (canMove(current, "west")){
+                    Position temp = maze[current.getX()-1][current.getY()];
+                    path.push(temp);
+                    visited.add(temp);
+                    System.out.println("5");
+
+                }
+                //System.out.println(path);
             } else return false;
 
         }
