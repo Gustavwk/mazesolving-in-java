@@ -116,18 +116,22 @@ public class DFSObject implements GameObject {
             //System.out.println(path.peek());
             Position current = (Position) path.pop();
 
+            if (visited.contains(goal)){
 
-
-            if (current == goal){
-                this.position  = goal;
                 System.out.println("Succes");
                 goPath = visited;
                 return true;
             }
 
+
+
+
+
             if (!visited.contains(current)){
                 visited.add(current);
                 //System.out.println("3");
+
+
 
 
                 if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
@@ -171,7 +175,9 @@ public class DFSObject implements GameObject {
             }
 
             else return false;
+
             goPath = visited;
+            
 
         }
 
