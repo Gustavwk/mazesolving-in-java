@@ -15,6 +15,7 @@ public class DFSObject implements GameObject {
     private Position[][] maze;
     private int witdh;
     private int height;
+    private LinkedList<Position> goPath = new LinkedList<>();
 
 
     public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
@@ -110,6 +111,7 @@ public class DFSObject implements GameObject {
             if (current == goal){
                 this.position  = goal;
                 System.out.println("Succes");
+                goPath = visited;
                 return true;
             }
 
@@ -121,31 +123,33 @@ public class DFSObject implements GameObject {
                 if (canMove(current, "east")){
                     Position temp = maze[current.getX()+1][current.getY()];
                     path.push(temp);
-                    visited.add(temp);
+                    //visited.add(temp);
                     System.out.println("4");
+
+                }
+
+                else if (canMove(current, "south")){
+                    Position temp = maze[current.getX()][current.getY() -1];
+                    path.push(temp);
+                    //visited.add(temp);
+                    System.out.println("7");
 
                 }
 
                  else if (canMove(current, "north")){
                     Position temp = maze[current.getX()][current.getY() + 1];
                     path.push(temp);
-                    visited.add(temp);
+                    //visited.add(temp);
                     System.out.println("6");
 
                 }
 
-                 else if (canMove(current, "south")){
-                    Position temp = maze[current.getX()][current.getY() -1];
-                    path.push(temp);
-                    visited.add(temp);
-                    System.out.println("7");
 
-                }
 
                else  if (canMove(current, "west")){
                     Position temp = maze[current.getX()-1][current.getY()];
                     path.push(temp);
-                    visited.add(temp);
+                    //visited.add(temp);
                     System.out.println("5");
 
                 }
