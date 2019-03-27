@@ -38,9 +38,14 @@ public class Controller {
     Player player = new Player(5,5, Color.WHITE);
     RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     ArrayList<Item> items = new ArrayList<Item>();
+
     Room room = new Room();
     goal defaultGoal = new goal(Color.GREEN, 28,1);
+
+
     Position[][] maze = room.populate(items,width,height);
+
+
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
 
     public void btnStartAction(ActionEvent event)

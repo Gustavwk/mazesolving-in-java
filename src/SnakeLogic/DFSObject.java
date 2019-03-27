@@ -40,6 +40,7 @@ public class DFSObject implements GameObject {
 
         Position west = maze[currentPosition.getX() - 1][currentPosition.getY()];
 
+
         if (s == "west") {
             if (!west.isOccupied()) {
                 return true;
@@ -77,7 +78,7 @@ public class DFSObject implements GameObject {
 
 
 
-        if (!this.position.equals(goal.getPosition()) && go != goPath.size()-1) {
+        if (go != goPath.size()-1) {
             go++;
           System.out.println(goPath.get(go));
           this.position = goPath.get(go);
@@ -107,14 +108,10 @@ public class DFSObject implements GameObject {
 
         Stack path = new Stack();
         LinkedList<Position> visited = new LinkedList<>();
-
-
+        int steps = 0;
         path.push(root);
-        //System.out.println("1");
-
+        Position current = (Position) path.peek();
         while (!path.empty()){
-            //System.out.println(path.peek());
-            Position current = (Position) path.pop();
 
             if (visited.contains(goal)){
 
@@ -123,40 +120,35 @@ public class DFSObject implements GameObject {
                 return true;
             }
 
-
-
-
-
             if (!visited.contains(current)){
                 visited.add(current);
-
-
-
+                path.push(current);
 
 
                 if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];
-                    path.push(temp);
-
+                    current = temp;
+                    steps++;
 
                 }
 
                 else if (canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])){
                     Position temp = maze[current.getX()][current.getY() +1];
-                    path.push(temp);
-
+                    current = temp;
+                    steps++;
 
                 }
                 else  if (canMove(current, "east")&& !visited.contains(maze[current.getX()+1][current.getY()])){
                     Position temp = maze[current.getX()+1][current.getY()];
-                    path.push(temp);
-
+                    current = temp;
+                    steps++;
 
                 }
 
                  else if (canMove(current, "north")&& !visited.contains(maze[current.getX()][current.getY()-1])){
                     Position temp = maze[current.getX()][current.getY()-1];
-                    path.push(temp);
+                    current = temp;
+                    steps++;
 
 
                 } else if (    !canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()])
@@ -165,34 +157,22 @@ public class DFSObject implements GameObject {
                             && !canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1]) )
                 {
 
-                     
-                    System.out.println("blindgyde");
+                    visited.add(current);
+                    System.out.println("DEAD-END");
+                    System.out.println("STEP TAKEN:" + steps);
+
+                    if(visited.contains(current)){
+                        System.out.println("POP: " + path.peek());
+                        path.pop();
+
+                    }
                      return false;
                 }
-
-
-
-                else {
-
-                }
-
-
             }
-
             else return false;
-
+            System.out.println(path);
             goPath = visited;
-
-
         }
-
-
-
-
-
-
-
-
 
 
 

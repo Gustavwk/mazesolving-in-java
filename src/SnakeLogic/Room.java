@@ -35,6 +35,7 @@ public class Room {
 
         Wall wall = new Wall(x, y, Color.BLACK);
         objects.add(wall);
+
         maze[x][y].setOccupied(true);
         maze[x][y].setEdge(true);
 

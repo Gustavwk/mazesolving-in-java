@@ -6,6 +6,7 @@ public class Position implements Comparable<Position> {
 
     private int x;
     private int y;
+    private int cost;
     private boolean occupied = false;
     private boolean edge;
     String OccupiedString[] = {"Occopied", "Not Occupied"};
