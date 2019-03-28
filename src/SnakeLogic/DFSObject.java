@@ -120,15 +120,16 @@ public class DFSObject implements GameObject {
                 return true;
             }
 
-            if (!visited.contains(current)){
+            while (!visited.contains(goal)){
                 visited.add(current);
-                path.push(current);
+
 
 
                 if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];
                     current = temp;
                     steps++;
+                    path.push(current);
 
                 }
 
@@ -136,12 +137,14 @@ public class DFSObject implements GameObject {
                     Position temp = maze[current.getX()][current.getY() +1];
                     current = temp;
                     steps++;
+                    path.push(current);
 
                 }
                 else  if (canMove(current, "east")&& !visited.contains(maze[current.getX()+1][current.getY()])){
                     Position temp = maze[current.getX()+1][current.getY()];
                     current = temp;
                     steps++;
+                    path.push(current);
 
                 }
 
@@ -149,34 +152,36 @@ public class DFSObject implements GameObject {
                     Position temp = maze[current.getX()][current.getY()-1];
                     current = temp;
                     steps++;
+                    path.push(current);
 
 
-                } else if (    !canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()])
-                            && !canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1])
-                            && !canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()])
-                            && !canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1]) )
+                } else if (    (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
+                            && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
+                            && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
+                            && (!canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1])) )
                 {
-
-                    visited.add(current);
-                    System.out.println("DEAD-END");
-                    System.out.println("STEP TAKEN:" + steps);
-
-                    if(visited.contains(current)){
-                        System.out.println("POP: " + path.peek());
-                        path.pop();
-
+                    if (path.size() != 0){
+                    if (!visited.contains(current)){
+                        visited.add(current);
                     }
 
-                }
+                    System.out.println("DEAD-END");
+                    System.out.println("STEP TAKEN:" + steps);
+                    System.out.println("POP: " + path.peek());
+                    current = (Position) path.pop();
+
+
+                }}
             }
-            else return false;
-            //System.out.println(path);
-            goPath = visited;
+
         }
+        goPath = visited;
+
+        return false;
+        //System.out.println(path);
 
 
 
-return false;
 }
 
 
