@@ -20,6 +20,9 @@ public class Room {
         addWallToRoom(1,10,objects,maze);
         addWallToRoom(2,10,objects,maze);
         addWallToRoom(2,9,objects,maze);
+        addWallToRoom(3,9,objects,maze);
+        addWallToRoom(3,12,objects,maze);
+        addWallToRoom(4,12,objects,maze);
 
 
 

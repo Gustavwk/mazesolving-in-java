@@ -80,16 +80,9 @@ public class DFSObject implements GameObject {
 
         if (go != goPath.size()-1) {
             go++;
-          System.out.println(goPath.get(go));
+          //System.out.println(goPath.get(go));
           this.position = goPath.get(go);
         }
-
-
-
-
-
-
-
 
     }
 
@@ -114,9 +107,8 @@ public class DFSObject implements GameObject {
         while (!path.empty()){
 
             if (visited.contains(goal)){
-
-                System.out.println("Succes");
                 goPath = visited;
+                System.out.println("MAZE SOLVED WITH DFS - STEPS TAKEN: " + steps );
                 return true;
             }
 
@@ -147,13 +139,11 @@ public class DFSObject implements GameObject {
                     path.push(current);
 
                 }
-
                  else if (canMove(current, "north")&& !visited.contains(maze[current.getX()][current.getY()-1])){
                     Position temp = maze[current.getX()][current.getY()-1];
                     current = temp;
                     steps++;
                     path.push(current);
-
 
                 } else if (    (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
                             && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
@@ -165,9 +155,6 @@ public class DFSObject implements GameObject {
                         visited.add(current);
                     }
 
-                    System.out.println("DEAD-END");
-                    System.out.println("STEP TAKEN:" + steps);
-                    System.out.println("POP: " + path.peek());
                     current = (Position) path.pop();
 
 
@@ -181,23 +168,7 @@ public class DFSObject implements GameObject {
         //System.out.println(path);
 
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Override
     public boolean drawObject(GraphicsContext g, double fieldWidth, double fieldHeight) {
@@ -232,8 +203,6 @@ public class DFSObject implements GameObject {
 
         return false;
     }
-
-
 
     }
 
