@@ -34,6 +34,8 @@ public class Room {
         return maze;
     }
 
+
+
     public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
         Wall wall = new Wall(x, y, Color.BLACK);

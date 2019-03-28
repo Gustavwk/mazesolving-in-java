@@ -40,13 +40,15 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
 
     Room room = new Room();
-    goal defaultGoal = new goal(Color.GREEN, 28,1);
+
 
 
     Position[][] maze = room.populate(items,width,height);
+    goal defaultGoal = new goal(Color.GREEN, 28,1,maze);
 
 
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
+    //DFSObject DFSTwo = new DFSObject(1,18, Color.AQUA,defaultGoal, maze, width, height);
 
     public void btnStartAction(ActionEvent event)
     {
@@ -63,6 +65,7 @@ public class Controller {
     public void initialize()
     {
         DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
+        //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());
 
                 AddItems();
 
@@ -113,6 +116,7 @@ public class Controller {
             ranRam.wallCollision(items);
             //System.out.println(ranRam);
             DFS.update();
+            //DFSTwo.update();
             defaultGoal.update();
 
 
@@ -167,6 +171,8 @@ public class Controller {
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
         DFS.drawObject(g,fieldWidth,fieldHeight);
+
+       // DFSTwo.drawObject(g,fieldWidth,fieldHeight);
         defaultGoal.drawObject(g,fieldWidth,fieldHeight);
 
 

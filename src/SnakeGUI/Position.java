@@ -9,12 +9,13 @@ public class Position implements Comparable<Position> {
     private int cost;
     private boolean occupied = false;
     private boolean edge;
-    String OccupiedString[] = {"Occopied", "Not Occupied"};
+
+    private String[] OccupiedString = {"Occopied", "Not Occupied"};
 
 
     public Position(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.setX(x);
+        this.setY(y);
     }
 
 
@@ -65,12 +66,12 @@ public class Position implements Comparable<Position> {
     @Override
     public String toString() {
         int s;
-        if (this.occupied) {
+        if (this.isOccupied()) {
             s = 0;
         } else {
             s = 1;
         }
-        return "X Coordinat: (" + this.x + ") Y Coordinat (" + this.y + ") and it is " + OccupiedString[s];
+        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s];
     }
 
     @Override
@@ -81,7 +82,7 @@ public class Position implements Comparable<Position> {
             Position otherObject1 = (Position) otherObject;
 
             //return whether x == x and y == y.
-            return (otherObject1.x == this.x && otherObject1.y == this.y);
+            return (otherObject1.getX() == this.getX() && otherObject1.getY() == this.getY());
 
         } catch (ClassCastException e) {
 
@@ -92,12 +93,30 @@ public class Position implements Comparable<Position> {
 
     }
 
+
+
     public void setEdge(boolean edge) {
         this.edge = edge;
     }
 
     public boolean isEdge() {
         return edge;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
+    public String[] getOccupiedString() {
+        return OccupiedString;
+    }
+
+    public void setOccupiedString(String[] occupiedString) {
+        OccupiedString = occupiedString;
     }
 }
 
