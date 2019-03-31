@@ -9,14 +9,14 @@ import java.util.LinkedList;
 public class BFSObject implements GameObject {
     private Position position;
     private Color color;
-    private goal goal;
+    private Goal goal;
     private Position[][] maze;
     private int witdh;
     private int height;
     private LinkedList<Position> goPath = new LinkedList<>();
     private int go = 0;
 
-    public BFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
+    public BFSObject(int X, int Y, Color color, Goal goal, Position[][] maze, int width, int height) {
         this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
@@ -87,11 +87,11 @@ public class BFSObject implements GameObject {
         this.color = color;
     }
 
-    public SnakeLogic.goal getGoal() {
+    public Goal getGoal() {
         return goal;
     }
 
-    public void setGoal(SnakeLogic.goal goal) {
+    public void setGoal(Goal goal) {
         this.goal = goal;
     }
 

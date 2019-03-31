@@ -10,7 +10,7 @@ public class GreedObject extends Ghost implements GameObject {
 
 
 
-    public GreedObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
+    public GreedObject(int X, int Y, Color color, Goal goal, Position[][] maze, int width, int height) {
         this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
@@ -22,7 +22,7 @@ public class GreedObject extends Ghost implements GameObject {
 
     }
 
-    public boolean bestFirst(){}
+    public boolean bestFirst(){return true;}
 
     @Override
     public void update() {

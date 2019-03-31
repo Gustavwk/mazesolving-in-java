@@ -8,7 +8,7 @@ import sun.misc.PostVMInitHook;
 
 import java.util.LinkedList;
 
-public class goal implements GameObject {
+public class Goal implements GameObject {
     private Position position;
     private Color color;
     private Position[][] maze;
@@ -24,7 +24,7 @@ public class goal implements GameObject {
 
 
 
-    public goal(Color color, int X, int Y, Position[][] maze) {
+    public Goal(Color color, int X, int Y, Position[][] maze) {
         this.setPosition(new Position(X,Y));
         this.setColor(color);
         this.maze = maze;
@@ -73,55 +73,38 @@ public class goal implements GameObject {
     public boolean mazeCost(Position goal){
 
         int cost = 1;
-
         goal.setCost(cost);
-
         north.setCost(1);
-
         east.setCost(1);
-
         west.setCost(1);
-
         south.setCost(1);
-
-
-        mazeCost(north,south,west,east,cost);
-        System.out.println("CHECKER VAL: " + checkerValue);
-
-
+        mazeCost(north, south, west, east, cost);
         return true;
     }
 
-    public boolean mazeCost(Position north, Position south, Position west, Position east, int cost){
+    public void mazeCost(Position north, Position south, Position west, Position east, int cost) {
 
 
 
-    if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
-        Position nextNorth = maze[north.getX()][north.getY() - 1];
-        expandCost(north, cost, nextNorth);
+            if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
+                Position nextNorth = maze[north.getX()][north.getY() - 1];
+                expandCost(north, cost, nextNorth);
+            }
+            if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
+                Position nextSouth = maze[south.getX()][south.getY() + 1];
+                expandCost(south, cost, nextSouth);
 
-    }
+            }
+            if (east.getX() < maxCoordinat && east.getX() < maxCoordinat) {
+                Position nextEast = maze[east.getX() + 1][east.getY()];
+                expandCost(east, cost, nextEast);
+            }
 
-    if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
-        Position nextSouth = maze[south.getX()][south.getY() + 1];
-        expandCost(south, cost, nextSouth);
-
-
-    }
-    if (east.getX() < maxCoordinat && east.getX() < maxCoordinat) {
-        Position nextEast = maze[east.getX() + 1][east.getY()];
-        expandCost(east, cost, nextEast);
-
-    }
-
-    if (west.getX() < maxCoordinat && west.getX() < maxCoordinat) {
-
-        Position nextWest = maze[west.getX() - 1][west.getY()];
-        expandCost(west, cost, nextWest);
-    }
-
-      return true;
-    }
+            if (west.getX() < maxCoordinat && west.getX() < maxCoordinat) {
+                Position nextWest = maze[west.getX() - 1][west.getY()];
+                expandCost(west, cost, nextWest);
+            }
+        }
 
     private void expandCost(Position position, int cost, Position nextPosition) {
         cost++;
@@ -133,13 +116,11 @@ public class goal implements GameObject {
             nextPosition.setCost(cost);
             left.setCost(cost);
             right.setCost(cost);
-
         }
-while (cost < 10) {
-    expandCost(nextPosition, cost, left);
-    expandCost(nextPosition, cost, right);
-}
-
+        /*while (cost < 3){
+        expandCost(nextPosition,cost,left);
+        expandCost(nextPosition,cost,right);
+    }*/
     }
 
 
@@ -153,15 +134,12 @@ while (cost < 10) {
     public Position getPosition() {
         return position;
     }
-
     public void setPosition(Position position) {
         this.position = position;
     }
-
     public Position[][] getMaze() {
         return maze;
     }
-
     public void setMaze(Position[][] maze) {
         this.maze = maze;
     }

@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public abstract class Ghost implements GameObject {
     protected  Position position;
     protected  Color color;
-    protected  goal goal;
+    protected Goal goal;
     protected  Position[][] maze;
     protected  int width;
     protected  int height;
@@ -85,11 +85,11 @@ public abstract class Ghost implements GameObject {
         this.color = color;
     }
 
-    public SnakeLogic.goal getGoal() {
+    public Goal getGoal() {
         return goal;
     }
 
-    public void setGoal(SnakeLogic.goal goal) {
+    public void setGoal(Goal goal) {
         this.goal = goal;
     }
 

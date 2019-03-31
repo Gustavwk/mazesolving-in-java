@@ -9,7 +9,7 @@ import java.util.Stack;
 public class DFSObject extends Ghost implements GameObject {
 
 
-    public DFSObject(int X, int Y, Color color, goal goal, Position[][] maze, int width, int height) {
+    public DFSObject(int X, int Y, Color color, Goal goal, Position[][] maze, int width, int height) {
         this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
