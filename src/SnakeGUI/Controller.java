@@ -44,7 +44,7 @@ public class Controller {
 
 
     Position[][] maze = room.populate(items,width,height);
-    goal defaultGoal = new goal(Color.GREEN, 28,1,maze);
+    goal defaultGoal = new goal(Color.GREEN, 15,15,maze);
 
 
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
@@ -65,6 +65,9 @@ public class Controller {
     public void initialize()
     {
         DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
+        defaultGoal.mazeCost(defaultGoal.getPosition());
+
+        print2D(maze);
         //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());
 
                 AddItems();
@@ -187,4 +190,6 @@ public class Controller {
             for (int j = 0; j < mat[i].length; j++)
                 System.out.println(mat[i][j] + " ");
     }
+
 }
+
