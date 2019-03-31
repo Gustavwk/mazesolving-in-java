@@ -65,7 +65,7 @@ public class Controller {
     public void initialize()
     {
         DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
-        defaultGoal.mazeCost(defaultGoal.getPosition());
+//        defaultGoal.mazeCost(defaultGoal.getPosition());
 
         print2D(maze);
         //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());
@@ -188,8 +188,9 @@ public class Controller {
 
             // Loop through all elements of current row
             for (int j = 0; j < mat[i].length; j++)
+                if (mat[i][j].getCost() !=0){
                 System.out.println(mat[i][j] + " ");
-    }
+    }}
 
 }
 

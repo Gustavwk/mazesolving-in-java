@@ -77,29 +77,35 @@ public class goal implements GameObject {
         goal.setCost(cost);
 
         north.setCost(1);
+
         east.setCost(1);
+
         west.setCost(1);
+
         south.setCost(1);
 
+
         mazeCost(north,south,west,east,cost);
-        System.out.println(maxCoordinat);
+        System.out.println("CHECKER VAL: " + checkerValue);
 
 
         return true;
     }
 
     public boolean mazeCost(Position north, Position south, Position west, Position east, int cost){
-        cost++;
+
 
 
     if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
         Position nextNorth = maze[north.getX()][north.getY() - 1];
         expandCost(north, cost, nextNorth);
+
     }
 
     if (north.getX() < maxCoordinat && north.getX() < maxCoordinat) {
         Position nextSouth = maze[south.getX()][south.getY() + 1];
         expandCost(south, cost, nextSouth);
+
 
     }
     if (east.getX() < maxCoordinat && east.getX() < maxCoordinat) {
@@ -114,27 +120,26 @@ public class goal implements GameObject {
         expandCost(west, cost, nextWest);
     }
 
-
-
-
-
-
-
-
       return true;
     }
 
     private void expandCost(Position position, int cost, Position nextPosition) {
-        if(nextPosition.getCost() ==0 ){
+        cost++;
+        Position left = maze[position.getX()-1][position.getY()];
+        Position right = maze[position.getX()+1][position.getY()];
+
+        if(nextPosition.getCost() == 0 ){
 
             nextPosition.setCost(cost);
-            Position Left = maze[position.getX()-1][position.getY()];
-            Position Right = maze[position.getX()+1][position.getY()];
-
-            Left.setCost(cost);
-            Right.setCost(cost);
+            left.setCost(cost);
+            right.setCost(cost);
 
         }
+while (cost < 10) {
+    expandCost(nextPosition, cost, left);
+    expandCost(nextPosition, cost, right);
+}
+
     }
 
 
@@ -160,27 +165,6 @@ public class goal implements GameObject {
     public void setMaze(Position[][] maze) {
         this.maze = maze;
     }
-    public boolean costAssigned (){
-
-        for (int i = 0; i < maze.length ; i++) {
-            for (int j = 0; j < maze[i].length ; j++) {
-                if (maze[i][j].getCost() != 0){
-                    checkerValue++;
 
 
-                }
-            }
-        }
-        if (checkerValue == maxCoordinat * maxCoordinat){
-            System.out.println("TRUE");
-            System.out.println("Values Assignet: " + checkerValue);
-            return true;
-
-        } else {
-            System.out.println("FALSE");
-            System.out.println("Values Assignet: " + checkerValue);
-            return  false;
-        }
-
-    }
 }
