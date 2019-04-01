@@ -35,9 +35,11 @@ public class Controller {
 
 
 
+
     Player player = new Player(5,5, Color.WHITE);
     RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     ArrayList<Item> items = new ArrayList<Item>();
+
 
     Room room = new Room();
 
@@ -45,6 +47,7 @@ public class Controller {
 
     Position[][] maze = room.populate(items,width,height);
     Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze);
+    PositionTree<Position> tree = new PositionTree<>(maze);
 
 
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
@@ -66,6 +69,14 @@ public class Controller {
     {
         DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
        defaultGoal.mazeCost(defaultGoal.getPosition());
+
+       /** Tree Testing
+        tree.add(defaultGoal.getPosition());
+        tree.add(maze[15][16]);
+        tree.add(maze[15][17]);
+        tree.add(maze[15][18]);
+        System.out.println(tree);
+        **/
 
         print2D(maze);
         //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());

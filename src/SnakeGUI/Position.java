@@ -10,6 +10,11 @@ public class Position implements Comparable<Position> {
     private boolean occupied = false;
     private boolean edge;
 
+    private Position west;
+    private Position south;
+    private Position east;
+    private Position north;
+
 
 
     private String[] OccupiedString = {"Occopied", "Not Occupied"};
@@ -125,5 +130,36 @@ public class Position implements Comparable<Position> {
     }
 
 
+    public Position getWest() {
+        return west;
+    }
+
+    public void setWest(Position west) {
+        this.west = west;
+    }
+
+    public Position getSouth() {
+        return south;
+    }
+
+    public void setSouth(Position south) {
+        this.south = south;
+    }
+
+    public Position getEast() {
+        return east;
+    }
+
+    public void setEast(Position east) {
+        this.east = east;
+    }
+
+    public Position getNorth() {
+        return north;
+    }
+
+    public void setNorth(Position north) {
+        this.north = north;
+    }
 }
 

@@ -29,6 +29,12 @@ public abstract class Ghost implements GameObject {
     }
 
 
+    /**
+     * Nedenstående er fundet på nettet og skal måske ligeforståes ekstra meget
+     * @param currentPosition
+     * @param s
+     * @return
+     */
 
     public boolean canMove(Position currentPosition, String s) {
 
