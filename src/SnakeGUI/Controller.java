@@ -199,9 +199,9 @@ public class Controller {
 
             // Loop through all elements of current row
             for (int j = 0; j < mat[i].length; j++)
-                if (mat[i][j].getCost() !=0){
+               // if (mat[i][j].getCost() !=0){
                 System.out.println(mat[i][j] + " ");
-    }}
+    }//}
 
 }
 

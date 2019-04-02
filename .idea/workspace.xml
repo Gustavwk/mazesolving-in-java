@@ -143,8 +143,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Goal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+            <state relative-caret-position="35">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="120" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5494#5495#0" expanded="true" />
@@ -674,12 +674,12 @@
       <workItem from="1554047928154" duration="2707000" />
       <workItem from="1554118015236" duration="5454000" />
       <workItem from="1554185650730" duration="4952000" />
-      <workItem from="1554197909793" duration="1048000" />
+      <workItem from="1554197909793" duration="1068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168295000" />
+    <option name="totallyTimeSpent" value="168315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1024,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Goal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+        <state relative-caret-position="35">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="120" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5494#5495#0" expanded="true" />
