@@ -6,7 +6,7 @@ public class Position implements Comparable<Position> {
 
     private int x;
     private int y;
-    private int cost;
+    private double cost;
     private boolean occupied = false;
     private boolean edge;
 
@@ -113,11 +113,11 @@ public class Position implements Comparable<Position> {
         return edge;
     }
 
-    public int getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 

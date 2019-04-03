@@ -16,7 +16,7 @@ public class Goal implements GameObject {
     public ArrayList<Item> items;
     private int maxCoordinateX;
     private int maxCoordinateY;
-    private int checkerValue;
+
 
 
 
@@ -39,8 +39,8 @@ public class Goal implements GameObject {
 
         items = (ArrayList<Item>) item;
 
-        maxCoordinateX = this.maze.length - 2 ;
-        maxCoordinateY = this.maze.length -12; // fixer vi serenere
+        maxCoordinateX = this.maze.length -1 ;
+        maxCoordinateY = this.maze.length -11; // fixer vi serenere
 
     }
 
@@ -78,57 +78,67 @@ public class Goal implements GameObject {
 
     public boolean mazeCost(Position goal){
 
-        int cost = 1;
+
         goal.setCost(0);
         hasSetCost.add(goal);
 
-        north.setCost(1);
-        setMarkedTile(north);
+        north.setCost(calculateDistance(goal,north));
+        //setMarkedTile(north);
         hasSetCost.add(north);
 
-        east.setCost(1);
+        east.setCost(calculateDistance(goal,east));
         hasSetCost.add(east);
-        setMarkedTile(east);
+        //setMarkedTile(east);
 
-        west.setCost(1);
+        west.setCost(calculateDistance(goal,west));
         hasSetCost.add(west);
-        setMarkedTile(west);
+        //setMarkedTile(west);
 
-        south.setCost(1);
+        south.setCost(calculateDistance(goal,south));
         hasSetCost.add(south);
-        setMarkedTile(south);
+        //setMarkedTile(south);
 
-        mazeCost(north, south, west, east, cost);
+        mazeCost(north, south, west, east, goal.getCost());
         return true;
     }
+//dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+    private double calculateDistance(Position posOne, Position posTwo) {
 
-    public void mazeCost(Position north, Position south, Position west, Position east, int cost) {
+        return Math.sqrt(               ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX())) +
+                                        ((posTwo.getY() - posOne.getY())*  (posTwo.getY() - posOne.getY()))             );
+    }
+
+    public void mazeCost(Position north, Position south, Position west, Position east, double cost) {
 
 
 
 
                 Position nextNorth = maze[north.getX()][north.getY() - 1];
-                expandCost(north, cost, nextNorth);
+                expandCost(north, nextNorth);
 
 
                 Position nextSouth = maze[south.getX()][south.getY() + 1];
-                expandCost(south, cost, nextSouth);
+                expandCost(south, nextSouth);
 
 
 
                 Position nextEast = maze[east.getX() + 1][east.getY()];
-                expandCost(east, cost, nextEast);
+                expandCost(east, nextEast);
 
 
 
                 Position nextWest = maze[west.getX() - 1][west.getY()];
-                expandCost(west, cost, nextWest);
+                expandCost(west, nextWest);
 
         }
 
-    private void expandCost(Position position, int cost, Position nextPosition) {
+    private void expandCost(Position position, Position nextPosition) {
 
-        cost++;
+
+
+
+
+        //cost++;
 
         if (position.getX() < maxCoordinateX && position.getY() < maxCoordinateY &&
                 nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY &&
@@ -139,7 +149,7 @@ public class Goal implements GameObject {
             Position up = maze[position.getX()][position.getY() - 1];         // if (x || y = 0) så stop!
             Position down = maze[position.getX()][position.getY() + 1];
 
-            if (left.getX() > 0 && left.getY() > 0 &&
+            if (    left.getX() > 0 && left.getY() > 0 &&
                     right.getX() > 0 && right.getY() > 0 &&
                     up.getX() > 0 && up.getY() > 0 &&
                     down.getX() > 0 && down.getY() > 0) {
@@ -151,35 +161,36 @@ public class Goal implements GameObject {
 
 
                 if (!hasSetCost.contains(left)) {
-                    left.setCost(cost);
+                    left.setCost(calculateDistance(this.position,left));
+
                     //setMarkedTile(left);
                     hasSetCost.add(left);
-                    expandCost(left, cost, leftNext);
+                    expandCost(left, leftNext);
 
 
                 }
                 if (!hasSetCost.contains(right)) {
-                    right.setCost(cost);
+                    right.setCost(calculateDistance(this.position,right));
                     //setMarkedTile(right);
                     hasSetCost.add(right);
-                    expandCost(right, cost, rightNext);
+                    expandCost(right, rightNext);
 
 
 
                 }
                 if (!hasSetCost.contains(up)) {
-                    up.setCost(cost);
+                    up.setCost(calculateDistance(this.position,up));
                     //setMarkedTile(up);
                     hasSetCost.add(up);
-                    expandCost(up, cost, upNext);
+                    expandCost(up, upNext);
 
 
                 }
                 if (!hasSetCost.contains(down)) {
-                    down.setCost(cost);
+                    down.setCost(calculateDistance(this.position,down));
                     //setMarkedTile(down);
                     hasSetCost.add(down);
-                    expandCost(down, cost, downNext);
+                    expandCost(down, downNext);
 
                 }
             }
