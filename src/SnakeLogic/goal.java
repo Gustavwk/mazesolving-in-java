@@ -126,40 +126,46 @@ public class Goal implements GameObject {
 
                 Position left = maze[position.getX()-1][position.getY()];
                 Position right = maze[position.getX() + 1][position.getY()];    // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
-                Position up = maze[position.getX()][position.getY()-1];         // if (x || y = 0) så stop!
+                Position up = maze[position.getX()][position.getY()- 1];         // if (x || y = 0) så stop!
                 Position down = maze[position.getX()][position.getY() + 1];
 
+                if (    left.getX()  >  0 && left.getY()  > 0 &&
+                        right.getX() >  0 && right.getY() > 0 &&
+                        up.getX()    >  0 && up.getY()    > 0 &&
+                        down.getX()  >  0 && down.getY()  > 0 ) {
 
-                if (!hasSetCost.contains(nextPosition)) {
-                    nextPosition.setCost(cost);
-                    hasSetCost.add(nextPosition);
+                    Position leftNext =  maze[left.getX()-1] [left.getY()];
+                    Position rightNext = maze[right.getX()+1][right.getY()];
+                    Position upNext =    maze[up.getX()]     [up.getY()-1];
+                    Position downNext =  maze[down.getX()]   [down.getY()+1];
 
+
+
+                    if (!hasSetCost.contains(left)) {
+                        left.setCost(cost);
+                        hasSetCost.add(left);
+                        expandCost(leftNext, cost, left);
+
+                    }
+                    if (!hasSetCost.contains(right)) {
+                        right.setCost(cost);
+                        hasSetCost.add(right);
+                        expandCost(rightNext, cost, right);
+
+
+                    }
+                    if (!hasSetCost.contains(up)) {
+                        up.setCost(cost);
+                        hasSetCost.add(up);
+                        expandCost(upNext, cost, up);
+
+                    }
+                    if (!hasSetCost.contains(down)) {
+                        down.setCost(cost);
+                        hasSetCost.add(down);
+                        expandCost(downNext, cost, down);
+                    }
                 }
-                if (!hasSetCost.contains(left)) {
-                    left.setCost(cost);
-                    hasSetCost.add(left);
-                    expandCost(nextPosition, cost, left);
-
-                }
-                if (!hasSetCost.contains(right)) {
-                    right.setCost(cost);
-                    hasSetCost.add(right);
-                    expandCost(nextPosition, cost, right);
-
-
-                }
-                if (!hasSetCost.contains(up)) {
-                    up.setCost(cost);
-                    hasSetCost.add(up);
-                    expandCost(nextPosition, cost, up);
-
-                }
-                if (!hasSetCost.contains(down)) {
-                    down.setCost(cost);
-                    hasSetCost.add(down);
-                    expandCost(nextPosition, cost, down);
-                }
-
 
 
         }

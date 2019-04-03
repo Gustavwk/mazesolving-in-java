@@ -9,13 +9,12 @@ import java.util.Stack;
 public class DFSObject extends Ghost implements GameObject {
 
 
-    public DFSObject(int X, int Y, Color color, Goal goal, Position[][] maze, int width, int height) {
+    public DFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
         this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
-        this.setWidth(width);
-        this.setHeight(height);
+
         System.out.println(this.getGoal().getPosition());
 
 
@@ -86,13 +85,11 @@ public class DFSObject extends Ghost implements GameObject {
                             && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
                             && (!canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1])) )
                 {
-                    if (path.size() != 0){
-                    if (!visited.contains(current)){
-                        visited.add(current);
-                    }
+
+
                     current = (Position) path.pop();
 
-                }}
+                }
             }
 
         }

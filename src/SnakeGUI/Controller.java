@@ -5,7 +5,6 @@ import SnakeLogic.*;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
@@ -44,7 +43,7 @@ public class Controller {
     Position[][] maze = room.populate(items,width,height);
     Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze);
     PositionTree<Position> tree = new PositionTree<>(maze);
-    DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
+    DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
 
 
 
@@ -97,10 +96,10 @@ public class Controller {
 
     private void AddItems() {
 
-        DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
+        dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
         defaultGoal.mazeCost(defaultGoal.getPosition());
         print2D(maze);
-
+        
 
 
 
@@ -123,7 +122,7 @@ public class Controller {
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
-            DFS.update();
+            dfsCrawler.update();
             defaultGoal.update();
             drawCanvas();
 
@@ -169,7 +168,7 @@ public class Controller {
         // draw 'player'
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
-        DFS.drawObject(g,fieldWidth,fieldHeight);
+        dfsCrawler.drawObject(g,fieldWidth,fieldHeight);
         defaultGoal.drawObject(g,fieldWidth,fieldHeight);
 
 
@@ -182,8 +181,12 @@ public class Controller {
 
             // Loop through all elements of current row
             for (int j = 0; j < mat[i].length; j++)
-                if (mat[i][j].getCost() !=0){
-                System.out.println(mat[i][j] + " ");
+                if (mat[i][j].getCost() != 0){
+
+                    System.out.println(mat[i][j] + " ");
+
+
+
     }}
 
 }
