@@ -5,6 +5,7 @@ import SnakeLogic.*;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
@@ -44,6 +45,7 @@ public class Controller {
     Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze);
     PositionTree<Position> tree = new PositionTree<>(maze);
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
+
 
 
     public void btnStartAction(ActionEvent event)
@@ -94,9 +96,11 @@ public class Controller {
     }
 
     private void AddItems() {
+
         DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
         defaultGoal.mazeCost(defaultGoal.getPosition());
         print2D(maze);
+
 
 
 

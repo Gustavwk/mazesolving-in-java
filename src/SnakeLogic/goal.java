@@ -10,7 +10,7 @@ public class Goal implements GameObject {
     private Position position;
     private Color color;
     private Position[][] maze;
-    private LinkedList<Position> hasSetCost = new LinkedList<>();
+    public LinkedList<Position> hasSetCost = new LinkedList<>();
     private int maxCoordinateX;
     private int maxCoordinateY;
     private int checkerValue;
@@ -96,7 +96,7 @@ public class Goal implements GameObject {
 
 
 
-            
+
                 Position nextNorth = maze[north.getX()][north.getY() - 1];
                 expandCost(north, cost, nextNorth);
 
@@ -125,36 +125,36 @@ public class Goal implements GameObject {
                 position.getX() > 0 && position.getY() > 0) {
 
                 Position left = maze[position.getX()-1][position.getY()];
-                Position right = maze[position.getX() + 1][position.getY()]; // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
-                Position up = maze[position.getX()][position.getY()-1];        // if (x || y = 0) så stop!
+                Position right = maze[position.getX() + 1][position.getY()];    // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
+                Position up = maze[position.getX()][position.getY()-1];         // if (x || y = 0) så stop!
                 Position down = maze[position.getX()][position.getY() + 1];
 
 
-                if (!hasSetCost.contains(nextPosition) && nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY) {
+                if (!hasSetCost.contains(nextPosition)) {
                     nextPosition.setCost(cost);
                     hasSetCost.add(nextPosition);
 
                 }
-                if (!hasSetCost.contains(left) && left.getX() < maxCoordinateX && left.getY() < maxCoordinateY) {
+                if (!hasSetCost.contains(left)) {
                     left.setCost(cost);
                     hasSetCost.add(left);
                     expandCost(nextPosition, cost, left);
 
                 }
-                if (!hasSetCost.contains(right) && right.getX() < maxCoordinateX && right.getY() < maxCoordinateY) {
+                if (!hasSetCost.contains(right)) {
                     right.setCost(cost);
                     hasSetCost.add(right);
                     expandCost(nextPosition, cost, right);
 
 
                 }
-                if (!hasSetCost.contains(up) && up.getX() < maxCoordinateX && up.getY() < maxCoordinateY) {
+                if (!hasSetCost.contains(up)) {
                     up.setCost(cost);
                     hasSetCost.add(up);
                     expandCost(nextPosition, cost, up);
 
                 }
-                if (!hasSetCost.contains(down) && down.getX() < maxCoordinateX && down.getY() < maxCoordinateY) {
+                if (!hasSetCost.contains(down)) {
                     down.setCost(cost);
                     hasSetCost.add(down);
                     expandCost(nextPosition, cost, down);
