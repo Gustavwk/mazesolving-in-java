@@ -167,19 +167,15 @@ public class Controller {
 
         g.clearRect(0,0,width*fieldWidth ,height*fieldHeight);
 
-        // draw all fields
-        g.setFill(Color.TAN);
-        for (int i = 0; i < width ; i++) {
-            for (int j = 0; j < height ; j++) {
-                g.fillRoundRect(i*fieldWidth, j*fieldHeight, fieldWidth,fieldHeight, 5, 5);
-            }
-        }
 
         // draw items
         for (Item item : items)
         {
             item.drawObject(g,fieldWidth,fieldHeight);
+
         }
+
+
 
         // draw 'player'
         player.drawObject(g,fieldWidth,fieldHeight);

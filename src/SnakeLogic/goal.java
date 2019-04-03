@@ -1,10 +1,8 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import sun.misc.PostVMInitHook;
 
 import java.util.LinkedList;
 
@@ -13,8 +11,8 @@ public class Goal implements GameObject {
     private Color color;
     private Position[][] maze;
     private LinkedList<Position> hasSetCost = new LinkedList<>();
-    private int maxCoordinatX;
-    private int maxCoordinatY;
+    private int maxCoordinateX;
+    private int maxCoordinateY;
     private int checkerValue;
 
 
@@ -35,8 +33,8 @@ public class Goal implements GameObject {
         south = maze[this.position.getX()][this.position.getY() + 1];
         west = maze[this.position.getX() - 1][this.position.getY()];
 
-        maxCoordinatX = this.maze.length - 2 ;
-        maxCoordinatY = this.maze.length -12; // fixer vi serenere
+        maxCoordinateX = this.maze.length - 2 ;
+        maxCoordinateY = this.maze.length -12; // fixer vi serenere
 
     }
 
@@ -98,21 +96,21 @@ public class Goal implements GameObject {
 
 
 
-            if (north.getX() < maxCoordinatX && north.getY() < maxCoordinatY) {
+            if (north.getX() < maxCoordinateX && north.getY() < maxCoordinateY) {
                 Position nextNorth = maze[north.getX()][north.getY() - 1];
                 expandCost(north, cost, nextNorth);
             }
-            if (north.getX() < maxCoordinatX && north.getY() < maxCoordinatY) {
+            if (north.getX() < maxCoordinateX && north.getY() < maxCoordinateY) {
                 Position nextSouth = maze[south.getX()][south.getY() + 1];
                 expandCost(south, cost, nextSouth);
 
             }
-            if (east.getX() < maxCoordinatX && east.getY() < maxCoordinatY) {
+            if (east.getX() < maxCoordinateX && east.getY() < maxCoordinateY) {
                 Position nextEast = maze[east.getX() + 1][east.getY()];
                 expandCost(east, cost, nextEast);
             }
 
-            if (west.getX() < maxCoordinatX && west.getY() < maxCoordinatY) {
+            if (west.getX() < maxCoordinateX && west.getY() < maxCoordinateY) {
                 Position nextWest = maze[west.getX() - 1][west.getY()];
                 expandCost(west, cost, nextWest);
             }
@@ -122,8 +120,8 @@ public class Goal implements GameObject {
 
        cost++;
 
-        if (    position.getX() < maxCoordinatX && position.getY() < maxCoordinatY &&
-                nextPosition.getX() < maxCoordinatX && nextPosition.getY() < maxCoordinatY ) {
+        if (    position.getX() < maxCoordinateX && position.getY() < maxCoordinateY &&
+                nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY) {
 
                 Position left = maze[position.getX()][position.getY()];
                 Position right = maze[position.getX() + 1][position.getY()]; // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
@@ -131,31 +129,31 @@ public class Goal implements GameObject {
                 Position down = maze[position.getX()][position.getY() + 1];
 
 
-                if (!hasSetCost.contains(nextPosition) && nextPosition.getX() < maxCoordinatX && nextPosition.getY() < maxCoordinatY) {
+                if (!hasSetCost.contains(nextPosition) && nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY) {
                     nextPosition.setCost(cost);
                     hasSetCost.add(nextPosition);
 
                 }
-                if (!hasSetCost.contains(left) && left.getX() < maxCoordinatX && left.getY() < maxCoordinatY) {
+                if (!hasSetCost.contains(left) && left.getX() < maxCoordinateX && left.getY() < maxCoordinateY) {
                     left.setCost(cost);
                     hasSetCost.add(left);
                     expandCost(nextPosition, cost, left);
 
                 }
-                if (!hasSetCost.contains(right) && right.getX() < maxCoordinatX && right.getY() < maxCoordinatY) {
+                if (!hasSetCost.contains(right) && right.getX() < maxCoordinateX && right.getY() < maxCoordinateY) {
                     right.setCost(cost);
                     hasSetCost.add(right);
                     expandCost(nextPosition, cost, right);
 
 
                 }
-                if (!hasSetCost.contains(up) && up.getX() < maxCoordinatX && up.getY() < maxCoordinatY) {
+                if (!hasSetCost.contains(up) && up.getX() < maxCoordinateX && up.getY() < maxCoordinateY) {
                     up.setCost(cost);
                     hasSetCost.add(up);
                     expandCost(nextPosition, cost, up);
 
                 }
-                if (!hasSetCost.contains(down) && down.getX() < maxCoordinatX && down.getY() < maxCoordinatY) {
+                if (!hasSetCost.contains(down) && down.getX() < maxCoordinateX && down.getY() < maxCoordinateY) {
                     down.setCost(cost);
                     hasSetCost.add(down);
                     expandCost(nextPosition, cost, down);
