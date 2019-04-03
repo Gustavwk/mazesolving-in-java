@@ -4,16 +4,20 @@ import SnakeGUI.Position;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Goal implements GameObject {
     private Position position;
     private Color color;
     private Position[][] maze;
     public LinkedList<Position> hasSetCost = new LinkedList<>();
+    public ArrayList<Item> items;
     private int maxCoordinateX;
     private int maxCoordinateY;
     private int checkerValue;
+
 
 
     private Position north;
@@ -23,7 +27,7 @@ public class Goal implements GameObject {
 
 
 
-    public Goal(Color color, int X, int Y, Position[][] maze) {
+    public Goal(Color color, int X, int Y, Position[][] maze, List item) {
         this.setPosition(new Position(X,Y));
         this.setColor(color);
         this.maze = maze;
@@ -32,6 +36,8 @@ public class Goal implements GameObject {
         east = maze[this.position.getX() + 1][this.position.getY()];
         south = maze[this.position.getX()][this.position.getY() + 1];
         west = maze[this.position.getX() - 1][this.position.getY()];
+
+        items = (ArrayList<Item>) item;
 
         maxCoordinateX = this.maze.length - 2 ;
         maxCoordinateY = this.maze.length -12; // fixer vi serenere
@@ -77,16 +83,20 @@ public class Goal implements GameObject {
         hasSetCost.add(goal);
 
         north.setCost(1);
+        setMarkedTile(north);
         hasSetCost.add(north);
 
         east.setCost(1);
         hasSetCost.add(east);
+        setMarkedTile(east);
 
         west.setCost(1);
         hasSetCost.add(west);
+        setMarkedTile(west);
 
         south.setCost(1);
         hasSetCost.add(south);
+        setMarkedTile(south);
 
         mazeCost(north, south, west, east, cost);
         return true;
@@ -118,59 +128,70 @@ public class Goal implements GameObject {
 
     private void expandCost(Position position, int cost, Position nextPosition) {
 
-       cost++;
+        cost++;
 
-        if (    position.getX() < maxCoordinateX && position.getY() < maxCoordinateY &&
+        if (position.getX() < maxCoordinateX && position.getY() < maxCoordinateY &&
                 nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY &&
-                position.getX() > 0 && position.getY() > 0) {
+                position.getX() > -1 && position.getY() > -1) {
 
-                Position left = maze[position.getX()-1][position.getY()];
-                Position right = maze[position.getX() + 1][position.getY()];    // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
-                Position up = maze[position.getX()][position.getY()- 1];         // if (x || y = 0) så stop!
-                Position down = maze[position.getX()][position.getY() + 1];
+            Position left = maze[position.getX() - 1][position.getY()];
+            Position right = maze[position.getX() + 1][position.getY()];    // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
+            Position up = maze[position.getX()][position.getY() - 1];         // if (x || y = 0) så stop!
+            Position down = maze[position.getX()][position.getY() + 1];
 
-                if (    left.getX()  >  0 && left.getY()  > 0 &&
-                        right.getX() >  0 && right.getY() > 0 &&
-                        up.getX()    >  0 && up.getY()    > 0 &&
-                        down.getX()  >  0 && down.getY()  > 0 ) {
+            if (left.getX() > 0 && left.getY() > 0 &&
+                    right.getX() > 0 && right.getY() > 0 &&
+                    up.getX() > 0 && up.getY() > 0 &&
+                    down.getX() > 0 && down.getY() > 0) {
 
-                    Position leftNext =  maze[left.getX()-1] [left.getY()];
-                    Position rightNext = maze[right.getX()+1][right.getY()];
-                    Position upNext =    maze[up.getX()]     [up.getY()-1];
-                    Position downNext =  maze[down.getX()]   [down.getY()+1];
-
-
-
-                    if (!hasSetCost.contains(left)) {
-                        left.setCost(cost);
-                        hasSetCost.add(left);
-                        expandCost(leftNext, cost, left);
-
-                    }
-                    if (!hasSetCost.contains(right)) {
-                        right.setCost(cost);
-                        hasSetCost.add(right);
-                        expandCost(rightNext, cost, right);
+                Position leftNext = maze[left.getX() - 1][left.getY()];
+                Position rightNext = maze[right.getX() + 1][right.getY()];
+                Position upNext = maze[up.getX()][up.getY() - 1];
+                Position downNext = maze[down.getX()][down.getY() + 1];
 
 
-                    }
-                    if (!hasSetCost.contains(up)) {
-                        up.setCost(cost);
-                        hasSetCost.add(up);
-                        expandCost(upNext, cost, up);
+                if (!hasSetCost.contains(left)) {
+                    left.setCost(cost);
+                    //setMarkedTile(left);
+                    hasSetCost.add(left);
+                    expandCost(left, cost, leftNext);
 
-                    }
-                    if (!hasSetCost.contains(down)) {
-                        down.setCost(cost);
-                        hasSetCost.add(down);
-                        expandCost(downNext, cost, down);
-                    }
+
                 }
+                if (!hasSetCost.contains(right)) {
+                    right.setCost(cost);
+                    //setMarkedTile(right);
+                    hasSetCost.add(right);
+                    expandCost(right, cost, rightNext);
+
+
+
+                }
+                if (!hasSetCost.contains(up)) {
+                    up.setCost(cost);
+                    //setMarkedTile(up);
+                    hasSetCost.add(up);
+                    expandCost(up, cost, upNext);
+
+
+                }
+                if (!hasSetCost.contains(down)) {
+                    down.setCost(cost);
+                    //setMarkedTile(down);
+                    hasSetCost.add(down);
+                    expandCost(down, cost, downNext);
+
+                }
+            }
 
 
         }
 
-        
+
+    }
+
+    public void setMarkedTile(Position position){
+        items.add(new Tile(position.getX(), position.getY(), Color.DARKRED));
     }
 
 

@@ -52,7 +52,7 @@ public class Room {
 
     public boolean addTileToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
-        Tile tile = new Tile(x, y);
+        Tile tile = new Tile(x,y, Color.TAN);
         objects.add(tile);
 
 
