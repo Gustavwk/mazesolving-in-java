@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 
 public abstract class Item implements GameObject {
     protected Color color;
-    protected Position position;
+    private Position position;
 
 
     @Override
@@ -18,7 +18,7 @@ public abstract class Item implements GameObject {
     @Override
     public boolean drawObject(GraphicsContext g, double fieldWidth, double fieldHeight) {
         g.setFill(this.color);
-        g.fillRoundRect(this.position.getX() * fieldWidth, this.position.getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
+        g.fillRoundRect(this.getPosition().getX() * fieldWidth, this.getPosition().getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
         return true;
 
     }
@@ -27,10 +27,18 @@ public abstract class Item implements GameObject {
     }
 
     public int getX() {
-        return this.position.getX();
+        return this.getPosition().getX();
     }
 
     public int getY() {
-        return this.position.getX();
+        return this.getPosition().getX();
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }

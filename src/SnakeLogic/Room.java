@@ -15,8 +15,8 @@ public class Room {
     public Position[][] populate(List<Item> objects, int width, int height) {
 
         Position[][] maze = new Position[width][height];
-        layFloor(width,height,objects,maze);
         maze = initMazArray(width, height, maze);
+        layFloor(objects,maze);
         mazeBoarders(width, height, objects, maze);
 
         addWallToRoom(1,10,objects,maze);
@@ -41,8 +41,9 @@ public class Room {
 
     public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
-        Wall wall = new Wall(x, y, Color.BLACK);
+        Wall wall = new Wall(x, y);
         objects.add(wall);
+
 
         maze[x][y].setOccupied(true);
         maze[x][y].setEdge(true);
@@ -53,8 +54,11 @@ public class Room {
 
     public boolean addTileToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
-        Tile tile = new Tile(x, y, Color.TAN);
+        Tile tile = new Tile(x, y);
         objects.add(tile);
+
+
+
 
         return true;
     }
@@ -89,7 +93,7 @@ public class Room {
         }
         return maze;
     }
-    public boolean layFloor(int width, int height, List objects, Position[][] maze){
+    public boolean layFloor(List objects, Position[][] maze){
         for (int i = 0; i < maze.length ; i++) {
             for (int j = 0; j <maze[i].length ; j++) {
                 addTileToRoom(i,j,objects,maze);

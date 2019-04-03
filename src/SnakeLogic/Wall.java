@@ -5,11 +5,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Wall extends Item implements GameObject {
-    private Color color;
+    private Color color = Color.BLACK;
 
-    public Wall(int x, int y, Color color) {
-        this.position = new Position(x,y);
-        this.color = color;
+    public Wall(int x, int y) {
+        this.setPosition(new Position(x,y));
+
 
     }
 
@@ -28,15 +28,15 @@ public class Wall extends Item implements GameObject {
 
 
     public void setX(int x) {
-        this.position.setX(x);
+        this.getPosition().setX(x);
     }
 
     public int getY() {
-        return this.position.getY();
+        return this.getPosition().getY();
     }
 
     public void setY(int y) {
-        this.position.setY(y);
+        this.getPosition().setY(y);
     }
 
     public Color getColor() {
@@ -45,7 +45,7 @@ public class Wall extends Item implements GameObject {
 
     @Override
     public String toString() {
-        return  "X: " + this.position.getX() + " - Y:" + this.position.getY();
+        return  "X: " + this.getPosition().getX() + " - Y:" + this.getPosition().getY();
     }
 
     public void setColor(Color color) {
