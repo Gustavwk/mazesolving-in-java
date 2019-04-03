@@ -101,12 +101,9 @@ public class Goal implements GameObject {
         mazeCost(north, south, west, east, goal.getCost());
         return true;
     }
-//dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-    private double calculateDistance(Position posOne, Position posTwo) {
 
-        return Math.sqrt(               ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX())) +
-                                        ((posTwo.getY() - posOne.getY())*  (posTwo.getY() - posOne.getY()))             );
-    }
+    //dis=Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+
 
     public void mazeCost(Position north, Position south, Position west, Position east, double cost) {
 
@@ -227,5 +224,9 @@ public class Goal implements GameObject {
         this.maze = maze;
     }
 
+    private double calculateDistance(Position posOne, Position posTwo) {
 
+        return Math.sqrt(               ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX())) +
+                ((posTwo.getY() - posOne.getY())*  (posTwo.getY() - posOne.getY()))             );
+    }
 }
