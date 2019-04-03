@@ -1,18 +1,15 @@
 package SnakeLogic;
 
+import SnakeGUI.Position;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Wall extends Item implements GameObject {
-    private int X;
-    private int Y;
     private Color color;
 
-    public Wall(int x, int y,Color color) {
-        super(color, x, y);
-        this.setX(x);
-        this.setY(y);
-        this.setColor(color);
+    public Wall(int x, int y, Color color) {
+        this.position = new Position(x,y);
+        this.color = color;
 
     }
 
@@ -31,15 +28,15 @@ public class Wall extends Item implements GameObject {
 
 
     public void setX(int x) {
-        X = x;
+        this.position.setX(x);
     }
 
     public int getY() {
-        return Y;
+        return this.position.getY();
     }
 
     public void setY(int y) {
-        Y = y;
+        this.position.setY(y);
     }
 
     public Color getColor() {
@@ -48,7 +45,7 @@ public class Wall extends Item implements GameObject {
 
     @Override
     public String toString() {
-        return  "X: " + this.X + " - Y:" + this.Y;
+        return  "X: " + this.position.getX() + " - Y:" + this.position.getY();
     }
 
     public void setColor(Color color) {
