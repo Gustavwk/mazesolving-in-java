@@ -5,25 +5,13 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Goal implements GameObject {
     private Position position;
     private Color color;
     private Position[][] maze;
-    public LinkedList<Position> hasSetCost = new LinkedList<>();
     public ArrayList<Item> items;
-    private int maxCoordinateX;
-    private int maxCoordinateY;
-
-
-
-
-    private Position north;
-    private Position east;
-    private Position south;
-    private Position west;
 
 
 
@@ -32,15 +20,11 @@ public class Goal implements GameObject {
         this.setColor(color);
         this.maze = maze;
 
-        north = maze[this.position.getX()][this.position.getY() - 1];
-        east = maze[this.position.getX() + 1][this.position.getY()];
-        south = maze[this.position.getX()][this.position.getY() + 1];
-        west = maze[this.position.getX() - 1][this.position.getY()];
+
 
         items = (ArrayList<Item>) item;
 
-        maxCoordinateX = this.maze.length -1 ;
-        maxCoordinateY = this.maze.length -11; // fixer vi serenere
+
 
     }
 
