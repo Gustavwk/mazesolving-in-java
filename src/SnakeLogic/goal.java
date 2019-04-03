@@ -96,24 +96,24 @@ public class Goal implements GameObject {
 
 
 
-            if (north.getX() < maxCoordinateX && north.getY() < maxCoordinateY) {
+            
                 Position nextNorth = maze[north.getX()][north.getY() - 1];
                 expandCost(north, cost, nextNorth);
-            }
-            if (north.getX() < maxCoordinateX && north.getY() < maxCoordinateY) {
+
+
                 Position nextSouth = maze[south.getX()][south.getY() + 1];
                 expandCost(south, cost, nextSouth);
 
-            }
-            if (east.getX() < maxCoordinateX && east.getY() < maxCoordinateY) {
+
+
                 Position nextEast = maze[east.getX() + 1][east.getY()];
                 expandCost(east, cost, nextEast);
-            }
 
-            if (west.getX() < maxCoordinateX && west.getY() < maxCoordinateY) {
+
+
                 Position nextWest = maze[west.getX() - 1][west.getY()];
                 expandCost(west, cost, nextWest);
-            }
+
         }
 
     private void expandCost(Position position, int cost, Position nextPosition) {
