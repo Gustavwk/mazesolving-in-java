@@ -93,12 +93,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="59" />
+          <entry key="fxml" value="1" />
+          <entry key="java" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="59" />
+          <entry key="JAVA" value="61" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -140,11 +142,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Goal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+            <state relative-caret-position="2280">
+              <caret line="162" selection-start-line="162" selection-end-line="162" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5163#5164#0" expanded="true" />
@@ -176,23 +178,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="705">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#886#892#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Direction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -206,51 +208,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SnakeGUI/sample.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-              <folding>
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-                <element signature="e#1225#1226#0" expanded="true" />
-                <element signature="e#1256#1257#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
-                <element signature="e#2210#2211#0" expanded="true" />
-                <element signature="e#2241#2242#0" expanded="true" />
-                <element signature="e#2268#2269#0" expanded="true" />
-                <element signature="e#2296#2297#0" expanded="true" />
-                <element signature="e#2323#2324#0" expanded="true" />
-                <element signature="e#2360#2361#0" expanded="true" />
-                <element signature="e#2392#2393#0" expanded="true" />
-                <element signature="e#2435#2436#0" expanded="true" />
-                <element signature="e#2472#2473#0" expanded="true" />
-                <element signature="e#2534#2535#0" expanded="true" />
-                <element signature="e#2581#2582#0" expanded="true" />
-                <element signature="e#2615#2616#0" expanded="true" />
-                <element signature="e#2642#2643#0" expanded="true" />
-                <element signature="e#2684#2685#0" expanded="true" />
-                <element signature="e#2716#2717#0" expanded="true" />
-                <element signature="e#2750#2751#0" expanded="true" />
-                <element signature="e#2778#2779#0" expanded="true" />
-                <element signature="e#2822#2823#0" expanded="true" />
-                <element signature="e#2856#2857#0" expanded="true" />
-                <element signature="e#2889#2890#0" expanded="true" />
-                <element signature="e#2916#2917#0" expanded="true" />
-                <element signature="e#2958#2959#0" expanded="true" />
-                <element signature="e#2990#2991#0" expanded="true" />
-                <element signature="e#3024#3025#0" expanded="true" />
-                <element signature="e#3052#3053#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
-                <element signature="e#3130#3131#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="240" selection-start-line="12" selection-start-column="240" selection-end-line="12" selection-end-column="240" />
             </state>
           </provider>
         </entry>
@@ -259,7 +222,7 @@
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -380,11 +343,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+    <option name="width" value="1821" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -438,7 +400,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554281823634" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554284738312" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -717,23 +679,22 @@
       <workItem from="1554197909793" duration="1068000" />
       <workItem from="1554204264191" duration="75000" />
       <workItem from="1554272978543" duration="116000" />
-      <workItem from="1554274749098" duration="6635000" />
+      <workItem from="1554274749098" duration="8012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175141000" />
+    <option name="totallyTimeSpent" value="176518000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" weight="0.32995737" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.14925373" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.14925373" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -745,7 +706,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.3253796" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.15292841" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.0835141" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -841,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="240" selection-start-line="12" selection-start-column="240" selection-end-line="12" selection-end-column="240" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -889,13 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -950,13 +896,6 @@
             <element signature="e#1157#1158#0" expanded="true" />
             <element signature="e#1191#1192#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1017,7 +956,7 @@
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1071,21 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#886#892#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Goal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
+        <state relative-caret-position="2280">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5163#5164#0" expanded="true" />
@@ -1097,6 +1025,39 @@
             <element signature="e#5391#5392#0" expanded="true" />
             <element signature="e#5423#5424#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#886#892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="240" selection-start-line="12" selection-start-column="240" selection-end-line="12" selection-end-column="240" />
         </state>
       </provider>
     </entry>
