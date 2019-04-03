@@ -102,7 +102,7 @@ public class Controller {
         defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-        print2D(maze);
+        //print2D(maze);
 
 
 
