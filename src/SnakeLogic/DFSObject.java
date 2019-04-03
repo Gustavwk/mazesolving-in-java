@@ -25,7 +25,6 @@ public class DFSObject extends Ghost implements GameObject {
 
     @Override
     public void update() {
-
         if (go != goPath.size()-1) {
             go++;
           //System.out.println(goPath.get(go));
@@ -42,6 +41,7 @@ public class DFSObject extends Ghost implements GameObject {
         int steps = 0;
         path.push(root);
         Position current = (Position) path.peek();
+
         while (!path.empty()){
 
             if (visited.contains(goal)){
@@ -52,8 +52,6 @@ public class DFSObject extends Ghost implements GameObject {
 
             while (!visited.contains(goal)){
                 visited.add(current);
-
-
 
                 if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];

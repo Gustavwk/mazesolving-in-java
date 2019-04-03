@@ -121,11 +121,12 @@ public class Goal implements GameObject {
        cost++;
 
         if (    position.getX() < maxCoordinateX && position.getY() < maxCoordinateY &&
-                nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY) {
+                nextPosition.getX() < maxCoordinateX && nextPosition.getY() < maxCoordinateY &&
+                position.getX() > 0 && position.getY() > 0) {
 
-                Position left = maze[position.getX()][position.getY()];
+                Position left = maze[position.getX()-1][position.getY()];
                 Position right = maze[position.getX() + 1][position.getY()]; // Find ud af en meningsfuldt if statement der sørge for at den ikke går out of bounds
-                Position up = maze[position.getX()][position.getY()];        // if (x || y = 0) så stop!
+                Position up = maze[position.getX()][position.getY()-1];        // if (x || y = 0) så stop!
                 Position down = maze[position.getX()][position.getY() + 1];
 
 

@@ -39,19 +39,12 @@ public class Controller {
     Player player = new Player(5,5, Color.WHITE);
     RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     ArrayList<Item> items = new ArrayList<Item>();
-
-
     Room room = new Room();
-
-
-
     Position[][] maze = room.populate(items,width,height);
     Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze);
     PositionTree<Position> tree = new PositionTree<>(maze);
-
-
     DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
-    //DFSObject DFSTwo = new DFSObject(1,18, Color.AQUA,defaultGoal, maze, width, height);
+
 
     public void btnStartAction(ActionEvent event)
     {
@@ -67,8 +60,6 @@ public class Controller {
 
     public void initialize()
     {
-        DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
-       defaultGoal.mazeCost(defaultGoal.getPosition());
 
        /** Tree Testing
         tree.add(defaultGoal.getPosition());
@@ -78,15 +69,15 @@ public class Controller {
         System.out.println(tree);
         **/
 
-        print2D(maze);
-        //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());
 
-                AddItems();
 
+
+
+
+        AddItems();
         calculateFields();
         //This control the start position of the player.
         getRandomPosition();
-        //drawCanvas();
 
         // Start and control game loop
         new AnimationTimer(){
@@ -103,9 +94,9 @@ public class Controller {
     }
 
     private void AddItems() {
-        //add walls here
-        //add everything here!!
-
+        DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
+        defaultGoal.mazeCost(defaultGoal.getPosition());
+        print2D(maze);
 
 
 
@@ -128,16 +119,10 @@ public class Controller {
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
-            //System.out.println(ranRam);
             DFS.update();
-            //DFSTwo.update();
             defaultGoal.update();
+            drawCanvas();
 
-
-        //getRandomPosition();
-        //Crete randomRambler object
-        drawCanvas();
-        //System.out.println(now);
 
     }
 
@@ -181,8 +166,6 @@ public class Controller {
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
         DFS.drawObject(g,fieldWidth,fieldHeight);
-
-       // DFSTwo.drawObject(g,fieldWidth,fieldHeight);
         defaultGoal.drawObject(g,fieldWidth,fieldHeight);
 
 

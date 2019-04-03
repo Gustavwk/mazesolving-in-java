@@ -16,16 +16,15 @@ public class Room {
 
         Position[][] maze = new Position[width][height];
         maze = initMazArray(width, height, maze);
-        layFloor(objects,maze);
+        layFloor(objects, maze);
         mazeBoarders(width, height, objects, maze);
 
-        addWallToRoom(1,10,objects,maze);
-        addWallToRoom(2,10,objects,maze);
-        addWallToRoom(2,9,objects,maze);
-        addWallToRoom(3,9,objects,maze);
-        addWallToRoom(3,12,objects,maze);
-        addWallToRoom(4,12,objects,maze);
-
+        addWallToRoom(1, 10, objects, maze);
+        addWallToRoom(2, 10, objects, maze);
+        addWallToRoom(2, 9, objects, maze);
+        addWallToRoom(3, 9, objects, maze);
+        addWallToRoom(3, 12, objects, maze);
+        addWallToRoom(4, 12, objects, maze);
 
 
         for (int i = 0; i < height / 2; i++) {
@@ -36,7 +35,6 @@ public class Room {
 
         return maze;
     }
-
 
 
     public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
@@ -56,8 +54,6 @@ public class Room {
 
         Tile tile = new Tile(x, y);
         objects.add(tile);
-
-
 
 
         return true;
@@ -93,12 +89,15 @@ public class Room {
         }
         return maze;
     }
-    public boolean layFloor(List objects, Position[][] maze){
-        for (int i = 0; i < maze.length ; i++) {
-            for (int j = 0; j <maze[i].length ; j++) {
-                addTileToRoom(i,j,objects,maze);
+
+    public boolean layFloor(List objects, Position[][] maze) {
+        for (int i = 0; i < maze.length; i++) {
+            for (int j = 0; j < maze[i].length; j++) {
+                addTileToRoom(i, j, objects, maze);
             }
         }
-       return true;
+        return true;
     }
+
+
 }
