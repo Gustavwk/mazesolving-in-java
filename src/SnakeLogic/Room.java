@@ -25,6 +25,9 @@ public class Room {
         addWallToRoom(3, 9, objects, maze);
         addWallToRoom(3, 12, objects, maze);
         addWallToRoom(4, 12, objects, maze);
+        addWallToRoom(4, 11, objects, maze);
+        addWallToRoom(4, 10, objects, maze);
+        addWallToRoom(4, 9, objects, maze);
 
 
         for (int i = 0; i < height / 2; i++) {

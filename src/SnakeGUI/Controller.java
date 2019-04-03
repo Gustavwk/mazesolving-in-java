@@ -44,6 +44,8 @@ public class Controller {
     Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze,items); // man kan ikke sætte goal i hjørnerne... det må jeg lige se på
     PositionTree<Position> tree = new PositionTree<>(maze);
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
+    GreedObject greedGhost = new GreedObject(1,1,Color.BLUE,defaultGoal,maze,width,height);
+
 
 
 
@@ -97,7 +99,9 @@ public class Controller {
     private void AddItems() {
 
         dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
-        defaultGoal.mazeCost(defaultGoal.getPosition());
+        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
+        greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
+
         print2D(maze);
 
 
@@ -105,7 +109,7 @@ public class Controller {
 
 
 
-        //would be nice to add players and walls here.
+
 
     }
 
@@ -124,6 +128,7 @@ public class Controller {
             ranRam.wallCollision(items);
             dfsCrawler.update();
             defaultGoal.update();
+            greedGhost.update();
             drawCanvas();
 
 
@@ -170,6 +175,7 @@ public class Controller {
         ranRam.drawObject(g,fieldWidth,fieldHeight);
         dfsCrawler.drawObject(g,fieldWidth,fieldHeight);
         defaultGoal.drawObject(g,fieldWidth,fieldHeight);
+        greedGhost.drawObject(g,fieldWidth,fieldHeight);
 
 
 

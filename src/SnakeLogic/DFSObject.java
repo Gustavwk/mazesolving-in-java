@@ -67,7 +67,7 @@ public class DFSObject extends Ghost implements GameObject {
                     path.push(current);
 
                 }
-                else  if (canMove(current, "east")&& !visited.contains(maze[current.getX()+1][current.getY()])){
+                else  if (canMove(current, "east") && !visited.contains(maze[current.getX()+1][current.getY()])){
                     Position temp = maze[current.getX()+1][current.getY()];
                     current = temp;
                     steps++;
