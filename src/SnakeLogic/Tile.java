@@ -1,20 +1,27 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class Wall extends Item implements GameObject {
-    private Color color = Color.BLACK;
+public class Tile extends Item implements GameObject {
+    private Color color;
 
-    public Wall(int x, int y) {
+
+    public Tile(int x, int y, Color color) {
         this.setPosition(new Position(x,y));
+        this.color = color;
+
+
+
 
 
     }
 
     @Override
     public void update() {
+
 
     }
 
@@ -39,13 +46,14 @@ public class Wall extends Item implements GameObject {
         this.getPosition().setY(y);
     }
 
+
     public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return  "X: " + this.getPosition().getX() + " - Y:" + this.getPosition().getY();
+        return  "X: " + this.getPosition().getX() + " - Y:" + this.getPosition().getY() + "Cost:" + this.getPosition().getCost();
     }
 
     public void setColor(Color color) {

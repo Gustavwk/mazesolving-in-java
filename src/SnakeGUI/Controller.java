@@ -35,20 +35,17 @@ public class Controller {
 
 
 
+
     Player player = new Player(5,5, Color.WHITE);
     RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     ArrayList<Item> items = new ArrayList<Item>();
-
     Room room = new Room();
-
-
-
     Position[][] maze = room.populate(items,width,height);
-    goal defaultGoal = new goal(Color.GREEN, 28,1,maze);
+    Goal defaultGoal = new Goal(Color.GREEN, 15,15,maze,items); // man kan ikke sætte goal i hjørnerne... det må jeg lige se på
+    PositionTree<Position> tree = new PositionTree<>(maze);
+    DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
 
 
-    DFSObject DFS = new DFSObject(1,1, Color.RED,defaultGoal, maze, width, height);
-    //DFSObject DFSTwo = new DFSObject(1,18, Color.AQUA,defaultGoal, maze, width, height);
 
     public void btnStartAction(ActionEvent event)
     {
@@ -64,15 +61,24 @@ public class Controller {
 
     public void initialize()
     {
-        DFS.DFS(DFS.getPosition(),defaultGoal.getPosition());
-        //DFSTwo.DFS(DFSTwo.getPosition(),defaultGoal.getPosition());
 
-                AddItems();
+       /** Tree Testing
+        tree.add(defaultGoal.getPosition());
+        tree.add(maze[15][16]);
+        tree.add(maze[15][17]);
+        tree.add(maze[15][18]);
+        System.out.println(tree);
+        **/
 
+
+
+
+
+
+        AddItems();
         calculateFields();
         //This control the start position of the player.
         getRandomPosition();
-        //drawCanvas();
 
         // Start and control game loop
         new AnimationTimer(){
@@ -89,8 +95,10 @@ public class Controller {
     }
 
     private void AddItems() {
-        //add walls here
-        //add everything here!!
+
+        dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
+        defaultGoal.mazeCost(defaultGoal.getPosition());
+        print2D(maze);
 
 
 
@@ -114,16 +122,10 @@ public class Controller {
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
-            //System.out.println(ranRam);
-            DFS.update();
-            //DFSTwo.update();
+            dfsCrawler.update();
             defaultGoal.update();
+            drawCanvas();
 
-
-        //getRandomPosition();
-        //Crete randomRambler object
-        drawCanvas();
-        //System.out.println(now);
 
     }
 
@@ -153,26 +155,20 @@ public class Controller {
 
         g.clearRect(0,0,width*fieldWidth ,height*fieldHeight);
 
-        // draw all fields
-        g.setFill(Color.TAN);
-        for (int i = 0; i < width ; i++) {
-            for (int j = 0; j < height ; j++) {
-                g.fillRoundRect(i*fieldWidth, j*fieldHeight, fieldWidth,fieldHeight, 5, 5);
-            }
-        }
 
         // draw items
         for (Item item : items)
         {
             item.drawObject(g,fieldWidth,fieldHeight);
+
         }
+
+
 
         // draw 'player'
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
-        DFS.drawObject(g,fieldWidth,fieldHeight);
-
-       // DFSTwo.drawObject(g,fieldWidth,fieldHeight);
+        dfsCrawler.drawObject(g,fieldWidth,fieldHeight);
         defaultGoal.drawObject(g,fieldWidth,fieldHeight);
 
 
@@ -185,6 +181,13 @@ public class Controller {
 
             // Loop through all elements of current row
             for (int j = 0; j < mat[i].length; j++)
-                System.out.println(mat[i][j] + " ");
-    }
+                if (mat[i][j].getCost() != 0){
+
+                    System.out.println(mat[i][j] + " ");
+
+
+
+    }}
+
 }
+

@@ -1,21 +1,14 @@
 package SnakeLogic;
 
+import SnakeGUI.Position;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-/**
- * Items in Maze
- */
-public class Item implements GameObject {
-    private Color color;
-    private int x;
-    private int y;
 
-    public Item(Color color, int x, int y) {
-        this.color = color;
-        this.x = x;
-        this.y = y;
-    }
+public abstract class Item implements GameObject {
+    protected Color color;
+    private Position position;
+
 
     @Override
     public void update() {
@@ -25,7 +18,7 @@ public class Item implements GameObject {
     @Override
     public boolean drawObject(GraphicsContext g, double fieldWidth, double fieldHeight) {
         g.setFill(this.color);
-        g.fillRoundRect(this.x * fieldWidth, this.y * fieldHeight, fieldWidth, fieldHeight, 3, 3);
+        g.fillRoundRect(this.getPosition().getX() * fieldWidth, this.getPosition().getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
         return true;
 
     }
@@ -34,10 +27,18 @@ public class Item implements GameObject {
     }
 
     public int getX() {
-        return x;
+        return this.getPosition().getX();
     }
 
     public int getY() {
-        return y;
+        return this.getPosition().getX();
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 }

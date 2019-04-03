@@ -6,9 +6,16 @@ public class Position implements Comparable<Position> {
 
     private int x;
     private int y;
-    private int cost;
+    private double cost;
     private boolean occupied = false;
     private boolean edge;
+
+    private Position west;
+    private Position south;
+    private Position east;
+    private Position north;
+
+
 
     private String[] OccupiedString = {"Occopied", "Not Occupied"};
 
@@ -16,6 +23,9 @@ public class Position implements Comparable<Position> {
     public Position(int x, int y) {
         this.setX(x);
         this.setY(y);
+
+
+
     }
 
 
@@ -71,7 +81,7 @@ public class Position implements Comparable<Position> {
         } else {
             s = 1;
         }
-        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s];
+        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s] + " COST: " + this.cost ;
     }
 
     @Override
@@ -103,11 +113,11 @@ public class Position implements Comparable<Position> {
         return edge;
     }
 
-    public int getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
@@ -117,6 +127,39 @@ public class Position implements Comparable<Position> {
 
     public void setOccupiedString(String[] occupiedString) {
         OccupiedString = occupiedString;
+    }
+
+
+    public Position getWest() {
+        return west;
+    }
+
+    public void setWest(Position west) {
+        this.west = west;
+    }
+
+    public Position getSouth() {
+        return south;
+    }
+
+    public void setSouth(Position south) {
+        this.south = south;
+    }
+
+    public Position getEast() {
+        return east;
+    }
+
+    public void setEast(Position east) {
+        this.east = east;
+    }
+
+    public Position getNorth() {
+        return north;
+    }
+
+    public void setNorth(Position north) {
+        this.north = north;
     }
 }
 
