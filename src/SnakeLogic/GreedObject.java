@@ -4,11 +4,9 @@ import SnakeGUI.Position;
 import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode;
 
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 
 public class GreedObject extends Ghost implements GameObject {
@@ -39,9 +37,17 @@ public class GreedObject extends Ghost implements GameObject {
         while(!path.empty()){
 
 
+            if (visited.contains(goal)){
+                System.out.println("succes");
+                goPath = visited;
+                return true;
+            }
+
 
             while(!visited.contains(goal)){
                 visited.add(current);
+                current = (nextStep(current,visited));
+                path.push(current);
 
 
             }
@@ -51,11 +57,13 @@ public class GreedObject extends Ghost implements GameObject {
         }
 
 
-        return true;
+        return false;
     }
 
     public Position nextStep(Position current, List visited){
+
         List<Position> options = new LinkedList<>();
+
         if (canMove(current, "west") && !visited.contains(maze[current.getX()-1][current.getY()]))
         {
             options.add(maze[current.getX()-1][current.getY()]);
@@ -73,7 +81,11 @@ public class GreedObject extends Ghost implements GameObject {
             options.add(maze[current.getX()][current.getY()-1]);
         }
 
-        return null;
+        Collections.sort(options);
+
+
+
+        return  options.get(0) ;
     }
 
     private boolean outOfGoodChoices(Position current) {
