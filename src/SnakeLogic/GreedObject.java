@@ -6,6 +6,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Stack;
 
 
@@ -36,18 +37,14 @@ public class GreedObject extends Ghost implements GameObject {
 
         while(!path.empty()){
 
-            if (visited.contains(goal)){
-                System.out.println("MAZE SOLVED WITH GREED - STEPS TAKEN: " + steps);
-                goPath = visited;
-                return true;
-            }
+
 
             while(!visited.contains(goal)){
                 visited.add(current);
 
                 if (    canMove(current,"west") &&
                         !visited.contains(maze[current.getX()-1][current.getY()]) &&
-                        maze[current.getX()-1][current.getY()].getCost() < current.getCost()){
+                        maze[current.getX()-1][current.getY()].getCost() < maze[current.getX()][current.getY()].getCost()){
 
                     Position temp = maze[current.getX()-1][current.getY()];
                     current = temp;
@@ -84,7 +81,9 @@ public class GreedObject extends Ghost implements GameObject {
                     steps++;
                     path.push(current);
 
+
                 }
+
                     else if (      (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
                                 && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
                                 && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
@@ -95,9 +94,42 @@ public class GreedObject extends Ghost implements GameObject {
                     current = (Position) path.pop();
 
                 }
-                    {
+                else if(        maze[current.getX()-1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() ||
+                                maze[current.getX()][current.getY()+1].getCost() > maze[current.getX()][current.getY()].getCost() ||
+                                maze[current.getX()+1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() ||
+                                maze[current.getX()][current.getY()-1].getCost() > maze[current.getX()][current.getY()].getCost() ||(
+                                !canMove(current, "west") || !canMove(current, "south") ||
+                                !canMove(current, "east") || !canMove(current, "north"))) {
+
+                    if (visited.contains(goal)){
+                        System.out.println("MAZE SOLVED WITH GREED - STEPS TAKEN: " + steps);
+                        goPath = visited;
+                        return true;
+
+                    }
+                    if (!visited.contains(goal)){
+
+                        if(
+                                        visited.contains(maze[current.getX()-1][current.getY()].getCost()) ||
+                                        visited.contains(maze[current.getX()][current.getY()+1].getCost()) ||
+                                        visited.contains(maze[current.getX()+1][current.getY()].getCost()) ||
+                                        visited.contains(maze[current.getX()][current.getY()-1].getCost()) || (
+                                        !canMove(current, "west") || !canMove(current, "south") ||
+                                        !canMove(current, "east") || !canMove(current, "north"))) {
+
+                            goPath = visited;
+                            System.out.println("Unsolvable");
+                            return false;
+                        }
+
+
+                    }
+
 
                 }
+
+
+
 
 
             }

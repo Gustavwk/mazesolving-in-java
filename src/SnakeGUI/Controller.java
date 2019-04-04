@@ -41,7 +41,7 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
-    Goal defaultGoal = new Goal(Color.GREEN, 28,18,maze,items);
+    Goal defaultGoal = new Goal(Color.GREEN, 28,1,maze,items);
     PositionTree<Position> tree = new PositionTree<>(maze);
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
     GreedObject greedGhost = new GreedObject(1,1,Color.BLUE,defaultGoal,maze,width,height); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
@@ -102,7 +102,7 @@ public class Controller {
         defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-        print2D(maze);
+        //print2D(maze);
 
 
 
