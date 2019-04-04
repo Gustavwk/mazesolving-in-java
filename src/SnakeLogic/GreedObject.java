@@ -108,21 +108,9 @@ public class GreedObject extends Ghost implements GameObject {
 
                     }
                     if (!visited.contains(goal)){
-
-                        if(
-                                        visited.contains(maze[current.getX()-1][current.getY()].getCost()) ||
-                                        visited.contains(maze[current.getX()][current.getY()+1].getCost()) ||
-                                        visited.contains(maze[current.getX()+1][current.getY()].getCost()) ||
-                                        visited.contains(maze[current.getX()][current.getY()-1].getCost()) || (
-                                        !canMove(current, "west") || !canMove(current, "south") ||
-                                        !canMove(current, "east") || !canMove(current, "north"))) {
-
-                            goPath = visited;
-                            System.out.println("Unsolvable");
-                            return false;
-                        }
-
-
+                        goPath = visited;
+                        System.out.println("Unsolvable");
+                        return false;
                     }
 
 
