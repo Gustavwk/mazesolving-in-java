@@ -50,17 +50,9 @@ public class Position implements Comparable<Position> {
     @Override
     public int compareTo(Position otherPos) {
         int rtn = 0;
-        if (getX() == otherPos.getX() && getY() == otherPos.getY()) {
-            return 0;
-        }
-        if (getX() < otherPos.getX()) rtn = +1;
-        if (getX() > otherPos.getX()) rtn = -1;
 
-        if (rtn == 0) {
-            if (getY() < otherPos.getY()) rtn = +1;
-            if (getY() > otherPos.getY()) rtn = -1;
-        }
-
+        if (this.getCost() < otherPos.getCost()){ rtn = +1;}
+        if (this.getCost() > otherPos.getCost()){ rtn = -1;}
         return rtn;
     }
 

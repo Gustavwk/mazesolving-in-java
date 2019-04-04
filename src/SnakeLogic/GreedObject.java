@@ -1,12 +1,13 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 
+import java.util.Collection;
 import java.util.LinkedList;
-import java.util.Random;
+import java.util.List;
 import java.util.Stack;
 
 
@@ -42,83 +43,6 @@ public class GreedObject extends Ghost implements GameObject {
             while(!visited.contains(goal)){
                 visited.add(current);
 
-                if (    canMove(current,"west") &&
-                        !visited.contains(maze[current.getX()-1][current.getY()]) &&
-                        maze[current.getX()-1][current.getY()].getCost() < maze[current.getX()][current.getY()].getCost()){
-
-                    Position temp = maze[current.getX()-1][current.getY()];
-                    current = temp;
-                    steps++;
-                    path.push(current);
-                }
-
-                else if (    canMove(current,"south") &&
-                             !visited.contains(maze[current.getX()][current.getY()+1]) &&
-                             maze[current.getX()][current.getY()+1].getCost() < maze[current.getX()][current.getY()].getCost()){
-
-                    Position temp = maze[current.getX()][current.getY()+1];
-                    current = temp;
-                    steps++;
-                    path.push(current);
-                }
-
-                else if (    canMove(current,"east") &&
-                             !visited.contains(maze[current.getX()+1][current.getY()]) &&
-                             maze[current.getX()+1][current.getY()].getCost() < maze[current.getX()][current.getY()].getCost()){
-
-                    Position temp = maze[current.getX()+1][current.getY()];
-                    current = temp;
-                    steps++;
-                    path.push(current);
-                }
-
-                else if (    canMove(current,"north") &&
-                             !visited.contains(maze[current.getX()][current.getY()-1]) &&
-                             maze[current.getX()][current.getY()+1].getCost() < maze[current.getX()][current.getY()].getCost()){
-
-                    Position temp = maze[current.getX()+1][current.getY()];
-                    current = temp;
-                    steps++;
-                    path.push(current);
-
-
-                }
-
-                    else if (      (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
-                                && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
-                                && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
-                                && (!canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1])) )
-                {
-
-
-                    current = (Position) path.pop();
-
-                }
-                else if(        maze[current.getX()-1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() ||
-                                maze[current.getX()][current.getY()+1].getCost() > maze[current.getX()][current.getY()].getCost() ||
-                                maze[current.getX()+1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() ||
-                                maze[current.getX()][current.getY()-1].getCost() > maze[current.getX()][current.getY()].getCost() ||(
-                                !canMove(current, "west") || !canMove(current, "south") ||
-                                !canMove(current, "east") || !canMove(current, "north"))) {
-
-                    if (visited.contains(goal)){
-                        System.out.println("MAZE SOLVED WITH GREED - STEPS TAKEN: " + steps);
-                        goPath = visited;
-                        return true;
-
-                    }
-                    if (!visited.contains(goal)){
-                        goPath = visited;
-                        System.out.println("Unsolvable");
-                        return false;
-                    }
-
-
-                }
-
-
-
-
 
             }
 
@@ -128,6 +52,44 @@ public class GreedObject extends Ghost implements GameObject {
 
 
         return true;
+    }
+
+    public Position nextStep(Position current, List visited){
+        List<Position> options = new LinkedList<>();
+        if (canMove(current, "west") && !visited.contains(maze[current.getX()-1][current.getY()]))
+        {
+            options.add(maze[current.getX()-1][current.getY()]);
+        }
+        if (canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1]))
+        {
+            options.add(maze[current.getX()][current.getY()+1]);
+        }
+        if (canMove(current, "east") && !visited.contains(maze[current.getX()+1][current.getY()]))
+        {
+            options.add(maze[current.getX()+1][current.getY()]);
+        }
+        if (canMove(current, "north") && !visited.contains(maze[current.getX()][current.getY()-1]))
+        {
+            options.add(maze[current.getX()][current.getY()-1]);
+        }
+
+        return null;
+    }
+
+    private boolean outOfGoodChoices(Position current) {
+                return  maze[current.getX()-1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "west")  &&
+                        maze[current.getX()][current.getY()+1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "south") &&
+                        maze[current.getX()+1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "east") &&
+                        maze[current.getX()][current.getY()-1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "north");
+
+
+    }
+
+    private boolean cantMove(LinkedList<Position> visited, Position current) {
+                return (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
+                    && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
+                    && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
+                    && (!canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1]));
     }
 
     @Override
