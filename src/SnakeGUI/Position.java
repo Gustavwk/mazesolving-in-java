@@ -51,8 +51,8 @@ public class Position implements Comparable<Position> {
     public int compareTo(Position otherPos) {
         int rtn = 0;
 
-        if (this.getCost() < otherPos.getCost()){ rtn = +1;}
-        if (this.getCost() > otherPos.getCost()){ rtn = -1;}
+        if (this.getCost() < otherPos.getCost()){ rtn = -1;}
+        if (this.getCost() > otherPos.getCost()){ rtn = +1;}
         return rtn;
     }
 

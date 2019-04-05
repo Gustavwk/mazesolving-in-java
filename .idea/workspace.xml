@@ -205,8 +205,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+            <state relative-caret-position="150">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -429,7 +429,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554459230013" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554459270909" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -716,12 +716,12 @@
       <workItem from="1554322350037" duration="3897000" />
       <workItem from="1554358075593" duration="5156000" />
       <workItem from="1554367041499" duration="9150000" />
-      <workItem from="1554380317666" duration="6971000" />
+      <workItem from="1554380317666" duration="7012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216343000" />
+    <option name="totallyTimeSpent" value="216384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1035,8 +1035,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="83" selection-start-line="41" selection-start-column="83" selection-end-line="41" selection-end-column="83" />
+        <state relative-caret-position="150">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
