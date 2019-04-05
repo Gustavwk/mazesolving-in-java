@@ -41,7 +41,7 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
-    Goal defaultGoal = new Goal(Color.GREEN, 3,10,maze,items);
+    Goal defaultGoal = new Goal(Color.GREEN, 28,2,maze,items);
 
     PositionTree<Position> tree = new PositionTree<>(maze);
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
@@ -68,13 +68,13 @@ public class Controller {
         dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-       /** Tree Testing
-        tree.add(defaultGoal.getPosition());
-        tree.add(maze[15][16]);
-        tree.add(maze[15][17]);
-        tree.add(maze[15][18]);
-        System.out.println(tree);
-        **/
+
+        //tree.addRoot(defaultGoal.getPosition());
+        //tree.addChild(maze[15][16],maze[15][15]);
+
+
+       // System.out.println("Root: " + tree.rootNode);
+
 
 
 
@@ -104,7 +104,7 @@ public class Controller {
 
 
 
-        //print2D(maze);
+        print2D(maze);
 
 
 

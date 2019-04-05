@@ -6,46 +6,47 @@ public class PositionTree<T extends Comparable<T>> {
 
     Position[][] maze;
     public Position rootNode = null;
+    public int size;
 
 
-    public PositionTree(Position[][] maze){
+    public PositionTree(Position[][] maze) {
         this.maze = maze;
     }
 
 
+    public boolean addRoot(Position newPosition) {
 
-    public boolean add(Position newPosition) {
-        add(newPosition, rootNode);
-        System.out.println(rootNode);
-        return true;
-    }
-
-    public Position add(Position addedPosition, Position root) {
-
-        if (root == null) {
-
-            return (addedPosition);
-
+        if (rootNode == null) {
+            rootNode = newPosition;
+            return true;
+        } else {
+            return false;
         }
 
-        if (addedPosition.equals(maze[root.getX()+1][root.getY()])) {
-            root.setEast((add(addedPosition, root.getEast()))); //east
+    }
+}
+    /*
+    public enum direction {n, s, e , w};
+    public Position addChild(Position addedPosition, Position parent, direction d) {
 
-        } else if (addedPosition.equals(maze[root.getX()-1][root.getY()])) {
-            root.setEast((add(addedPosition, root.getEast()))); //west
 
 
-        } else if (addedPosition.equals(maze[root.getX()][root.getY()+1])){
-            root.setEast((add(addedPosition, root.getEast()))); //south
+        if (d == direction.n) {
+            parent.setNorth((addChild(addedPosition, parent.getNorth()))); //east
 
-        } else if ((addedPosition.equals(maze[root.getX()][root.getY()-1]))){
-            root.setEast((add(addedPosition, root.getEast()))); //north
+        } else if (addedPosition.equals(maze[parent.getX() - 1][parent.getY()])) {
+            parent.setEast((addChild(addedPosition, parent.getEast()))); //west
+
+
+        } else if (addedPosition.equals(maze[parent.getX()][parent.getY() + 1])) {
+            parent.setEast((addChild(addedPosition, parent.getEast()))); //south
+
+        } else if ((addedPosition.equals(maze[parent.getX()][parent.getY() - 1]))) {
+            parent.setEast((addChild(addedPosition, parent.getEast()))); //north
 
         }
-        return root;
+        return parent;
     }
-
-
-
 
 }
+*/

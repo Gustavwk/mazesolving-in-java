@@ -53,6 +53,7 @@ public class Position implements Comparable<Position> {
 
         if (this.getCost() < otherPos.getCost()){ rtn = -1;}
         if (this.getCost() > otherPos.getCost()){ rtn = +1;}
+
         return rtn;
     }
 
@@ -79,16 +80,10 @@ public class Position implements Comparable<Position> {
     @Override
     public boolean equals(Object otherObject) {
 
-        try {
-            //cast into position to get x and y values.
-            Position otherObject1 = (Position) otherObject;
-
-            //return whether x == x and y == y.
-            return (otherObject1.getX() == this.getX() && otherObject1.getY() == this.getY());
-
-        } catch (ClassCastException e) {
-
-            System.out.println("ClassException!");
+        Position p = (Position) otherObject;
+        if (this.cost == p.getCost()){
+            return true;
+        } else {
             return false;
         }
 

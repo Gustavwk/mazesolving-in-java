@@ -22,7 +22,6 @@ public class GreedObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
-        //System.out.println(this.getGoal().getPosition());
 
 
     }
@@ -49,14 +48,13 @@ public class GreedObject extends Ghost implements GameObject {
 
                 if (!cantMove(visited,current)) {
 
-                    System.out.println("My Current Position: " + current);
-                    visited.add(current);
+                    //System.out.println("My Current Position: " + current);
                     current = (nextStep(current, visited));
                     visited.add(current);
                     path.push(current);
                     steps++;
                 } else {
-                    System.out.println("peek & pop: " + path.peek() + "\n");
+                    //System.out.println("peek & pop: " + path.peek() + "\n");
                     current = (Position) path.pop();
                 }
 
@@ -101,7 +99,7 @@ public class GreedObject extends Ghost implements GameObject {
 
             Collections.sort(options);
 
-            System.out.println("Going for:           " +options.get(0) + "\n");
+            //System.out.println("Going for:           " +options.get(0) + "\n");
 
             return options.get(0);
 
@@ -109,7 +107,8 @@ public class GreedObject extends Ghost implements GameObject {
     }
 
     private boolean outOfGoodChoices(Position current) {
-        return maze[current.getX() - 1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "west") &&
+
+        return  maze[current.getX() - 1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "west") &&
                 maze[current.getX()][current.getY() + 1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "south") &&
                 maze[current.getX() + 1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "east") &&
                 maze[current.getX()][current.getY() - 1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "north");
@@ -138,10 +137,8 @@ public class GreedObject extends Ghost implements GameObject {
     }
 
     public static void print2D(Position mat[][]) {
-        // Loop through all rows
-        for (int i = 0; i < mat.length; i++)
 
-            // Loop through all elements of current row
+        for (int i = 0; i < mat.length; i++)
             for (int j = 0; j < mat[i].length; j++)
 
 
