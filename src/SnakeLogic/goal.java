@@ -98,7 +98,7 @@ public class Goal implements GameObject {
 
     private double calculateDistance(Position posOne, Position posTwo) {
 
-        return                Math.sqrt          ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX()) + // Jeg har fjernet kvadratrods udregninging fordi Ebbe siger at den er gør min algoritme mere skod.
-                                                 ((posTwo.getY() - posOne.getY())*  (posTwo.getY() - posOne.getY()))        )    ;
+        return Math.sqrt(               ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX())) +
+                                        ((posTwo.getY() - posOne.getY())*  (posTwo.getY() - posOne.getY()))             );
     }
 }
