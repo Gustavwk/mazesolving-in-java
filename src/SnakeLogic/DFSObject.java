@@ -82,8 +82,9 @@ public class DFSObject extends Ghost implements GameObject {
                 } else if (cantMove(visited,current) )
                 {
 
-
+                    steps++;
                     current = (Position) path.pop();
+
 
                 }
             }

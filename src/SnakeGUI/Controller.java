@@ -41,7 +41,7 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
-    Goal defaultGoal = new Goal(Color.GREEN, 28,1,maze,items);
+    Goal defaultGoal = new Goal(Color.GREEN, 3,10,maze,items);
 
     PositionTree<Position> tree = new PositionTree<>(maze);
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
