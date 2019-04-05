@@ -74,6 +74,12 @@ public abstract class Ghost implements GameObject {
         }
         else return false;
     }
+    public boolean cantMove(LinkedList<Position> visited, Position current) {
+            return (!canMove(current, "west") || visited.contains(maze[current.getX() - 1][current.getY()]))
+                && (!canMove(current, "south") || visited.contains(maze[current.getX()][current.getY() + 1]))
+                && (!canMove(current, "east") || visited.contains(maze[current.getX() + 1][current.getY()]))
+                && (!canMove(current, "north") || visited.contains(maze[current.getX()][current.getY() - 1]));
+    }
 
     public Position getPosition() {
         return position;

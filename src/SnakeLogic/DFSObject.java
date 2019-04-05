@@ -10,12 +10,11 @@ public class DFSObject extends Ghost implements GameObject {
 
 
     public DFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
-        this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
-
-        System.out.println(this.getGoal().getPosition());
+        this.setPosition(maze[X][Y]);
+        //System.out.println(this.getGoal().getPosition());
 
 
     }
@@ -80,10 +79,7 @@ public class DFSObject extends Ghost implements GameObject {
                     steps++;
                     path.push(current);
 
-                } else if (    (!canMove(current, "west") || visited.contains(maze[current.getX()-1][current.getY()]))
-                            && (!canMove(current, "south")|| visited.contains(maze[current.getX()][current.getY()+1]))
-                            && (!canMove(current, "east") || visited.contains(maze[current.getX()+1][current.getY()]))
-                            && (!canMove(current, "north")|| visited.contains(maze[current.getX()][current.getY()-1])) )
+                } else if (cantMove(visited,current) )
                 {
 
 
