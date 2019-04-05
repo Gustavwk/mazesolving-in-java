@@ -79,11 +79,7 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
 <<<<<<< HEAD
-<<<<<<< HEAD
           <entry key="project.closed" value="33" />
-=======
-          <entry key="project.closed" value="36" />
->>>>>>> parent of 8f6203c... hj
 =======
           <entry key="project.closed" value="36" />
 >>>>>>> parent of 8f6203c... hj
@@ -107,11 +103,7 @@
         <counts>
           <entry key="fxml" value="2" />
 <<<<<<< HEAD
-<<<<<<< HEAD
           <entry key="java" value="88" />
-=======
-          <entry key="java" value="98" />
->>>>>>> parent of 8f6203c... hj
 =======
           <entry key="java" value="98" />
 >>>>>>> parent of 8f6203c... hj
@@ -120,11 +112,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
 <<<<<<< HEAD
-<<<<<<< HEAD
           <entry key="JAVA" value="88" />
-=======
-          <entry key="JAVA" value="98" />
->>>>>>> parent of 8f6203c... hj
 =======
           <entry key="JAVA" value="98" />
 >>>>>>> parent of 8f6203c... hj
@@ -135,11 +123,7 @@
         <counts>
           <entry key="dummy" value="25" />
 <<<<<<< HEAD
-<<<<<<< HEAD
           <entry key="java" value="23863" />
-=======
-          <entry key="java" value="24506" />
->>>>>>> parent of 8f6203c... hj
 =======
           <entry key="java" value="24506" />
 >>>>>>> parent of 8f6203c... hj
@@ -148,11 +132,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
 <<<<<<< HEAD
-<<<<<<< HEAD
           <entry key="JAVA" value="23863" />
-=======
-          <entry key="JAVA" value="24506" />
->>>>>>> parent of 8f6203c... hj
 =======
           <entry key="JAVA" value="24506" />
 >>>>>>> parent of 8f6203c... hj
@@ -234,13 +214,8 @@
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
             <state relative-caret-position="285">
               <caret line="46" column="71" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="71" />
-=======
-            <state relative-caret-position="240">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
->>>>>>> parent of 8f6203c... hj
 =======
             <state relative-caret-position="240">
               <caret line="59" selection-start-line="59" selection-end-line="59" />
@@ -273,7 +248,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Ghost.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="350">
               <caret line="80" column="19" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
@@ -316,10 +290,6 @@
             <state relative-caret-position="1140">
               <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
 >>>>>>> parent of 8f6203c... hj
-=======
-            <state relative-caret-position="1140">
-              <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
->>>>>>> parent of 8f6203c... hj
             </state>
           </provider>
         </entry>
@@ -328,12 +298,9 @@
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
             <state relative-caret-position="115">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
 =======
-=======
->>>>>>> parent of 8f6203c... hj
             <state relative-caret-position="509">
               <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
 >>>>>>> parent of 8f6203c... hj
@@ -344,7 +311,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="48">
               <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
@@ -361,10 +327,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-=======
-            <state relative-caret-position="118">
-              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
->>>>>>> parent of 8f6203c... hj
 =======
             <state relative-caret-position="118">
               <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
@@ -436,7 +398,6 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tile.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Room.java" />
 <<<<<<< HEAD
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/SnakeLogic/Goal.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/DFSObject.java" />
@@ -445,8 +406,6 @@
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/GreedObject.java" />
 =======
-=======
->>>>>>> parent of 8f6203c... hj
         <option value="$PROJECT_DIR$/src/SnakeLogic/DFSObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Ghost.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/GreedObject.java" />
@@ -454,9 +413,6 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Goal.java" />
-<<<<<<< HEAD
->>>>>>> parent of 8f6203c... hj
-=======
 >>>>>>> parent of 8f6203c... hj
       </list>
     </option>
@@ -485,10 +441,7 @@
       <pane id="PackagesPane" />
       <pane id="Scope" />
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 8f6203c... hj
       <pane id="AndroidView" />
 >>>>>>> parent of 8f6203c... hj
       <pane id="ProjectPane">
@@ -518,10 +471,7 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
-<<<<<<< HEAD
       <pane id="AndroidView" />
-=======
->>>>>>> parent of 8f6203c... hj
 =======
 >>>>>>> parent of 8f6203c... hj
     </panes>
@@ -537,11 +487,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
 <<<<<<< HEAD
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554459270909" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554467239249" />
->>>>>>> parent of 8f6203c... hj
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554467239249" />
 >>>>>>> parent of 8f6203c... hj
@@ -838,26 +784,16 @@
       <workItem from="1554462423042" duration="4780000" />
       <workItem from="1554482750288" duration="582000" />
       <workItem from="1554483350867" duration="240000" />
-<<<<<<< HEAD
->>>>>>> parent of 8f6203c... hj
-=======
 >>>>>>> parent of 8f6203c... hj
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="216384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-=======
-    <option name="totallyTimeSpent" value="223092000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
->>>>>>> parent of 8f6203c... hj
 =======
     <option name="totallyTimeSpent" value="223092000" />
   </component>
@@ -872,11 +808,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17537314" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17697228" />
->>>>>>> parent of 8f6203c... hj
 =======
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17697228" />
 >>>>>>> parent of 8f6203c... hj
@@ -892,11 +824,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="9" weight="0.96420825" />
-=======
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.21800433" />
->>>>>>> parent of 8f6203c... hj
 =======
       <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.21800433" />
 >>>>>>> parent of 8f6203c... hj
@@ -927,11 +855,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17377399" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17697228" />
->>>>>>> parent of 8f6203c... hj
 =======
       <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.17697228" />
 >>>>>>> parent of 8f6203c... hj
@@ -947,11 +871,7 @@
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
 <<<<<<< HEAD
-<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.23861171" />
-=======
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.35791758" />
->>>>>>> parent of 8f6203c... hj
 =======
       <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.35791758" />
 >>>>>>> parent of 8f6203c... hj
@@ -1132,21 +1052,7 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
->>>>>>> parent of 8f6203c... hj
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
@@ -1165,26 +1071,15 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Ghost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> parent of 8f6203c... hj
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Item.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="155">
           <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
@@ -1217,58 +1112,23 @@
         <state relative-caret-position="118">
           <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
 >>>>>>> parent of 8f6203c... hj
-=======
-        <state relative-caret-position="75">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
->>>>>>> parent of 8f6203c... hj
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2647#2648#0" expanded="true" />
-            <element signature="e#2675#2676#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Goal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/DFSObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
->>>>>>> parent of 8f6203c... hj
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Ghost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1316,15 +1176,6 @@
             <element signature="e#228#229#0" expanded="true" />
             <element signature="e#260#261#0" expanded="true" />
 >>>>>>> parent of 8f6203c... hj
-=======
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
->>>>>>> parent of 8f6203c... hj
           </folding>
         </state>
       </provider>
@@ -1332,13 +1183,8 @@
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Player.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <state relative-caret-position="285">
           <caret line="46" column="71" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="71" />
-=======
-        <state relative-caret-position="465">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
->>>>>>> parent of 8f6203c... hj
 =======
         <state relative-caret-position="465">
           <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
@@ -1352,12 +1198,9 @@
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <state relative-caret-position="150">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
 =======
-=======
->>>>>>> parent of 8f6203c... hj
         <state relative-caret-position="240">
           <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>

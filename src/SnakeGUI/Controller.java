@@ -42,11 +42,7 @@ public class Controller {
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
 <<<<<<< HEAD
-<<<<<<< HEAD
     Goal defaultGoal = new Goal(Color.GREEN, 3,10,maze,items);
-=======
-    Goal defaultGoal = new Goal(Color.GREEN, 28,2,maze,items);
->>>>>>> parent of 8f6203c... hj
 =======
     Goal defaultGoal = new Goal(Color.GREEN, 28,2,maze,items);
 >>>>>>> parent of 8f6203c... hj
