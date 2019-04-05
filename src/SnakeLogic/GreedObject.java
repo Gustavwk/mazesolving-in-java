@@ -50,7 +50,6 @@ public class GreedObject extends Ghost implements GameObject {
                 if (!cantMove(visited,current)) {
 
                     System.out.println("My Current Position: " + current);
-                    visited.add(current);
                     current = (nextStep(current, visited));
                     visited.add(current);
                     path.push(current);
