@@ -5,7 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Wall extends Item implements GameObject {
-    private Color color = Color.BLACK;
+    private Color color = Color.BLUE;
 
     public Wall(int x, int y) {
         this.setPosition(new Position(x,y));
