@@ -176,44 +176,42 @@ public class Room {
 
 
 
+
         //////////////////////////////////////////////////
-        for (int i = 12; i < 18  ; i++) {
-            addWallToRoom(2,i,objects,maze);
+
+        for (int i = 25; i < 28 ; i++) {
+            addWallToRoom(i,9,objects,maze);
+            addWallToRoom(i,10,objects,maze);
+
         }
 
-        for (int i = 2; i < 5 ; i++) {
+        //////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////
+
+        for (int i = 21; i < 24 ; i++) {
+            addWallToRoom(i,9,objects,maze);
+            addWallToRoom(i,10,objects,maze);
+
+        }
+
+        for (int i = 7; i < 13 ; i++) {
+            addWallToRoom(25,i,objects,maze);
+        }
+
+        for (int i = 7 ; i < 13 ; i++) {
+            addWallToRoom(23,i,objects,maze);
+        }
+        //////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////
+        for (int i = 12; i < 18 ; i++) {
+            addWallToRoom(27,i,objects,maze);
+        }
+
+        for (int i = 25; i < 28 ; i++) {
             addWallToRoom(i,14,objects,maze);
         }
-        //////////////////////////////////////////////////
-
-
-        //////////////////////////////////////////////////
-
-        for (int i = 25; i < 27 ; i++) {
-            addWallToRoom(i,9,objects,maze);
-            addWallToRoom(i,10,objects,maze);
-
-        }
-
-        for (int i = 7; i < 13 ; i++) {
-            addWallToRoom(24,i,objects,maze);
-        }
-        //////////////////////////////////////////////////
-
-        //////////////////////////////////////////////////
-
-        for (int i = 22; i < 24 ; i++) {
-            addWallToRoom(i,9,objects,maze);
-            addWallToRoom(i,10,objects,maze);
-
-        }
-
-        for (int i = 7; i < 13 ; i++) {
-            addWallToRoom(24,i,objects,maze);
-        }
-        //////////////////////////////////////////////////
-
-        //////////////////////////////////////////////////
         //////////////////////////////////////////////////
 
         //////////////////////////////////////////////////
