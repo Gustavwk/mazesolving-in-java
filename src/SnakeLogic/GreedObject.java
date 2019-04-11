@@ -22,7 +22,7 @@ public class GreedObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
-        //System.out.println(this.getGoal().getPosition());
+
 
 
     }

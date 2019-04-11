@@ -68,13 +68,18 @@ public class Controller {
         dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-       /** Tree Testing
-        tree.add(defaultGoal.getPosition());
-        tree.add(maze[15][16]);
-        tree.add(maze[15][17]);
-        tree.add(maze[15][18]);
-        System.out.println(tree);
-        **/
+/*
+        tree.addRoot(defaultGoal.getPosition());
+
+        System.out.println(tree.rootNode);
+
+        tree.addChild(maze[16][10],tree.rootNode);
+        tree.addChild(maze[14][10],tree.rootNode);
+        tree.addChild(maze[15][9],tree.rootNode);
+        tree.addChild(maze[15][11],tree.rootNode);
+*/
+
+
 
 
 

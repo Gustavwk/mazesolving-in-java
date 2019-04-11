@@ -1,0 +1,18 @@
+
+Wsquid:UnusedPrivateMethodu"-Remove this unused private "occupied" method.(œÖ–Øùÿÿÿÿ
+asquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ëÇÔ
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ßÒÆşÿÿÿÿ
+O
+squid:S106/"9Replace this use of System.out or System.err by a logger.(ë·ÇÜ
+T
+squid:S106]"9Replace this use of System.out or System.err by a logger.(ô²Å§ÿÿÿÿÿ
+Xsquid:S1126w"AReplace this if-then-else statement by a single return statement.(“¸Ş
+hsquid:S3776#"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(µå§5
+esquid:S00100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µå§5
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î×¬Åøÿÿÿÿ
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î×¬Åøÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+lsquid:S1149%"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
+Vsquid:S1161f":Add the "@Override" annotation above this method signature(…Æ¸Íùÿÿÿÿ
+Qsquid:S1161j":Add the "@Override" annotation above this method signature(¯Ï¸Õ

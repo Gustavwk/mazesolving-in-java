@@ -1,6 +1,8 @@
 package SnakeGUI;
 
 
+import javafx.geometry.Pos;
+
 public class Position implements Comparable<Position> {
 
 
@@ -77,20 +79,9 @@ public class Position implements Comparable<Position> {
     }
 
     @Override
-    public boolean equals(Object otherObject) {
+    public boolean equals(Object object2) {
 
-        try {
-            //cast into position to get x and y values.
-            Position otherObject1 = (Position) otherObject;
-
-            //return whether x == x and y == y.
-            return (otherObject1.getX() == this.getX() && otherObject1.getY() == this.getY());
-
-        } catch (ClassCastException e) {
-
-            System.out.println("ClassException!");
-            return false;
-        }
+        return object2 instanceof Position && this.x == (((Position)object2).x) && this.y ==(((Position)object2).y);
 
 
     }

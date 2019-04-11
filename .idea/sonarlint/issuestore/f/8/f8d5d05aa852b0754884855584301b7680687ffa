@@ -1,0 +1,6 @@
+
+csquid:S1871"LThis branch's code block is the same as the block for the branch on line 28.(­ÆÅ¿
+hsquid:S1871&"LThis branch's code block is the same as the block for the branch on line 28.(ÊªË–ıÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+hsquid:S1871#"LThis branch's code block is the same as the block for the branch on line 28.(ú¤œüÿÿÿÿ
+‡"squid:ClassVariableVisibilityCheck"TMake rootNode a static final constant or non-public and provide accessors if needed.(Ê¾“ìÿÿÿÿÿ
