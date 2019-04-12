@@ -1,15 +1,14 @@
 
-Msquid:S1068"1Remove this unused "gameLoopDelay" private field.(°à§Ïûÿÿÿÿ
-O
-squid:S1067"9Replace this use of System.out or System.err by a logger.(àÅóè
-P
-squid:S106Ç"9Replace this use of System.out or System.err by a logger.(¿âí†
-fsquid:S00100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿—¯¶
+hsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(óºøL8ÓĞ…†¡-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æÁëÏ
-Esquid:S1068".Remove this unused "keyPressed" private field.( ÄÛ©
-isquid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(‘Ò†Ü8´şÿŞ -
-psquid:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëæÛŠ
-Hsquid:S11725",Remove this unused method parameter "event".(ÙŞÒüÿÿÿÿ
-Bsquid:S1172ƒ"*Remove this unused method parameter "now".(ÈÕ¢×
-Psquid:S1197¾"8Move the array designator from the variable to the type.(ÔÊÊ–
-asquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(óºøL
+O
+squid:S1068"9Replace this use of System.out or System.err by a logger.(àÅóè
+Hsquid:S11726",Remove this unused method parameter "event".(ÙŞÒüÿÿÿÿ
+Esquid:S1068".Remove this unused "keyPressed" private field.( ÄÛ©
+W
+squid:S106Ç"9Replace this use of System.out or System.err by a logger.(¿âí†8ÓĞ…†¡-
+Isquid:S1172ƒ"*Remove this unused method parameter "now".(ÈÕ¢×8ÓĞ…†¡-
+psquid:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëæÛŠ
+V
+squid:S106J"9Replace this use of System.out or System.err by a logger.(áÚÑ„8ÕÛ—†¡-
+Msquid:S1068"1Remove this unused "gameLoopDelay" private field.(°à§Ïûÿÿÿÿ

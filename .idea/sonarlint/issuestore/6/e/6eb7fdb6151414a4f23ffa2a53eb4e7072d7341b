@@ -1,23 +1,19 @@
 
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(û¿µàþÿÿÿÿ8èÈ£†¡-
+lsquid:S1149 "PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
 psquid:S1450"TRemove the "north" field and declare it as a local variable in the relevant methods.(©Ç¡Øþÿÿÿÿ
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
 jsquid:S1450"SRemove the "west" field and declare it as a local variable in the relevant methods.(ÀÚ–Ú
-O
-squid:S106g"9Replace this use of System.out or System.err by a logger.(÷ÆÖà
-P
-squid:S106“"9Replace this use of System.out or System.err by a logger.(¿âí†
-O
-squid:S1064"9Replace this use of System.out or System.err by a logger.(ÌÔÚý
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
-N
-squid:S106*"9Replace this use of System.out or System.err by a logger.(Øó£&
-O
-squid:S106:"9Replace this use of System.out or System.err by a logger.(Ö÷¨ 
-squid:UselessImportCheck"VRemove this unused import 'jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode'.(â”±‡þÿÿÿÿ
 jsquid:S1450"SRemove the "east" field and declare it as a local variable in the relevant methods.(þðýˆ
 ksquid:S1450"TRemove the "south" field and declare it as a local variable in the relevant methods.(ŠÐË¸
 nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
-lsquid:S1149 "PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
-Psquid:S1197‹"8Move the array designator from the variable to the type.(Èòœü
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
+P
+squid:S106“"9Replace this use of System.out or System.err by a logger.(¿âí†
 _squid:UnusedPrivateMethodn"5Remove this unused private "outOfGoodChoices" method.(†À¼–ýÿÿÿÿ
-`squid:UselessImportCheck"0Remove this unused import 'javafx.geometry.Pos'.(ÌÆ÷Ùøÿÿÿÿ8ÿë‰Û -
+N
+squid:S106*"9Replace this use of System.out or System.err by a logger.(Øó£&
+Psquid:S1197‹"8Move the array designator from the variable to the type.(Èòœü
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+nsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(Ëø…üÿÿÿÿ8ì÷£†¡-
+squid:UselessImportCheck"VRemove this unused import 'jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode'.(â”±‡þÿÿÿÿ
+nsquid:CommentedOutCodeLineg"<This block of commented-out lines of code should be removed.(ÿÁœùÿÿÿÿ8÷¿¥†¡-
