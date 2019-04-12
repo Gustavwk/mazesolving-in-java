@@ -1,10 +1,7 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
-import SnakeLogic.GameObject;
-import SnakeLogic.Wall;
 
-import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 
 import java.util.List;
@@ -38,7 +35,7 @@ public class Room {
         return true;
     }
 
-    public boolean addTileToRoom(int x, int y, List<Item> objects, Position[][] maze) {
+    public boolean addTileToRoom(int x, int y, List<Item> objects) {
 
         Tile tile = new Tile(x, y, Color.BLACK);
         objects.add(tile);
@@ -81,7 +78,7 @@ public class Room {
     public boolean layFloor(List objects, Position[][] maze) {
         for (int i = 0; i < maze.length; i++) {
             for (int j = 0; j < maze[i].length; j++) {
-                addTileToRoom(i, j, objects, maze);
+                addTileToRoom(i, j, objects);
             }
         }
         return true;

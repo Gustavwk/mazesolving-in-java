@@ -7,9 +7,9 @@ import java.util.LinkedList;
 public class PositionTree<T extends Comparable<T>> {
 
     Position[][] maze;
-    public Position rootNode = null;
-    public LinkedList<Position> marked = new LinkedList();
-    public int size = 0;
+    private Position rootNode = null;
+    private LinkedList<Position> marked = new LinkedList();
+    private int size = 0;
 
 
     public PositionTree(Position[][] maze, Position root) {

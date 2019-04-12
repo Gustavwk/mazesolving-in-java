@@ -49,13 +49,13 @@ public class GreedObject extends Ghost implements GameObject {
 
                 if (!cantMove(visited,current)) {
 
-                    System.out.println("My Current Position: " + current);
+                    //System.out.println("My Current Position: " + current);
                     current = (nextStep(current, visited));
                     visited.add(current);
                     path.push(current);
                     steps++;
                 } else {
-                    System.out.println("peek & pop: " + path.peek() + "\n");
+                    //System.out.println("peek & pop: " + path.peek() + "\n");
                     current = (Position) path.pop();
                 }
 
@@ -100,7 +100,7 @@ public class GreedObject extends Ghost implements GameObject {
 
             Collections.sort(options);
 
-            System.out.println("Going for:           " +options.get(0) + "\n");
+            //System.out.println("Going for:           " +options.get(0) + "\n");
 
             return options.get(0);
 

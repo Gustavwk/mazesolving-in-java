@@ -5,7 +5,7 @@ import SnakeLogic.*;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
+
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
@@ -66,7 +66,7 @@ public class Controller {
     public void initialize()
     {
         defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
-        dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
+        dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
         PositionTree<Position> tree = new PositionTree<>(maze,greedGhost.getPosition());
@@ -86,7 +86,7 @@ public class Controller {
 
 
 
-        AddItems();
+        addItems();
         calculateFields();
         //This control the start position of the player.
         getRandomPosition();
@@ -105,7 +105,7 @@ public class Controller {
 
     }
 
-    private void AddItems() {
+    private void addItems() {
 
 
 
@@ -187,7 +187,7 @@ public class Controller {
 
 
     }
-    public static void print2D(Position mat[][])
+    public static void print2D(Position[][] mat)
     {
         // Loop through all rows
         for (int i = 0; i < mat.length; i++)

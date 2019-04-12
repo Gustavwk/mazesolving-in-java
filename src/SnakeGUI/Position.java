@@ -1,7 +1,6 @@
 package SnakeGUI;
 
 
-import javafx.geometry.Pos;
 
 public class Position implements Comparable<Position> {
 
@@ -19,7 +18,7 @@ public class Position implements Comparable<Position> {
 
 
 
-    private String[] OccupiedString = {"Occopied", "Not Occupied"};
+    private String[] occupiedString = {"Occopied", "Not Occupied"};
 
 
     public Position(int x, int y) {
@@ -105,11 +104,11 @@ public class Position implements Comparable<Position> {
     }
 
     public String[] getOccupiedString() {
-        return OccupiedString;
+        return occupiedString;
     }
 
     public void setOccupiedString(String[] occupiedString) {
-        OccupiedString = occupiedString;
+        this.occupiedString = occupiedString;
     }
 
 

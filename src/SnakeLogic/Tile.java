@@ -6,7 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Tile extends Item implements GameObject {
-    private Color color;
+
 
 
     public Tile(int x, int y, Color color) {

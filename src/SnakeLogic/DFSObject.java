@@ -9,12 +9,12 @@ import java.util.Stack;
 public class DFSObject extends Ghost implements GameObject {
 
 
-    public DFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
+    public DFSObject(int x, int y, Color color, Goal goal, Position[][] maze) {
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
-        this.setPosition(maze[X][Y]);
-        //System.out.println(this.getGoal().getPosition());
+        this.setPosition(maze[x][y]);
+
 
 
     }
@@ -25,14 +25,13 @@ public class DFSObject extends Ghost implements GameObject {
     public void update() {
         if (go != goPath.size()-1) {
             go++;
-          //System.out.println(goPath.get(go));
           this.position = goPath.get(go);
         }
 
     }
 
 
-    public boolean DFS(Position root, Position goal) {
+    public boolean dfs(Position root, Position goal) {
 
         Stack path = new Stack();
         LinkedList<Position> visited = new LinkedList<>();
@@ -44,7 +43,7 @@ public class DFSObject extends Ghost implements GameObject {
 
             if (visited.contains(goal)){
                 goPath = visited;
-                System.out.println("MAZE SOLVED WITH DFS - STEPS TAKEN: " + steps );
+                System.out.println("MAZE SOLVED WITH dfs - STEPS TAKEN: " + steps );
                 return true;
             }
 
@@ -99,11 +98,11 @@ public class DFSObject extends Ghost implements GameObject {
 
 }
 
-
+    @Override
     public Position getPosition() {
         return position;
     }
-
+    @Override
     public void setPosition(Position position) {
         this.position = position;
     }
@@ -115,20 +114,10 @@ public class DFSObject extends Ghost implements GameObject {
 
 
 
-    private boolean occupied(){
 
-    if(this.getMaze()[this.getPosition().getX()][this.getPosition().getY()].isOccupied()){
-
-    return true;
-
-
-    } else {
-
-        return false;
-    }
 
     }
 
 
 
-}
+
