@@ -77,6 +77,7 @@ public class Controller {
         drawCanvas();
     }
 
+
     /**
      * Executed when JavaFX is initialized. Used to setup the Snake game
      */
@@ -90,6 +91,7 @@ public class Controller {
         PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
 
         bfsGhost.bfs(bfsGhost.getPosition());
+        //room.markPath(tree.getMarked(),items,Color.RED);
 
 
 
@@ -100,6 +102,8 @@ public class Controller {
 
 
         System.out.println("South of " + bfsGhost.getPosition() + " is: " + bfsGhost.getPosition().getSouth());
+
+        System.out.println(maze[1][2].getNorth());
 
 
 

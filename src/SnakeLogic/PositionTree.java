@@ -37,7 +37,8 @@ public class PositionTree<T extends Comparable<T>> {
         public Position addChild (Position child, Position parent){
             if(!marked.contains(child)) {
 
-                    //East
+                //find på en bedre måde at lave det her å . de skal udeligeres på en meningsfuld måde
+                //East
                 if (child.equals(maze[parent.getX() + 1][parent.getY()]) && !maze[parent.getX() + 1][parent.getY()].isOccupied()) {
 
                     parent.setEast(child);
@@ -49,7 +50,8 @@ public class PositionTree<T extends Comparable<T>> {
                     addChild(maze[parent.getEast().getX()]          [parent.getEast().getY() + 1], parent.getEast());
                     addChild(maze[parent.getEast().getX() - 1]      [parent.getEast().getY()], parent.getEast());
                 }
-                    //West
+
+                //West
                 if (child.equals(maze[parent.getX() - 1][parent.getY()]) && !maze[parent.getX() - 1][parent.getY()].isOccupied()) {
 
                     parent.setWest(child);
@@ -62,7 +64,8 @@ public class PositionTree<T extends Comparable<T>> {
                     addChild(maze[parent.getWest().getX() - 1]      [parent.getWest().getY()], parent.getWest());
 
                 }
-                    //South
+
+                //South
                 if (child.equals(maze[parent.getX()][parent.getY() + 1]) && !maze[parent.getX()][parent.getY() + 1].isOccupied()) {
 
                     parent.setSouth(child);
@@ -75,7 +78,8 @@ public class PositionTree<T extends Comparable<T>> {
                     addChild(maze[parent.getSouth().getX() - 1]     [parent.getSouth().getY()], parent.getSouth());
 
                 }
-                    //North
+
+                //North
                 if (child.equals(maze[parent.getX()][parent.getY() - 1]) && !maze[parent.getX()][parent.getY() - 1].isOccupied()) {
 
                     parent.setNorth(child);
@@ -99,5 +103,12 @@ public class PositionTree<T extends Comparable<T>> {
         return size;
     }
 
+    public LinkedList<Position> getMarked() {
+        return marked;
+    }
+
+    public void setMarked(LinkedList<Position> marked) {
+        this.marked = marked;
+    }
 }
 
