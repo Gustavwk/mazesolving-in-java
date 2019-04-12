@@ -4,6 +4,7 @@ import SnakeGUI.Position;
 
 import javafx.scene.paint.Color;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Room {
@@ -21,6 +22,18 @@ public class Room {
         return maze;
     }
 
+    public boolean markPath(List<Position> marked, List<Item> objects, Color color){
+        int howManyMarked = 0;
+
+        for (Position pos: marked) {
+            addMarkedTileToRoom(pos.getX(),pos.getY(),objects, color);
+            howManyMarked++;
+        }
+        System.out.println(howManyMarked);
+
+        return true;
+    }
+
 
     public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
@@ -30,6 +43,14 @@ public class Room {
 
         maze[x][y].setOccupied(true);
         maze[x][y].setEdge(true);
+
+
+        return true;
+    }
+    public boolean addMarkedTileToRoom(int x, int y, List<Item> objects, Color color) {
+
+        Tile tile = new Tile(x, y, color);
+        objects.add(tile);
 
 
         return true;

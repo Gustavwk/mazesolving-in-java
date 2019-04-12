@@ -54,9 +54,26 @@ public class Controller {
 
     public void btnStartAction(ActionEvent event)
     {
-        System.out.println("btn clicked");
-        labelStatus.setText("test");
-        getRandomPosition();
+        room.layFloor(items,maze);
+        room.createPacManMaze(items,maze);
+        drawCanvas();
+    }
+    @FXML
+    public void greedyShowPath(ActionEvent event)
+    {
+        room.markPath(greedGhost.getGoPath(),items,Color.DARKGREEN);
+        drawCanvas();
+    }
+    @FXML
+    public void dfsShowPath(ActionEvent event)
+    {
+        room.markPath(dfsCrawler.getGoPath(),items,Color.DARKRED);
+        drawCanvas();
+    }
+    @FXML
+    public void bfsShowPath(ActionEvent event)
+    {
+        room.markPath(bfsGhost.getGoPath(),items, Color.DARKGOLDENROD);
         drawCanvas();
     }
 
@@ -74,7 +91,15 @@ public class Controller {
 
         bfsGhost.bfs(bfsGhost.getPosition());
 
+
+
+
+
+
         System.out.println(tree.getSize());
+
+
+        System.out.println("South of " + bfsGhost.getPosition() + " is: " + bfsGhost.getPosition().getSouth());
 
 
 

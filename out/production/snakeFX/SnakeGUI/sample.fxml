@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.canvas.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SnakeGUI.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SnakeGUI.Controller">
    <center>
       <Canvas id="canvas" fx:id="canvas" height="357.0" width="600.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -21,17 +17,24 @@
    <top>
       <FlowPane prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartAction" text="Start">
+            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartAction" text="Clear Canvas">
                <FlowPane.margin>
                   <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
                </FlowPane.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Button">
+            <Button mnemonicParsing="false" onAction="#dfsShowPath" text="DFS PATH">
                <FlowPane.margin>
                   <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
                </FlowPane.margin>
             </Button>
-            <Label fx:id="labelStatus" text="Label" />
+            <Button mnemonicParsing="false" onAction="#greedyShowPath" text="GREEDY PATH">
+               <FlowPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </FlowPane.margin></Button>
+            <Button mnemonicParsing="false" onAction="#bfsShowPath" text="BFS PATH">
+               <FlowPane.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </FlowPane.margin></Button>
          </children>
       </FlowPane>
    </top>

@@ -28,24 +28,26 @@ public class BFSObject implements GameObject {
 
     public boolean bfs(Position current){
         visited.add(current);
-if (visited.contains(goal.getPosition())){
-    System.out.println("Juhu BFS virker");
-    goPath = visited;
-return true;
-} else {
-    if (current.getEast() != null) {
-        bfs(current.getEast());
 
-    }
-    if (current.getNorth() != null) {
-        bfs(current.getNorth());
-    }
-    if (current.getSouth() != null) {
-        bfs(current.getSouth());
-    }
-    if (current.getWest() != null) {
-        bfs(current.getWest());
-    }
+        if (visited.contains(goal.getPosition())){
+            System.out.println("Juhu BFS virker");
+            goPath = visited;
+            return true;
+
+
+    } else {
+        if (current.getEast() != null) {
+            bfs(current.getEast());
+        }
+        if (current.getSouth() != null) {
+            bfs(current.getSouth());
+        }
+        if (current.getWest() != null) {
+            bfs(current.getWest());
+        }
+        if (current.getNorth() != null) {
+                bfs(current.getNorth());
+        }
 }
 
 return false;
