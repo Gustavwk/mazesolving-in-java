@@ -11,21 +11,44 @@ public class BFSObject implements GameObject {
     private Color color;
     private Goal goal;
     private Position[][] maze;
-    private int witdh;
-    private int height;
     private LinkedList<Position> goPath = new LinkedList<>();
     private int go = 0;
+    private LinkedList<Position> visited = new LinkedList<>();
 
-    public BFSObject(int X, int Y, Color color, Goal goal, Position[][] maze, int width, int height) {
+
+    public BFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
         this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
-        this.setWitdh(width);
-        this.setHeight(height);
         System.out.println(this.getGoal().getPosition());
 
 
+    }
+
+    public boolean bfs(Position current){
+        visited.add(current);
+if (visited.contains(goal.getPosition())){
+    System.out.println("Juhu BFS virker");
+    goPath = visited;
+return true;
+} else {
+    if (current.getEast() != null) {
+        bfs(current.getEast());
+
+    }
+    if (current.getNorth() != null) {
+        bfs(current.getNorth());
+    }
+    if (current.getSouth() != null) {
+        bfs(current.getSouth());
+    }
+    if (current.getWest() != null) {
+        bfs(current.getWest());
+    }
+}
+
+return false;
     }
 
     @Override
@@ -40,34 +63,6 @@ public class BFSObject implements GameObject {
         return true;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -103,21 +98,6 @@ public class BFSObject implements GameObject {
         this.maze = maze;
     }
 
-    public int getWitdh() {
-        return witdh;
-    }
-
-    public void setWitdh(int witdh) {
-        this.witdh = witdh;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
 
     public LinkedList<Position> getGoPath() {
         return goPath;

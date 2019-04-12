@@ -44,7 +44,7 @@ public class PositionTree<T extends Comparable<T>> {
                     marked.add(child);
                     size++;
 
-                    System.out.println(parent.getEast() + " is east of " + parent + "\n");
+                    //System.out.println(parent.getEast() + " is east of " + parent + "\n");
 
                     addChild(maze[parent.getEast().getX() + 1][parent.getEast().getY()], parent.getEast());
 
@@ -60,7 +60,7 @@ public class PositionTree<T extends Comparable<T>> {
                     marked.add(child);
                     size++;
 
-                    System.out.println(parent.getWest() + " is west of " + parent + "\n");
+                   // System.out.println(parent.getWest() + " is west of " + parent + "\n");
 
                     addChild(maze[parent.getWest().getX() - 1][parent.getWest().getY()], parent.getWest());
                     addChild(maze[parent.getWest().getX()][parent.getWest().getY() - 1], parent.getWest());
@@ -76,7 +76,7 @@ public class PositionTree<T extends Comparable<T>> {
                     marked.add(child);
                     size++;
 
-                    System.out.println(parent.getSouth() + " is south of " + parent + "\n");
+                    //System.out.println(parent.getSouth() + " is south of " + parent + "\n");
 
                     addChild(maze[parent.getSouth().getX()][parent.getSouth().getY() + 1], parent.getSouth());
                     addChild(maze[parent.getSouth().getX()][parent.getSouth().getY() - 1], parent.getSouth());
@@ -91,7 +91,7 @@ public class PositionTree<T extends Comparable<T>> {
                     parent.setNorth(child);
                     marked.add(child);
                     size++;
-                    System.out.println(parent.getNorth() + " is north of " + parent + "\n");
+                    //System.out.println(parent.getNorth() + " is north of " + parent + "\n");
 
                     addChild(maze[parent.getNorth().getX()][parent.getNorth().getY() - 1], parent.getNorth());
                     addChild(maze[parent.getNorth().getX()][parent.getNorth().getY() + 1], parent.getNorth());

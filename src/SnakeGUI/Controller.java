@@ -47,6 +47,7 @@ public class Controller {
 
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
     GreedObject greedGhost = new GreedObject(1,1,Color.PURPLE,defaultGoal,maze); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
+    BFSObject bfsGhost = new BFSObject(1,1,Color.GREEN,defaultGoal,maze);
 
 
 
@@ -69,7 +70,9 @@ public class Controller {
         dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-        PositionTree<Position> tree = new PositionTree<>(maze,greedGhost.getPosition());
+        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
+
+        bfsGhost.bfs(bfsGhost.getPosition());
 
         System.out.println(tree.getSize());
 
