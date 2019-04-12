@@ -5,6 +5,7 @@ import SnakeLogic.*;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
@@ -43,7 +44,7 @@ public class Controller {
     Position[][] maze = room.populate(items,width,height);
     Goal defaultGoal = new Goal(Color.GREEN, 15,10,maze,items);
 
-    PositionTree<Position> tree = new PositionTree<>(maze);
+
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
     GreedObject greedGhost = new GreedObject(1,1,Color.PURPLE,defaultGoal,maze); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
 
@@ -68,16 +69,15 @@ public class Controller {
         dfsCrawler.DFS(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
-/*
-        tree.addRoot(defaultGoal.getPosition());
+        PositionTree<Position> tree = new PositionTree<>(maze,greedGhost.getPosition());
 
-        System.out.println(tree.rootNode);
+        System.out.println(tree.getSize());
 
-        tree.addChild(maze[16][10],tree.rootNode);
-        tree.addChild(maze[14][10],tree.rootNode);
-        tree.addChild(maze[15][9],tree.rootNode);
-        tree.addChild(maze[15][11],tree.rootNode);
-*/
+
+
+
+
+
 
 
 
