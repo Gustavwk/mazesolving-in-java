@@ -87,9 +87,7 @@ public class Controller {
         defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
         dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
-
         PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
-
         bfsGhost.bfs(bfsGhost.getPosition());
         //room.markPath(tree.getMarked(),items,Color.RED);
 

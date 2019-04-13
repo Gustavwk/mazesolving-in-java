@@ -4,7 +4,7 @@ import SnakeGUI.Position;
 import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import jdk.nashorn.internal.runtime.regexp.joni.constants.OPCode;
+
 
 import java.util.*;
 

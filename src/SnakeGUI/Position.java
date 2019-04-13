@@ -15,6 +15,7 @@ public class Position implements Comparable<Position> {
     private Position south;
     private Position east;
     private Position north;
+    private Position parent;
 
 
 

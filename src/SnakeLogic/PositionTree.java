@@ -34,11 +34,42 @@ public class PositionTree<T extends Comparable<T>> {
         }
     }
 
-        public Position addChild (Position child, Position parent){
-            if(!marked.contains(child)) {
+        public Position addChild (Position child, Position parent) {
 
-                //find på en bedre måde at lave det her å . de skal udeligeres på en meningsfuld måde
-                //East
+            if (child.getX() < 0 && child.getY() < 0 && parent.getY() < 0 && parent.getX() < 0) {
+                Position childWest = maze[child.getX() - 1][child.getY()];
+                Position childEast = maze[child.getX() + 1][child.getY()];
+                Position childNorth = maze[child.getX()][child.getY() - 1];
+                Position childSouth = maze[child.getX()][child.getY() + 1];
+
+                Position parentWest = maze[parent.getX() - 1][parent.getY()];
+                Position parentEast = maze[parent.getX() + 1][parent.getY()];
+                Position parentNorth = maze[parent.getX()][parent.getY() - 1];
+                Position parentSouth = maze[parent.getX()][parent.getY() + 1];
+
+                LinkedList<Position> adjacents = new LinkedList<>();
+
+                if (!marked.contains(child)) {
+
+                    if ((child.equals(parentEast) || child.equals(parentWest) || child.equals(parentSouth) || child.equals(parentNorth)) && !child.isOccupied() ){
+                        if (child.equals(parentEast)){
+                            parent.setEast(child);
+                        }
+                        if (child.equals(parentWest)){
+                            parent.setWest(child);
+                        }
+                        if (child.equals(parentNorth)){
+                            parent.setNorth(child);
+                        }
+                        if (child.equals(parentSouth)){
+                            parent.setSouth(child);
+                        }
+                    }
+
+
+                    //find på en bedre måde at lave det her å . de skal udeligeres på en meningsfuld måde
+                    //East
+                /*
                 if (child.equals(maze[parent.getX() + 1][parent.getY()]) && !maze[parent.getX() + 1][parent.getY()].isOccupied()) {
 
                     parent.setEast(child);
@@ -92,12 +123,15 @@ public class PositionTree<T extends Comparable<T>> {
                     addChild(maze[parent.getNorth().getX() - 1]   [parent.getNorth().getY()], parent.getNorth());
 
                 }
+                */
 
 
+                }
             }
 
-            return parent;
-        }
+                return parent;
+            }
+
 
     public int getSize() {
         return size;
