@@ -97,19 +97,15 @@ public class Controller {
 
         System.out.println(maze[1][1].getEast());
 
+
+
+
         room.markPath(tree.getMarked(),items,Color.RED);
 
 
 
 
 
-
-        System.out.println(tree.getSize());
-
-
-        System.out.println("South of " + bfsGhost.getPosition() + " is: " + bfsGhost.getPosition().getSouth());
-
-        System.out.println(maze[1][2].getNorth());
 
 
 

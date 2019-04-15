@@ -24,18 +24,9 @@ public class PositionTree<T extends Comparable<T>> {
 
     public boolean initTree(Position start) {
 
-        Position parent = start;
+        
 
 
-            for (int i = 0; i < this.maze.length -1; i++) {
-                for (int j = 0; j < this.maze[i].length-1; j++) {
-
-                    addChild(maze[i][j], parent);
-                    parent = maze[i][j];
-
-                }
-
-        }
         return true;
     }
 
@@ -94,64 +85,6 @@ public class PositionTree<T extends Comparable<T>> {
                         }
                     }
 
-
-                    //find på en bedre måde at lave det her å . de skal udeligeres på en meningsfuld måde
-                    //East
-                /*
-                if (child.equals(maze[parent.getX() + 1][parent.getY()]) && !maze[parent.getX() + 1][parent.getY()].isOccupied()) {
-
-                    parent.setEast(child);
-                    marked.add(child);
-                    size++;
-
-                    addChild(maze[parent.getEast().getX() + 1]      [parent.getEast().getY()], parent.getEast());
-                    addChild(maze[parent.getEast().getX()]          [parent.getEast().getY() - 1], parent.getEast());
-                    addChild(maze[parent.getEast().getX()]          [parent.getEast().getY() + 1], parent.getEast());
-                    addChild(maze[parent.getEast().getX() - 1]      [parent.getEast().getY()], parent.getEast());
-                }
-
-                //West
-                if (child.equals(maze[parent.getX() - 1][parent.getY()]) && !maze[parent.getX() - 1][parent.getY()].isOccupied()) {
-
-                    parent.setWest(child);
-                    marked.add(child);
-                    size++;
-
-                    addChild(maze[parent.getWest().getX() + 1]      [parent.getWest().getY()], parent.getWest());
-                    addChild(maze[parent.getWest().getX()]          [parent.getWest().getY() - 1], parent.getWest());
-                    addChild(maze[parent.getWest().getX()]          [parent.getWest().getY() + 1], parent.getWest());
-                    addChild(maze[parent.getWest().getX() - 1]      [parent.getWest().getY()], parent.getWest());
-
-                }
-
-                //South
-                if (child.equals(maze[parent.getX()][parent.getY() + 1]) && !maze[parent.getX()][parent.getY() + 1].isOccupied()) {
-
-                    parent.setSouth(child);
-                    marked.add(child);
-                    size++;
-
-                    addChild(maze[parent.getSouth().getX() +1 ]     [parent.getSouth().getY()], parent.getSouth());
-                    addChild(maze[parent.getSouth().getX()]         [parent.getSouth().getY() - 1], parent.getSouth());
-                    addChild(maze[parent.getSouth().getX()]         [parent.getSouth().getY() +1], parent.getSouth());
-                    addChild(maze[parent.getSouth().getX() - 1]     [parent.getSouth().getY()], parent.getSouth());
-
-                }
-
-                //North
-                if (child.equals(maze[parent.getX()][parent.getY() - 1]) && !maze[parent.getX()][parent.getY() - 1].isOccupied()) {
-
-                    parent.setNorth(child);
-                    marked.add(child);
-                    size++;
-
-                    addChild(maze[parent.getNorth().getX()+1]     [parent.getNorth().getY()], parent.getNorth());
-                    addChild(maze[parent.getNorth().getX()]       [parent.getNorth().getY() -1], parent.getNorth());
-                    addChild(maze[parent.getNorth().getX()]       [parent.getNorth().getY()+1], parent.getNorth());
-                    addChild(maze[parent.getNorth().getX() - 1]   [parent.getNorth().getY()], parent.getNorth());
-
-                }
-                */
 
 
                 }
