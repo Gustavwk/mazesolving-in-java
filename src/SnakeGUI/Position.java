@@ -144,5 +144,13 @@ public class Position implements Comparable<Position> {
     public void setNorth(Position north) {
         this.north = north;
     }
+
+    public Position getParent() {
+        return parent;
+    }
+
+    public void setParent(Position parent) {
+        this.parent = parent;
+    }
 }
 
