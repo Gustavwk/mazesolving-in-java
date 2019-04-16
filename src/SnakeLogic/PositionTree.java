@@ -12,19 +12,31 @@ public class PositionTree<T extends Comparable<T>> {
     private int size = 0;
 
 
-    public PositionTree(Position[][] maze, Position root) {
+    public PositionTree(Position[][] maze) {
         this.maze = maze;
 
-        addRoot(root);
-        addChild(maze[root.getX()-1][root.getY()],root);
-        addChild(maze[root.getX()+1][root.getY()],root);
-        addChild(maze[root.getX()][root.getY()-1],root);
-        addChild(maze[root.getX()][root.getY()+1],root);
+
     }
 
     public boolean initTree(Position start) {
 
-        
+
+        addRoot(start);
+        Position s = start;
+
+        for (int i = 0; i < maze.length-1 ; i++) {
+            for (int j = 0; j < maze[i].length-1 ; j++) {
+                /*
+                addChild(s, maze[i][j]);
+                s = maze[i][j];
+                if (i != maze.length) {
+                    addChild(maze[i + 1][j], maze[i][j]);
+                }
+                */
+
+
+            }
+        }
 
 
         return true;
@@ -57,31 +69,31 @@ public class PositionTree<T extends Comparable<T>> {
                 if (!marked.contains(child)) {
 
 
-                    if ((child.equals(parentEast) || child.equals(parentWest) || child.equals(parentSouth) || child.equals(parentNorth)) && !child.isOccupied() ){
+                    if ((child.equals(parentEast) || child.equals(parentWest) || child.equals(parentSouth) || child.equals(parentNorth)) && !child.isOccupied() && !parent.isOccupied() ){
 
                         if (child.equals(parentEast)){
                             parent.setEast(child);
                             child.setParent(parent);
                             marked.add(child);
-                            System.out.println(child + " East set to " + parent);
+                            System.out.println(child + " and is East to " + parent);
                         }
                         if (child.equals(parentWest)){
                             parent.setWest(child);
                             child.setParent(parent);
                             marked.add(child);
-                            System.out.println(child + " West set to"  + parent);
+                            //System.out.println(child + " and is West to"  + parent);
                         }
                         if (child.equals(parentNorth)){
                             parent.setNorth(child);
                             child.setParent(parent);
                             marked.add(child);
-                            System.out.println(child + " Nort set to " + parent);
+                            System.out.println(child + " and is North to " + parent);
                         }
                         if (child.equals(parentSouth)){
                             parent.setSouth(child);
                             child.setParent(parent);
                             marked.add(child);
-                            System.out.println(child + " South set to " + parent);
+                            System.out.println(child + " and is South to " + parent);
                         }
                     }
 

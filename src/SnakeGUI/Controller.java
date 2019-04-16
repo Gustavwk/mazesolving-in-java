@@ -29,6 +29,7 @@ public class Controller {
     private int gameLoopDelay = 500;
     private float refreshRate = 300;
     private KeyCode keyPressed = KeyCode.BACK_SPACE;
+    private boolean takeoff = false;
 
 
 
@@ -58,6 +59,25 @@ public class Controller {
         room.createPacManMaze(items,maze);
         drawCanvas();
     }
+
+    @FXML
+    public void reset(){
+        dfsCrawler.setPosition(maze[1][1]);
+        dfsCrawler.getGoPath().clear();
+        greedGhost.setPosition(maze[1][1]);
+        greedGhost.getGoPath().clear();
+        takeoff = false;
+
+    }
+
+    @FXML
+    public void go() {
+        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
+        dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
+        greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
+        takeoff = true;
+    }
+
     @FXML
     public void greedyShowPath(ActionEvent event)
     {
@@ -84,12 +104,10 @@ public class Controller {
 
     public void initialize()
     {
-        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
-        dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
-        greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
 
 
-        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
+
+        PositionTree<Position> tree = new PositionTree<>(maze);
         bfsGhost.bfs(bfsGhost.getPosition());
 
         tree.initTree(bfsGhost.getPosition());
@@ -164,14 +182,18 @@ public class Controller {
 
     private void update(long now)
     {
+        drawCanvas();
+
+        if (takeoff) {
+
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
             dfsCrawler.update();
             defaultGoal.update();
             greedGhost.update();
-            drawCanvas();
 
+        }
 
     }
 
