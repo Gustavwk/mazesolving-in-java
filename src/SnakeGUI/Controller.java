@@ -107,13 +107,12 @@ public class Controller {
 
 
 
-        PositionTree<Position> tree = new PositionTree<>(maze);
+        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
         bfsGhost.bfs(bfsGhost.getPosition());
 
-        tree.initTree(bfsGhost.getPosition());
 
 
-        System.out.println(maze[1][1].getEast());
+        System.out.println(bfsGhost.getPosition());
 
 
 

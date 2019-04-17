@@ -1,14 +1,16 @@
 
-squid:S1319p"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÏØÒ‰¢-
-usquid:S37765"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(¹Ï°úÿÿÿÿ8ÏØÒ‰¢-
-nsquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(ŞØàÒıÿÿÿÿ8±™Ç¯¢-
-nsquid:CommentedOutCodeLineO"<This block of commented-out lines of code should be removed.(¦ìßúÿÿÿÿÿ8¬¨·¯¢-
-squid:S1319l"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÏØÒ‰¢-
-Ksquid:S1066C"/Merge this if statement with the enclosing one.(¢Œ8ÏØÒ‰¢-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
 V
-squid:S106I"9Replace this use of System.out or System.err by a logger.(Ü…Ÿ£8ŞúÇ¯¢-
+squid:S106N"9Replace this use of System.out or System.err by a logger.(Ü…Ÿ£8ŞúÇ¯¢-
+Msquid:S1066H"/Merge this if statement with the enclosing one.(£Êæ8ÏØÒ‰¢-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+nsquid:CommentedOutCodeLineT"<This block of commented-out lines of code should be removed.(¦ìßúÿÿÿÿÿ8¬¨·¯¢-
+usquid:S3776:"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(¹Ï°úÿÿÿÿ8ÏØÒ‰¢-
 [
-squid:S106U"9Replace this use of System.out or System.err by a logger.(‚Äºııÿÿÿÿ8ŞúÇ¯¢-
+squid:S106Z"9Replace this use of System.out or System.err by a logger.(‚Äºııÿÿÿÿ8ŞúÇ¯¢-
 U
-squid:S106["9Replace this use of System.out or System.err by a logger.(ù…¯	8ŞúÇ¯¢-
+squid:S106`"9Replace this use of System.out or System.err by a logger.(ù…¯	8ŞúÇ¯¢-
+squid:S1319u"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÏØÒ‰¢-
+squid:S1319q"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÏØÒ‰¢-
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(±æúğ8“»ê¯¢-
+Isquid:S1481"&Remove this unused "s" local variable.(Ê•œ¦şÿÿÿÿ8“»ê¯¢-
+Xsquid:S1854"5Remove this useless assignment to local variable "s".(Ê•œ¦şÿÿÿÿ8“»ê¯¢-

@@ -1,10 +1,10 @@
 
 Xsquid:S1126?"AReplace this if-then-else statement by a single return statement.(Ë¦û
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
-]squid:S1126E"AReplace this if-then-else statement by a single return statement.(òÁïˆüÿÿÿÿ
-isquid:S3776'"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¸ÃØÔ
 Šsquid:S1319M"sThe type of the "visited" object should be an interface such as "List" rather than the implementation "LinkedList".(‰Îø
+]squid:S1126E"AReplace this if-then-else statement by a single return statement.(òÁïˆüÿÿÿÿ
+Šsquid:S1319ˆ"rThe type of the "goPath" object should be an interface such as "List" rather than the implementation "LinkedList".(„•éº
+isquid:S3776'"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¸ÃØÔ
 Wsquid:S11263"AReplace this if-then-else statement by a single return statement.(ïŒÎI
 squid:S1319„"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ğğÇøüÿÿÿÿ
 ]squid:S11269"AReplace this if-then-else statement by a single return statement.(ßß ÿÿÿÿÿ
-Šsquid:S1319ˆ"rThe type of the "goPath" object should be an interface such as "List" rather than the implementation "LinkedList".(„•éº
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
