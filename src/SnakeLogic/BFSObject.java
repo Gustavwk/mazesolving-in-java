@@ -1,6 +1,7 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -14,6 +15,8 @@ public class BFSObject implements GameObject {
     private LinkedList<Position> goPath = new LinkedList<>();
     private int go = 0;
     private LinkedList<Position> visited = new LinkedList<>();
+    private int steps;
+    private LinkedList <Position> bfsPath = new LinkedList<>();
 
 
     public BFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
@@ -26,28 +29,47 @@ public class BFSObject implements GameObject {
 
     }
 
+    public boolean mapToRoot(Position here){
+
+        if (here.getParent() != null){
+            bfsPath.add(here.getParent());
+            mapToRoot(here.getParent());
+        }
+
+        return true;
+    }
+
     public boolean bfs(Position current){
+        steps++;
         visited.add(current);
+        LinkedList<Position> split = new LinkedList<>();
 
         if (visited.contains(goal.getPosition())){
+            mapToRoot(current);
             System.out.println("Juhu BFS virker");
-            goPath = visited;
+            goPath = bfsPath;
+            System.out.println("steps: " + steps);
             return true;
 
 
     } else {
         if (current.getEast() != null) {
-            bfs(current.getEast());
+            split.add(current.getEast());
         }
         if (current.getSouth() != null) {
-            bfs(current.getSouth());
+            split.add(current.getSouth());
         }
         if (current.getWest() != null) {
-            bfs(current.getWest());
+            split.add(current.getWest());
         }
         if (current.getNorth() != null) {
-                bfs(current.getNorth());
+            split.add(current.getNorth());
         }
+
+            for (Position pos: split) {
+                bfs(pos);
+
+            }
 }
 
 return false;

@@ -105,42 +105,22 @@ public class Controller {
     public void initialize()
     {
 
-
-
-        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition());
+        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition(),defaultGoal.getPosition());
         bfsGhost.bfs(bfsGhost.getPosition());
-
-
 
         System.out.println(bfsGhost.getPosition());
 
-
-
-
-        room.markPath(tree.getMarked(),items,Color.RED);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        room.markPath(tree.getMarked(),items,Color.DARKCYAN);
 
         addItems();
         calculateFields();
         //This control the start position of the player.
         getRandomPosition();
+
+
+
+
+
 
         // Start and control game loop
         new AnimationTimer(){
@@ -160,7 +140,7 @@ public class Controller {
 
 
 
-        //print2D(maze);
+
 
 
 
@@ -249,7 +229,7 @@ public class Controller {
 
             // Loop through all elements of current row
             for (int j = 0; j < mat[i].length; j++)
-                if (mat[i][j].getCost() != 0){
+                if (mat[i][j].getParent() != null){
 
                     System.out.println(mat[i][j] + " ");
 

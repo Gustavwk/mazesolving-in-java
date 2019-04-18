@@ -10,12 +10,15 @@ public class PositionTree<T extends Comparable<T>> {
     private Position rootNode = null;
     private LinkedList<Position> marked = new LinkedList();
     private int size = 0;
+    private Position goal;
 
 
-    public PositionTree(Position[][] maze, Position rootNode) {
+    public PositionTree(Position[][] maze, Position rootNode, Position goal) {
         this.maze = maze;
+        this.goal = goal;
         addRoot(rootNode);
         addChildrenToAdjacent(rootNode);
+
 
     }
 
@@ -30,28 +33,31 @@ public class PositionTree<T extends Comparable<T>> {
                 Position south = maze[position.getX()][position.getY() - 1];
                 Position north = maze[position.getX()][position.getY() + 1];
 
-                if (west != null && !marked.contains(west)){
+                if (west != null && !marked.contains(west) && !west.isOccupied()){
                     adjacent.add(west);
                 }
-                if (east != null && !marked.contains(east)){
+                if (east != null && !marked.contains(east) && !east.isOccupied()){
                     adjacent.add(east);
                 }
-                if (north != null && !marked.contains(north)){
+                if (north != null && !marked.contains(north) && !north.isOccupied()){
                     adjacent.add(north);
                 }
-                if (south != null && !marked.contains(south)){
+                if (south != null && !marked.contains(south) && !south.isOccupied()){
                     adjacent.add(south);
                 }
 
 
-                for (Position pos: adjacent) {
-                    addChild(pos,position);
+                    for (Position pos : adjacent) {
+                        addChild(pos, position);
+                    }
+
+
+                if (!marked.contains(goal)){
+                    for (Position pos : adjacent) {
+                        addChildrenToAdjacent(pos);
+                    }
                 }
-                /* StackOverflow 
-                for (Position pos: adjacent) {
-                    addChildrenToAdjacent(pos);
-                }
-                */
+
 
         }
 
@@ -97,7 +103,6 @@ public class PositionTree<T extends Comparable<T>> {
                             child.setParent(start);
                             marked.add(child);
 
-                            System.out.println(child + " and is East to " + start);
                             if (!marked.contains(start)){
                                 marked.add(start);
                             }
@@ -108,7 +113,6 @@ public class PositionTree<T extends Comparable<T>> {
                             child.setParent(start);
                             marked.add(child);
 
-                            System.out.println(child + " and is West to"  + start);
                             if (!marked.contains(start)){
                                 marked.add(start);
                             }
@@ -119,7 +123,6 @@ public class PositionTree<T extends Comparable<T>> {
                             child.setParent(start);
                             marked.add(child);
 
-                            System.out.println(child + " and is North to " + start);
                             if (!marked.contains(start)){
                                 marked.add(start);
                             }
@@ -130,7 +133,6 @@ public class PositionTree<T extends Comparable<T>> {
                             child.setParent(start);
                             marked.add(child);
 
-                            System.out.println(child + " and is South to " + start);
                             if (!marked.contains(start)){
                                 marked.add(start);
                             }

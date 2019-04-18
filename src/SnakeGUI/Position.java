@@ -75,7 +75,7 @@ public class Position implements Comparable<Position> {
         } else {
             s = 1;
         }
-        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s] + " COST: " + this.cost  ;
+        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s] + " COST: " + this.cost;
     }
 
     @Override
