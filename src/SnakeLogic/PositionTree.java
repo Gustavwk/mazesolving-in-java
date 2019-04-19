@@ -51,7 +51,7 @@ public class PositionTree<T extends Comparable<T>> {
                 }
 
 
-
+                Collections.sort(adjacent);
                     for (Position pos : adjacent) {
                         addChild(pos, position);
                     }
@@ -106,7 +106,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentEast)){
                             start.setEast(child);
                             child.setParent(start);
-                            System.out.println(child.getParent());
+
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -117,7 +117,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentWest)){
                             start.setWest(child);
                             child.setParent(start);
-                            System.out.println(child.getParent());
+
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -128,7 +128,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentNorth)){
                             start.setNorth(child);
                             child.setParent(start);
-                            System.out.println(child.getParent());
+
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -139,7 +139,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentSouth)){
                             start.setSouth(child);
                             child.setParent(start);
-                            System.out.println(child.getParent());
+
                             marked.add(child);
 
                             if (!marked.contains(start)){

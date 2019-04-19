@@ -1,8 +1,8 @@
 
-4squid:S2119W"Save and re-use this "Random".(¼İÅf
-dsquid:S00116"LRename this field "X" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØñƒ
-Osquid:S1197"8Move the array designator from the variable to the type.(Ã…ˆ
-lsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
-dsquid:S00116"LRename this field "Y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ”Ï¿
-‹squid:S1319K"oThe type of the "list" object should be an interface such as "List" rather than the implementation "ArrayList".(™ñ„ºøÿÿÿÿ
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+‰squid:S1319"oThe type of the "list" object should be an interface such as "List" rather than the implementation "ArrayList".(™ñ„ºøÿÿÿÿ
+bsquid:S00116"LRename this field "X" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØñƒ
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+jsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
+2squid:S2119"Save and re-use this "Random".(¼İÅf
+bsquid:S00116"LRename this field "Y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ”Ï¿
+Msquid:S1197"8Move the array designator from the variable to the type.(Ã…ˆ

@@ -47,7 +47,6 @@ public class BFSObject implements GameObject {
 
         if (visited.contains(goal.getPosition())){
             mapToRoot(current);
-            System.out.println("Juhu BFS virker");
             goPath = bfsPath;
             System.out.println("steps: " + steps);
             return true;

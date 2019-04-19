@@ -92,6 +92,9 @@ public class Controller {
     @FXML
     public void bfsShowPath(ActionEvent event)
     {
+        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition(),defaultGoal.getPosition());
+        room.markPath(tree.getMarked(),items,Color.DARKCYAN);
+        bfsGhost.bfs(bfsGhost.getPosition());
         room.markPath(bfsGhost.getGoPath(),items, Color.DARKGOLDENROD);
         drawCanvas();
     }
@@ -105,12 +108,12 @@ public class Controller {
     {
         defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
 
-        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition(),defaultGoal.getPosition());
-        bfsGhost.bfs(bfsGhost.getPosition());
 
-        System.out.println(bfsGhost.getPosition());
 
-        room.markPath(tree.getMarked(),items,Color.DARKCYAN);
+
+
+
+
 
         addItems();
         calculateFields();
