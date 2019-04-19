@@ -2,6 +2,7 @@ package SnakeLogic;
 
 import SnakeGUI.Position;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class PositionTree<T extends Comparable<T>> {
@@ -33,6 +34,12 @@ public class PositionTree<T extends Comparable<T>> {
                 Position south = maze[position.getX()][position.getY() - 1];
                 Position north = maze[position.getX()][position.getY() + 1];
 
+
+
+
+                if (south != null && !marked.contains(south) && !south.isOccupied()){
+                    adjacent.add(south);
+                }
                 if (west != null && !marked.contains(west) && !west.isOccupied()){
                     adjacent.add(west);
                 }
@@ -42,9 +49,7 @@ public class PositionTree<T extends Comparable<T>> {
                 if (north != null && !marked.contains(north) && !north.isOccupied()){
                     adjacent.add(north);
                 }
-                if (south != null && !marked.contains(south) && !south.isOccupied()){
-                    adjacent.add(south);
-                }
+
 
 
                     for (Position pos : adjacent) {
@@ -101,6 +106,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentEast)){
                             start.setEast(child);
                             child.setParent(start);
+                            System.out.println(child.getParent());
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -111,6 +117,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentWest)){
                             start.setWest(child);
                             child.setParent(start);
+                            System.out.println(child.getParent());
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -121,6 +128,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentNorth)){
                             start.setNorth(child);
                             child.setParent(start);
+                            System.out.println(child.getParent());
                             marked.add(child);
 
                             if (!marked.contains(start)){
@@ -131,6 +139,7 @@ public class PositionTree<T extends Comparable<T>> {
                         if (child.equals(parentSouth)){
                             start.setSouth(child);
                             child.setParent(start);
+                            System.out.println(child.getParent());
                             marked.add(child);
 
                             if (!marked.contains(start)){

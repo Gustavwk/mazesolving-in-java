@@ -43,7 +43,7 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
-    Goal defaultGoal = new Goal(Color.GREEN, 15,10,maze,items);
+    Goal defaultGoal = new Goal(Color.GREEN, 24 ,18,maze,items);
 
 
     DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
@@ -72,7 +72,6 @@ public class Controller {
 
     @FXML
     public void go() {
-        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
         dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
         greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
         takeoff = true;
@@ -104,6 +103,7 @@ public class Controller {
 
     public void initialize()
     {
+        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
 
         PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition(),defaultGoal.getPosition());
         bfsGhost.bfs(bfsGhost.getPosition());
@@ -116,6 +116,9 @@ public class Controller {
         calculateFields();
         //This control the start position of the player.
         getRandomPosition();
+
+
+
 
 
 

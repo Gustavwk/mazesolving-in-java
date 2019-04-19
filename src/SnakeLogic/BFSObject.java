@@ -30,17 +30,18 @@ public class BFSObject implements GameObject {
     }
 
     public boolean mapToRoot(Position here){
-
+        steps++;
         if (here.getParent() != null){
             bfsPath.add(here.getParent());
             mapToRoot(here.getParent());
+
         }
 
         return true;
     }
 
     public boolean bfs(Position current){
-        steps++;
+
         visited.add(current);
         LinkedList<Position> split = new LinkedList<>();
 
