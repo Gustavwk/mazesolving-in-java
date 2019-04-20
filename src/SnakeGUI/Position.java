@@ -9,7 +9,7 @@ public class Position implements Comparable<Position> {
     private int y;
     private double cost;
     private boolean occupied = false;
-    private boolean edge;
+    private int edge;
 
     private Position west;
     private Position south;
@@ -88,13 +88,7 @@ public class Position implements Comparable<Position> {
 
 
 
-    public void setEdge(boolean edge) {
-        this.edge = edge;
-    }
 
-    public boolean isEdge() {
-        return edge;
-    }
 
     public double getCost() {
         return cost;
