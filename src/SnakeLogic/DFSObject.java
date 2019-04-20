@@ -43,7 +43,7 @@ public class DFSObject extends Ghost implements GameObject {
 
             if (visited.contains(goal)){
                 goPath = visited;
-                System.out.println("MAZE SOLVED WITH dfs - STEPS TAKEN: " + steps );
+                System.out.println("MAZE SOLVED WITH DEPTH FIST SEARCH - STEPS TAKEN: " + steps );
                 return true;
             }
 

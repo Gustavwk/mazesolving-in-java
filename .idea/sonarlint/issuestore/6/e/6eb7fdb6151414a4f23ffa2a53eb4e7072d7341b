@@ -1,18 +1,18 @@
 
-]squid:UnusedPrivateMethod"5Remove this unused private "outOfGoodChoices" method.(†À¼–ýÿÿÿÿ
-hsquid:S1450"SRemove the "east" field and declare it as a local variable in the relevant methods.(þðýˆ
-nsquid:S1450"TRemove the "north" field and declare it as a local variable in the relevant methods.(©Ç¡Øþÿÿÿÿ
-Msquid:S1197"8Move the array designator from the variable to the type.(Èòœü
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(û¿µàþÿÿÿÿ8èÈ£†¡-
-isquid:S1450"TRemove the "south" field and declare it as a local variable in the relevant methods.(ŠÐË¸
-lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
-hsquid:S1450"SRemove the "west" field and declare it as a local variable in the relevant methods.(ÀÚ–Ú
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(¿âí†
-lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ëø…üÿÿÿÿ8ì÷£†¡-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿÁœùÿÿÿÿ8÷¿¥†¡-
-psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
-L
-squid:S106"9Replace this use of System.out or System.err by a logger.(Øó£&
-jsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
+P
+squid:S106“"9Replace this use of System.out or System.err by a logger.(¿âí†
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
+_squid:UnusedPrivateMethodn"5Remove this unused private "outOfGoodChoices" method.(†À¼–ýÿÿÿÿ
+N
+squid:S106*"9Replace this use of System.out or System.err by a logger.(Øó£&
+psquid:S1450"TRemove the "north" field and declare it as a local variable in the relevant methods.(©Ç¡Øþÿÿÿÿ
+lsquid:S1149 "PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
+jsquid:S1450"SRemove the "west" field and declare it as a local variable in the relevant methods.(ÀÚ–Ú
+nsquid:CommentedOutCodeLineg"<This block of commented-out lines of code should be removed.(ÿÁœùÿÿÿÿ8÷¿¥†¡-
+jsquid:S1450"SRemove the "east" field and declare it as a local variable in the relevant methods.(þðýˆ
+ksquid:S1450"TRemove the "south" field and declare it as a local variable in the relevant methods.(ŠÐË¸
+nsquid:CommentedOutCodeLine:"<This block of commented-out lines of code should be removed.(Ëø…üÿÿÿÿ8ì÷£†¡-
+nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(û¿µàþÿÿÿÿ8èÈ£†¡-
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
+Psquid:S1197‹"8Move the array designator from the variable to the type.(Èòœü
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ

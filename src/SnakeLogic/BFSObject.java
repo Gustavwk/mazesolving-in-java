@@ -7,15 +7,9 @@ import javafx.scene.paint.Color;
 
 import java.util.LinkedList;
 
-public class BFSObject implements GameObject {
-    private Position position;
-    private Color color;
-    private Goal goal;
-    private Position[][] maze;
-    private LinkedList<Position> goPath = new LinkedList<>();
-    private int go = 0;
+public class BFSObject extends Ghost implements GameObject {
+
     private LinkedList<Position> visited = new LinkedList<>();
-    private int steps;
     private LinkedList <Position> bfsPath = new LinkedList<>();
 
 
@@ -24,13 +18,11 @@ public class BFSObject implements GameObject {
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
-        System.out.println(this.getGoal().getPosition());
 
 
     }
 
     public boolean mapToRoot(Position here){
-        steps++;
         if (here.getParent() != null){
             bfsPath.add(here.getParent());
             mapToRoot(here.getParent());
@@ -48,11 +40,13 @@ public class BFSObject implements GameObject {
         if (visited.contains(goal.getPosition())){
             mapToRoot(current);
             goPath = bfsPath;
-            System.out.println("steps: " + steps);
+            System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
             return true;
 
 
+
     } else {
+
         if (current.getEast() != null) {
             split.add(current.getEast());
         }
@@ -77,6 +71,11 @@ return false;
 
     @Override
     public void update() {
+        if (go != goPath.size()-1) {
+            go++;
+            this.position = goPath.get(go);
+        }
+
 
     }
 

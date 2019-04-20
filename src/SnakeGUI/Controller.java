@@ -43,12 +43,12 @@ public class Controller {
     ArrayList<Item> items = new ArrayList<Item>();
     Room room = new Room();
     Position[][] maze = room.populate(items,width,height);
-    Goal defaultGoal = new Goal(Color.GREEN, 24 ,18,maze,items);
+    Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
 
 
-    DFSObject dfsCrawler = new DFSObject(1,1, Color.RED,defaultGoal, maze);
-    GreedObject greedGhost = new GreedObject(1,1,Color.PURPLE,defaultGoal,maze); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
-    BFSObject bfsGhost = new BFSObject(1,1,Color.GREEN,defaultGoal,maze);
+    DFSObject dfsObject = new DFSObject(1,1, Color.RED, goal, maze);
+    GreedObject greedyObject = new GreedObject(1,1,Color.PURPLE, goal,maze); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
+    BFSObject bfsObject = new BFSObject(1,1,Color.GREEN, goal,maze);
 
 
 
@@ -60,42 +60,26 @@ public class Controller {
         drawCanvas();
     }
 
-    @FXML
-    public void reset(){
-        dfsCrawler.setPosition(maze[1][1]);
-        dfsCrawler.getGoPath().clear();
-        greedGhost.setPosition(maze[1][1]);
-        greedGhost.getGoPath().clear();
-        takeoff = false;
-
-    }
-
-    @FXML
-    public void go() {
-        dfsCrawler.dfs(dfsCrawler.getPosition(),defaultGoal.getPosition());
-        greedGhost.bestFirst(greedGhost.getPosition(),defaultGoal.getPosition());
-        takeoff = true;
-    }
 
     @FXML
     public void greedyShowPath(ActionEvent event)
     {
-        room.markPath(greedGhost.getGoPath(),items,Color.DARKGREEN);
+        room.markPath(greedyObject.getGoPath(),items,Color.DARKGREEN);
         drawCanvas();
     }
     @FXML
     public void dfsShowPath(ActionEvent event)
     {
-        room.markPath(dfsCrawler.getGoPath(),items,Color.DARKRED);
+        room.markPath(dfsObject.getGoPath(),items,Color.DARKRED);
         drawCanvas();
     }
     @FXML
     public void bfsShowPath(ActionEvent event)
     {
-        PositionTree<Position> tree = new PositionTree<>(maze,bfsGhost.getPosition(),defaultGoal.getPosition());
+        PositionTree<Position> tree = new PositionTree<>(maze, bfsObject.getPosition(), goal.getPosition());
         room.markPath(tree.getMarked(),items,Color.DARKCYAN);
-        bfsGhost.bfs(bfsGhost.getPosition());
-        room.markPath(bfsGhost.getGoPath(),items, Color.DARKGOLDENROD);
+        bfsObject.bfs(bfsObject.getPosition());
+        room.markPath(bfsObject.getGoPath(),items, Color.DARKGOLDENROD);
         drawCanvas();
     }
 
@@ -106,7 +90,11 @@ public class Controller {
 
     public void initialize()
     {
-        defaultGoal.initMazeCost(defaultGoal.getPosition(),maze);
+        goal.initMazeCost(goal.getPosition(),maze);
+        dfsObject.dfs(dfsObject.getPosition(), goal.getPosition());
+        greedyObject.bestFirst(greedyObject.getPosition(), goal.getPosition());
+        takeoff = true;
+
 
 
 
@@ -117,7 +105,6 @@ public class Controller {
 
         addItems();
         calculateFields();
-        //This control the start position of the player.
         getRandomPosition();
 
 
@@ -174,9 +161,9 @@ public class Controller {
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
-            dfsCrawler.update();
-            defaultGoal.update();
-            greedGhost.update();
+            dfsObject.update();
+            goal.update();
+            greedyObject.update();
 
         }
 
@@ -221,9 +208,9 @@ public class Controller {
         // draw 'player'
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
-        dfsCrawler.drawObject(g,fieldWidth,fieldHeight);
-        defaultGoal.drawObject(g,fieldWidth,fieldHeight);
-        greedGhost.drawObject(g,fieldWidth,fieldHeight);
+        dfsObject.drawObject(g,fieldWidth,fieldHeight);
+        goal.drawObject(g,fieldWidth,fieldHeight);
+        greedyObject.drawObject(g,fieldWidth,fieldHeight);
 
 
 
