@@ -1,7 +1,6 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -55,7 +54,7 @@ public class GreedObject extends Ghost implements GameObject {
                     path.push(current);
                     steps++;
                 } else {
-                    //System.out.println("peek & pop: " + path.peek() + "\n");
+                    steps++;
                     current = (Position) path.pop();
                 }
 

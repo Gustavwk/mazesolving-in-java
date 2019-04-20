@@ -30,27 +30,16 @@ public class Controller {
     private float refreshRate = 300;
     private KeyCode keyPressed = KeyCode.BACK_SPACE;
     private boolean takeoff = false;
-
-
-
-
-
-
-
-
-    Player player = new Player(5,5, Color.WHITE);
-    RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
-    ArrayList<Item> items = new ArrayList<Item>();
-    Room room = new Room();
-    Position[][] maze = room.populate(items,width,height);
-    Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
-
-
-    DFSObject dfsObject = new DFSObject(1,1, Color.RED, goal, maze);
-    GreedObject greedyObject = new GreedObject(1,1,Color.PURPLE, goal,maze); // kan ikke finde vej på givne steder - bla hvis goal er i (1.28)
-    BFSObject bfsObject = new BFSObject(1,1,Color.GREEN, goal,maze);
-
-
+    private Position startingPoint = new Position(1,1);
+    private Player player = new Player(5,5, Color.WHITE);
+    private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
+    private ArrayList<Item> items = new ArrayList<Item>();
+    private Room room = new Room();
+    private Position[][] maze = room.populate(items,width,height);
+    private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
+    private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
+    private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
+    private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.GREEN, goal,maze);
 
 
     public void btnStartAction(ActionEvent event)
@@ -95,27 +84,10 @@ public class Controller {
         greedyObject.bestFirst(greedyObject.getPosition(), goal.getPosition());
         takeoff = true;
 
-
-
-
-
-
-
-
-
         addItems();
         calculateFields();
         getRandomPosition();
 
-
-
-
-
-
-
-
-
-        // Start and control game loop
         new AnimationTimer(){
             long lastUpdate;
             public void handle (long now)
@@ -131,26 +103,7 @@ public class Controller {
 
     private void addItems() {
 
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-    /**
-     * Game loop - executed continously during the game
-     * @param now game time in nano seconds
-     */
-
 
     private void update(long now)
     {
@@ -169,26 +122,18 @@ public class Controller {
 
     }
 
-    /**
-     * Get a random position
-     */
 
     private void getRandomPosition() {
         player.setX(random.nextInt(width));
         player.setY(random.nextInt(height));
     }
 
-    /**
-     * Calculate height and width of each field
-     */
     private void calculateFields() {
         this.fieldHeight = canvas.getHeight() / this.height;
         this.fieldWidth = canvas.getWidth() / this.width;
     }
 
-    /**
-     * Draw the canvas - used in the gameloop
-     */
+
     private void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
         //Clear everything
@@ -215,6 +160,7 @@ public class Controller {
 
 
     }
+
     public static void print2D(Position[][] mat)
     {
         // Loop through all rows
@@ -230,5 +176,8 @@ public class Controller {
 
     }}
 
+    public Player getPlayer() {
+        return player;
+    }
 }
 

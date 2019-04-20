@@ -23,7 +23,7 @@ public class Main extends Application {
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                controller.player.keyPressed(event.getCode());
+                controller.getPlayer().keyPressed(event.getCode());
             }
         });
         primaryStage.setScene(scene);

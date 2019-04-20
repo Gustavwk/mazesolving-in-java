@@ -42,9 +42,6 @@ public class BFSObject extends Ghost implements GameObject {
             goPath = bfsPath;
             System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
             return true;
-
-
-
     } else {
 
         if (current.getEast() != null) {
@@ -60,10 +57,11 @@ public class BFSObject extends Ghost implements GameObject {
             split.add(current.getNorth());
         }
 
-            for (Position pos: split) {
-                bfs(pos);
+    for (Position pos : split) {
+        bfs(pos);
 
-            }
+    }
+
 }
 
 return false;
