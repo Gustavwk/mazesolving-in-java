@@ -26,6 +26,25 @@ public class GreedObject extends Ghost implements GameObject {
 
     }
 
+    /**
+     * @param goal the desired end Position of the ghost.
+     * @return Returns true if visited contains the desired end position "goal".
+     *
+     * The method creates a stack and ushed the ghost's position onto it.
+     * The current position in then set to be equal the the top of the stack.
+     *
+     *  while the stack is not empty:
+     *      if visited contains goal - The search is done and the visited list is set equal the the gopPath list.
+     *
+     *      while visited does not contain goal
+     *      if the ghost can move, the next step will be calculated with the nextStep() method.
+     *      current will be set to nextStep() and current will then be pushed onto the stack.
+     *
+     *      else (if the ghost cantMove) : the ghost will backtrack by popping the stack and setting the current position equal to the popped element.
+     *
+     */
+
+
     public boolean bestFirst(Position goal) {
 
         Stack path = new Stack();
@@ -69,6 +88,16 @@ public class GreedObject extends Ghost implements GameObject {
         return false;
     }
 
+    /**
+     * This method takes the adjacent positions west/south/east/north and add them to a list "options" if the ghost can move there.
+     * the list is then sorted according to the weight or cost of the Positions according to the desired goal.
+     * After the list has been sorted the method return the 0th index of the list "options".
+     *
+     * @param current The current position of the ghost.
+     * @param visited The list of visited Positions
+     * @return Returns the best suitable Positions for the "next step".
+     */
+
     public Position nextStep(Position current, List visited) {
 
 
@@ -102,15 +131,6 @@ public class GreedObject extends Ghost implements GameObject {
             //System.out.println("Going for:           " +options.get(0) + "\n");
 
             return options.get(0);
-
-
-    }
-
-    private boolean outOfGoodChoices(Position current) {
-        return maze[current.getX() - 1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "west") &&
-                maze[current.getX()][current.getY() + 1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "south") &&
-                maze[current.getX() + 1][current.getY()].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "east") &&
-                maze[current.getX()][current.getY() - 1].getCost() > maze[current.getX()][current.getY()].getCost() || !canMove(current, "north");
 
 
     }
