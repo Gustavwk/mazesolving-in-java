@@ -34,33 +34,44 @@ public class BFSObject extends Ghost implements GameObject {
 
     public boolean bfs(Position current){
 
+
+
         visited.add(current);
         LinkedList<Position> split = new LinkedList<>();
 
         if (visited.contains(goal.getPosition())){
+
             mapToRoot(current);
             goPath = bfsPath;
             System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
             return true;
+
     } else {
 
-        if (current.getEast() != null) {
-            split.add(current.getEast());
-        }
-        if (current.getSouth() != null) {
-            split.add(current.getSouth());
-        }
-        if (current.getWest() != null) {
-            split.add(current.getWest());
-        }
-        if (current.getNorth() != null) {
-            split.add(current.getNorth());
-        }
+            if (current.getEast() != null) {
+                split.add(current.getEast());
+            }
+            if (current.getSouth() != null) {
+                split.add(current.getSouth());
+            }
+            if (current.getWest() != null) {
+                split.add(current.getWest());
+            }
+            if (current.getNorth() != null) {
+                split.add(current.getNorth());
+            }
 
-    for (Position pos : split) {
-        bfs(pos);
+            for (Position pos : split) {
 
-    }
+                bfs(pos);
+
+                if (visited.contains(goal.getPosition())) {
+                    split.clear();
+                }
+
+
+            }
+
 
 }
 

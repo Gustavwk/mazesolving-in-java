@@ -52,6 +52,7 @@ public class PositionTree<T extends Comparable<T>> {
 
 
                 Collections.sort(adjacent);
+
                     for (Position pos : adjacent) {
                         addChild(pos, position);
                     }

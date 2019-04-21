@@ -26,12 +26,12 @@ public class GreedObject extends Ghost implements GameObject {
 
     }
 
-    public boolean bestFirst(Position root, Position goal) {
+    public boolean bestFirst(Position goal) {
 
         Stack path = new Stack();
         LinkedList<Position> visited = new LinkedList<>();
         int steps = 0;
-        path.push(root);
+        path.push(this.position);
         Position current = (Position) path.peek();
 
         while (!path.empty()) {

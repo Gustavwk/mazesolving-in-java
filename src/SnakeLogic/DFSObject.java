@@ -31,12 +31,12 @@ public class DFSObject extends Ghost implements GameObject {
     }
 
 
-    public boolean dfs(Position root, Position goal) {
+    public boolean dfs(Position goal) {
 
         Stack path = new Stack();
         LinkedList<Position> visited = new LinkedList<>();
         int steps = 0;
-        path.push(root);
+        path.push(this.position);
         Position current = (Position) path.peek();
 
         while (!path.empty()){

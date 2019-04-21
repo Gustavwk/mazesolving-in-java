@@ -36,7 +36,7 @@ public class Controller {
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
     private Position[][] maze = room.populate(items,width,height);
-    private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
+    private Goal goal = new Goal(Color.GREEN, 1 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
     private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.GREEN, goal,maze);
@@ -53,7 +53,7 @@ public class Controller {
     @FXML
     public void greedyShowPath(ActionEvent event)
     {
-        room.markPath(greedyObject.getGoPath(),items,Color.DARKGREEN);
+        room.markPath(greedyObject.getGoPath(),items,Color.DARKVIOLET);
         drawCanvas();
     }
     @FXML
@@ -66,9 +66,9 @@ public class Controller {
     public void bfsShowPath(ActionEvent event)
     {
         PositionTree<Position> tree = new PositionTree<>(maze, bfsObject.getPosition(), goal.getPosition());
-        room.markPath(tree.getMarked(),items,Color.DARKCYAN);
+        room.markPath(tree.getMarked(),items,Color.DARKGOLDENROD);
         bfsObject.bfs(bfsObject.getPosition());
-        room.markPath(bfsObject.getGoPath(),items, Color.DARKGOLDENROD);
+        room.markPath(bfsObject.getGoPath(),items, Color.YELLOW);
         drawCanvas();
     }
 
@@ -79,9 +79,9 @@ public class Controller {
 
     public void initialize()
     {
-        goal.initMazeCost(goal.getPosition(),maze);
-        dfsObject.dfs(dfsObject.getPosition(), goal.getPosition());
-        greedyObject.bestFirst(greedyObject.getPosition(), goal.getPosition());
+        goal.initMazeCost(maze);
+        dfsObject.dfs(goal.getPosition());
+        greedyObject.bestFirst(goal.getPosition());
         takeoff = true;
 
         addItems();
@@ -110,14 +110,13 @@ public class Controller {
         drawCanvas();
 
         if (takeoff) {
-
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
             dfsObject.update();
             goal.update();
             greedyObject.update();
-
+           // bfsObject.update();
         }
 
     }
@@ -133,24 +132,15 @@ public class Controller {
         this.fieldWidth = canvas.getWidth() / this.width;
     }
 
-
     private void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
-        //Clear everything
-
         g.clearRect(0,0,width*fieldWidth ,height*fieldHeight);
 
-
-        // draw items
-        for (Item item : items)
-        {
+        for (Item item : items) {
             item.drawObject(g,fieldWidth,fieldHeight);
 
         }
 
-
-
-        // draw 'player'
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
         dfsObject.drawObject(g,fieldWidth,fieldHeight);
@@ -161,20 +151,6 @@ public class Controller {
 
     }
 
-    public static void print2D(Position[][] mat)
-    {
-        // Loop through all rows
-        for (int i = 0; i < mat.length; i++)
-
-            // Loop through all elements of current row
-            for (int j = 0; j < mat[i].length; j++)
-                if (mat[i][j].getParent() != null){
-
-                    System.out.println(mat[i][j] + " ");
-
-
-
-    }}
 
     public Player getPlayer() {
         return player;

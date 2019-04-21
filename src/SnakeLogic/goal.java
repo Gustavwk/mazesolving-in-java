@@ -58,10 +58,10 @@ public class Goal implements GameObject {
     public void update() {
 
     }
-    public boolean initMazeCost(Position goal, Position[][]maze){
+    public boolean initMazeCost(Position[][]maze){
         for (int i = 0; i <maze.length ; i++) {
             for (int j = 0; j <maze[i].length ; j++) {
-                maze[i][j].setCost(calculateDistance(goal,maze[i][j]));
+                maze[i][j].setCost(calculateDistance(this.position,maze[i][j]));
             }
         }
         return true;

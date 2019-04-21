@@ -30,7 +30,7 @@ public class Room {
             addMarkedTileToRoom(pos.getX(),pos.getY(),objects, color);
             howManyMarked++;
         }
-        System.out.println(howManyMarked);
+
 
         return true;
     }
