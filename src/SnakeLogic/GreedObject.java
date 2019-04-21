@@ -8,6 +8,9 @@ import javafx.scene.paint.Color;
 import java.util.*;
 
 
+/**
+ * This object can find a way through a maze by calculating the best local step based on how the positions in the maze are weighted according to the goal.
+ */
 public class GreedObject extends Ghost implements GameObject {
 
 
@@ -21,9 +24,6 @@ public class GreedObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
-
-
-
     }
 
     /**
@@ -76,8 +76,6 @@ public class GreedObject extends Ghost implements GameObject {
                     current = (Position) path.pop();
                 }
 
-
-
             }
 
 
@@ -126,9 +124,6 @@ public class GreedObject extends Ghost implements GameObject {
             }
 
             Collections.sort(options);
-
-            //System.out.println("Going for:           " +options.get(0) + "\n");
-
             return options.get(0);
 
 
@@ -154,16 +149,4 @@ public class GreedObject extends Ghost implements GameObject {
 
     }
 
-    public static void print2D(Position mat[][]) {
-        // Loop through all rows
-        for (int i = 0; i < mat.length; i++)
-
-            // Loop through all elements of current row
-            for (int j = 0; j < mat[i].length; j++)
-
-
-                System.out.println(mat[i][j] + " ");
-
-
-    }
 }

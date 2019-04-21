@@ -47,18 +47,16 @@ public class DFSObject extends Ghost implements GameObject {
 
 
     /**
+     *  The methods creates a stack and pushes the position of the ghost.
+     *          while the stack is not empty:
+     *              if visited contain goal - the search is done
+     *              else if the ghost can move either west/south/east/north(in that order), it moves there pushed that direction on the stack
+     *              else if it cant move - pops the stack and moves to that place - successfully backtracking
+     *
      * @param goal is the desired goal of the Depth first Search.
      * @return This method return True if the path is Possible, and false if its not possible.
      *
-     * The methods creates a stack and pushes the position of the ghost.
      *
-     * while the stack is not empty:
-     *
-     *              if visited contain goal - the search is done
-     *
-     *              else if the ghost can move either west/south/east/north(in that order), it moves there pushed that direction on the stack
-     *
-     *              else if it cant move - pops the stack and moves to that place - successfully backtracking
      */
 
     public boolean dfs(Position goal) {
