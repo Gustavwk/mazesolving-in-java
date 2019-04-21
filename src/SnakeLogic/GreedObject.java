@@ -27,10 +27,7 @@ public class GreedObject extends Ghost implements GameObject {
     }
 
     /**
-     * @param goal the desired end Position of the ghost.
-     * @return Returns true if visited contains the desired end position "goal".
-     *
-     * The method creates a stack and ushed the ghost's position onto it.
+     * The method creates a stack and pushed the ghost's position onto it.
      * The current position in then set to be equal the the top of the stack.
      *
      *  while the stack is not empty:
@@ -42,6 +39,8 @@ public class GreedObject extends Ghost implements GameObject {
      *
      *      else (if the ghost cantMove) : the ghost will backtrack by popping the stack and setting the current position equal to the popped element.
      *
+     * @param goal the desired end Position of the ghost.
+     * @return Returns true if visited contains the desired end position "goal".
      */
 
 
