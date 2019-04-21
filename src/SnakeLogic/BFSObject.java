@@ -1,7 +1,6 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -80,9 +79,9 @@ return false;
 
     @Override
     public void update() {
-        if (go != goPath.size()-1) {
-            go++;
-            this.position = goPath.get(go);
+        if (visualPosition != goPath.size()-1) {
+            visualPosition++;
+            this.position = goPath.get(visualPosition);
         }
 
 
@@ -139,11 +138,11 @@ return false;
         this.goPath = goPath;
     }
 
-    public int getGo() {
-        return go;
+    public int getVisualPosition() {
+        return visualPosition;
     }
 
-    public void setGo(int go) {
-        this.go = go;
+    public void setVisualPosition(int visualPosition) {
+        this.visualPosition = visualPosition;
     }
 }

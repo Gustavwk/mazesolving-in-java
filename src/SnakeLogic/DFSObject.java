@@ -6,6 +6,11 @@ import javafx.scene.paint.Color;
 import java.util.LinkedList;
 import java.util.Stack;
 
+/**
+ * This Object can find through a maze without any prior knowledge -
+ * it is appropriate for finding a solution to a maze, not always (almost never) the fastest.
+ */
+
 public class DFSObject extends Ghost implements GameObject {
 
 
@@ -19,22 +24,43 @@ public class DFSObject extends Ghost implements GameObject {
 
     }
 
-
+    /**
+     * The Pathfinder method return a list of all the visited positions in the maze.
+     * This update method makes a nice visual representation of the ghost walking through the maze
+     *
+     *
+     * Update runs continuously
+     * The visual Position is the drawn position of the ghost.
+     * If the Visual Position is not the same position as the last element in goPath, the Visual Position
+     * becomes the position on the next index in the list.
+     *
+     */
 
     @Override
     public void update() {
-        if (go != goPath.size()-1) {
-            go++;
-          this.position = goPath.get(go);
+        if (visualPosition != goPath.size()-1) {
+            visualPosition++;
+          this.position = goPath.get(visualPosition);
         }
 
     }
 
 
+    /**
+     * @param goal is the desired goal of the Depth first Search.
+     * @return This method return True if the path is Possible, and false if its not possible.
+     *
+     * The methods creates a stack and pushes the position of the ghost.
+     *
+     * while the stack is not empty:
+     *              if visited contain goal - the search is done
+     *              else if the ghost can move either west/south/east/north(in that order), it moves there pushed that direction on the stack
+     *              else if it cant move - pops the stack and moves to that place - successfully backtracking
+     */
+
     public boolean dfs(Position goal) {
 
         Stack path = new Stack();
-        LinkedList<Position> visited = new LinkedList<>();
         int steps = 0;
         path.push(this.position);
         Position current = (Position) path.peek();

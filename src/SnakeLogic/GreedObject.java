@@ -118,9 +118,9 @@ public class GreedObject extends Ghost implements GameObject {
 
     @Override
     public void update() {
-        if (go != goPath.size() - 1) {
-            go++;
-            this.position = goPath.get(go);
+        if (visualPosition != goPath.size() - 1) {
+            visualPosition++;
+            this.position = goPath.get(visualPosition);
         }
 
 

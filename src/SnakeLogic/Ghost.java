@@ -7,14 +7,13 @@ import javafx.scene.paint.Color;
 import java.util.LinkedList;
 
 public abstract class Ghost implements GameObject {
-    protected  Position position;
     protected  Color color;
     protected Goal goal;
+    protected  Position position;
+    protected  int visualPosition = 0;
     protected  Position[][] maze;
-    protected  int width;
-    protected  int height;
+    protected LinkedList<Position> visited = new LinkedList<>();
     protected  LinkedList<Position> goPath = new LinkedList<>();
-    protected  int go = 0;
 
     @Override
     public void update() {
@@ -97,10 +96,6 @@ public abstract class Ghost implements GameObject {
         this.color = color;
     }
 
-    public Goal getGoal() {
-        return goal;
-    }
-
     public void setGoal(Goal goal) {
         this.goal = goal;
     }
@@ -113,35 +108,9 @@ public abstract class Ghost implements GameObject {
         this.maze = maze;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
 
     public LinkedList<Position> getGoPath() {
         return goPath;
     }
 
-    public void setGoPath(LinkedList<Position> goPath) {
-        this.goPath = goPath;
-    }
-
-    public int getGo() {
-        return go;
-    }
-
-    public void setGo(int go) {
-        this.go = go;
-    }
 }
