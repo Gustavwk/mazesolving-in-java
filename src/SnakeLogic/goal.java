@@ -7,6 +7,9 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the desired goal in that path finding algorithms!
+ */
 public class Goal implements GameObject {
     private Position position;
     private Color color;
@@ -58,6 +61,13 @@ public class Goal implements GameObject {
     public void update() {
 
     }
+
+    /**
+     * This method calculates the cost (or weight) of each of the nodes in the maze.
+     * This is done with the method "calculateDistance()" that runs in a nested for loop on each of the positions in the maze relative to the goals position
+     * @param maze is the 2D array that represents the maze
+     * @return Returns true when the operation is done.
+     */
     public boolean initMazeCost(Position[][]maze){
         for (int i = 0; i <maze.length ; i++) {
             for (int j = 0; j <maze[i].length ; j++) {
@@ -96,6 +106,16 @@ public class Goal implements GameObject {
         this.maze = maze;
     }
 
+    /**
+     * calculates the distance between 2 positions using the "Distance formula" derived from pythagoras. This distance is
+     * used throughout the program as a cost or weight, making it possible to make educated guesses on ho to progress through the maze.
+     *
+     * This cost should be assigned to the position that is not the goal. The goals own cost should always be zero.
+     *
+     * @param posOne Position 1
+     * @param posTwo Position 2
+     * @return the distance from posOne to posTwo as a double.
+     */
     private double calculateDistance(Position posOne, Position posTwo) {
 
         return Math.sqrt(               ((posTwo.getX() - posOne.getX()) * (posTwo.getX() - posOne.getX())) +

@@ -6,6 +6,10 @@ import javafx.scene.paint.Color;
 
 import java.util.LinkedList;
 
+/**
+ * This is the superclass of the ghosts, it hold the methods and fields that all the ghost needs
+ * Each ghost will be more specified, and contain specific path finding algorithms.
+ */
 public abstract class Ghost implements GameObject {
     protected  Color color;
     protected Goal goal;
@@ -29,10 +33,10 @@ public abstract class Ghost implements GameObject {
 
 
     /**
-     * Nedenstående er fundet på nettet og skal måske ligeforståes ekstra meget
-     * @param currentPosition
-     * @param s
-     * @return
+     * This is a way to tell if the adjacent position is occupied or not. I found it on gitHub and tuned it to fir this program!
+     * @param currentPosition is the Position that the ghost occupies
+     * @param s is a string parameter used to navigate in what direction we want check.
+     * @return True if the space is not occupied, false if it is!
      */
 
     public boolean canMove(Position currentPosition, String s) {
@@ -73,6 +77,13 @@ public abstract class Ghost implements GameObject {
         }
         else return false;
     }
+
+    /**
+     * @param visited A list of visited Positions
+     * @param current The current position of the ghost
+     * @return returns True if the ghost cant move!
+     * - if all the spaces around the ghost either have already been visited or are occupied by walls
+     */
     public boolean cantMove(LinkedList<Position> visited, Position current) {
             return (!canMove(current, "west") || visited.contains(maze[current.getX() - 1][current.getY()]))
                 && (!canMove(current, "south") || visited.contains(maze[current.getX()][current.getY() + 1]))
