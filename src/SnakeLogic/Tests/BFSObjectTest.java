@@ -26,7 +26,6 @@ public class BFSObjectTest {
 
         maze = room.populate(items,width,height);
         goal.initMazeCost(maze);
-        PositionTree<Position> tree = new PositionTree<>(maze, bfsObject.getPosition(), goal.getPosition());
     }
 
     @org.junit.After
