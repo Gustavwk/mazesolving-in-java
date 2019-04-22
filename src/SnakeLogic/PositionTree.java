@@ -1,6 +1,7 @@
 package SnakeLogic;
 
 import SnakeGUI.Position;
+import javafx.geometry.Pos;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -59,6 +60,8 @@ public class PositionTree<T extends Comparable<T>> {
      * @return returns the start position.
      */
     public Position addChild (Position child, Position start) {
+
+
 
 
         if (child.getX() > 0 && child.getY() > 0 && start.getY() > 0 && start.getX() > 0) {
@@ -148,6 +151,8 @@ public class PositionTree<T extends Comparable<T>> {
      * @param startingPosition, the position from which the maze should be mapped by the tree.
      * @return true when the task is done.
      */
+
+
     public boolean addChildrenToAdjacent(Position startingPosition) {
 
             if (startingPosition.getY() > 0 && startingPosition.getX() > 0) {
@@ -162,11 +167,11 @@ public class PositionTree<T extends Comparable<T>> {
 
 
 
-                if (south != null && !marked.contains(south) && !south.isOccupied()){
-                    adjacent.add(south);
-                }
-                if (west != null && !marked.contains(west) && !west.isOccupied()){
+                if (west != null && !marked.contains(south) && !south.isOccupied()){
                     adjacent.add(west);
+                }
+                if (south != null && !marked.contains(west) && !west.isOccupied()){
+                    adjacent.add(south);
                 }
                 if (east != null && !marked.contains(east) && !east.isOccupied()){
                     adjacent.add(east);
@@ -176,21 +181,11 @@ public class PositionTree<T extends Comparable<T>> {
                 }
 
 
-                Collections.sort(adjacent);
-
-                    for (Position pos : adjacent) {
-                        addChild(pos, startingPosition);
-                    }
+                //expandWithSeparateLoops(startingPosition, adjacent);
+                expandWithOneLoop(startingPosition, adjacent);
 
 
-                if (!marked.contains(goal)){
-                    for (Position pos : adjacent) {
-                        addChildrenToAdjacent(pos);
-                    }
-                }
-
-
-        }
+            }
 
 
 
@@ -198,6 +193,35 @@ public class PositionTree<T extends Comparable<T>> {
 
 
         return true;
+    }
+
+    private void expandWithOneLoop(Position startingPosition, LinkedList<Position> adjacent) {
+        Collections.sort(adjacent);
+        if (!marked.contains(goal)){
+
+            for (Position pos : adjacent) {
+                addChild(pos, startingPosition);
+                addChildrenToAdjacent(pos);
+            }
+
+
+
+        }
+    }
+
+    private void expandWithSeprateLoops(Position startingPosition, LinkedList<Position> adjacent) {
+        Collections.sort(adjacent);
+
+        for (Position pos : adjacent) {
+            addChild(pos, startingPosition);
+        }
+
+
+        if (!marked.contains(goal)){
+            for (Position pos : adjacent) {
+                addChildrenToAdjacent(pos);
+            }
+        }
     }
 
     public int getSize() {
