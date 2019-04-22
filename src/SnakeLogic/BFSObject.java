@@ -120,7 +120,7 @@ return false;
     public void update() {
         if (visualPosition != goPath.size()-1) {
             visualPosition++;
-            this.position = goPath.get(visualPosition);
+//            this.position = goPath.get(visualPosition);
         }
 
 

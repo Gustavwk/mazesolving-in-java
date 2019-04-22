@@ -181,33 +181,73 @@ public class PositionTree<T extends Comparable<T>> {
                 }
 
 
-                //expandWithSeparateLoops(startingPosition, adjacent);
-                expandWithOneLoop(startingPosition, adjacent);
+               Collections.sort(adjacent);
+
+
+                for (Position pos : adjacent) {
+                    addChild(pos, startingPosition);
+                    addChildrenToAdjacent(pos);
+                }
+
 
 
             }
 
+             return true;
+            }
+
+    public boolean addChildrenToAdjacentWithCost(Position startingPosition) {
+
+        if (startingPosition.getY() > 0 && startingPosition.getX() > 0) {
+
+            LinkedList<Position> adjacent = new LinkedList<>();
+
+            Position west = maze[startingPosition.getX() - 1][startingPosition.getY()];
+            Position east = maze[startingPosition.getX() + 1][startingPosition.getY()];
+            Position south = maze[startingPosition.getX()][startingPosition.getY() - 1];
+            Position north = maze[startingPosition.getX()][startingPosition.getY() + 1];
 
 
 
 
+            if (west != null && !marked.contains(south) && !south.isOccupied()){
+                adjacent.add(west);
+            }
+            if (south != null && !marked.contains(west) && !west.isOccupied()){
+                adjacent.add(south);
+            }
+            if (east != null && !marked.contains(east) && !east.isOccupied()){
+                adjacent.add(east);
+            }
+            if (north != null && !marked.contains(north) && !north.isOccupied()){
+                adjacent.add(north);
+            }
+
+
+             Collections.sort(adjacent);
+
+
+            for (Position pos : adjacent) {
+                if (!marked.contains(goal)) {
+                    addChild(pos, startingPosition);
+                    addChildrenToAdjacent(pos);
+                }
+            }
+
+
+        }
 
         return true;
     }
 
-    private void expandWithOneLoop(Position startingPosition, LinkedList<Position> adjacent) {
-        Collections.sort(adjacent);
-        if (!marked.contains(goal)){
-
-            for (Position pos : adjacent) {
-                addChild(pos, startingPosition);
-                addChildrenToAdjacent(pos);
-            }
 
 
 
-        }
-    }
+
+
+
+
+
 
     private void expandWithSeprateLoops(Position startingPosition, LinkedList<Position> adjacent) {
         Collections.sort(adjacent);
