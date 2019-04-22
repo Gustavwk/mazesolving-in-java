@@ -36,7 +36,7 @@ public class Controller {
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
     private Position[][] maze = room.populate(items,width,height);
-    private Goal goal = new Goal(Color.GREEN, 1 ,18,maze,items);
+    private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
     private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.GREEN, goal,maze);
@@ -65,9 +65,9 @@ public class Controller {
     @FXML
     public void bfsShowPath(ActionEvent event)
     {
-        PositionTree<Position> tree = new PositionTree<>(maze, bfsObject.getPosition(), goal.getPosition());
-        room.markPath(tree.getMarked(),items,Color.DARKGOLDENROD);
-        bfsObject.bfs(bfsObject.getPosition());
+
+        room.markPath(bfsObject.getTree().getMarked(),items,Color.DARKGOLDENROD);
+
         room.markPath(bfsObject.getGoPath(),items, Color.YELLOW);
         drawCanvas();
     }
@@ -79,7 +79,9 @@ public class Controller {
 
     public void initialize()
     {
+
         goal.initMazeCost(maze);
+        bfsObject.bfs(bfsObject.getPosition());
         dfsObject.dfs(goal.getPosition());
         greedyObject.bestFirst(goal.getPosition());
         takeoff = true;
@@ -116,7 +118,7 @@ public class Controller {
             dfsObject.update();
             goal.update();
             greedyObject.update();
-           // bfsObject.update();
+            bfsObject.update();
         }
 
     }
