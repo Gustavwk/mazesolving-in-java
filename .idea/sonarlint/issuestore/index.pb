@@ -46,3 +46,7 @@ Q
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
 L
 src/SnakeGUI/Controller.java,8\6\861501c7ffb1bdfda8c14e11b1775b47cfd2a139
+W
+'src/SnakeLogic/Tests/DFSObjectTest.java,a\0\a083fb6435a704c93d0f4e97b7b590433dca2ced
+W
+'src/SnakeLogic/Tests/BFSObjectTest.java,6\7\67d5df62111b6799976a33cd1bf01da1875165eb

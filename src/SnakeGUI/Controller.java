@@ -44,8 +44,7 @@ public class Controller {
 
     public void btnStartAction(ActionEvent event)
     {
-        room.layFloor(items,maze);
-        room.createPacManMaze(items,maze);
+        room.populate(items,width,height);
         drawCanvas();
     }
 
