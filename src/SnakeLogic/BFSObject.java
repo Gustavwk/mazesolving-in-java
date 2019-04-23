@@ -17,10 +17,10 @@ public class BFSObject extends Ghost implements GameObject {
 
 
     public BFSObject(int X, int Y, Color color, Goal goal, Position[][] maze) {
-        this.setPosition(new Position(X, Y));
         this.setColor(color);
         this.setGoal(goal);
         this.setMaze(maze);
+        this.setPosition(maze[X][Y]);
 
 
 
@@ -47,6 +47,7 @@ public class BFSObject extends Ghost implements GameObject {
      * @param current the current position of the ghost
      * @return return true when the task is done.
      */
+
     public boolean bfs(Position current){
 
         this. tree = new PositionTree<>(this.maze, this.getPosition(), goal.getPosition());
@@ -60,6 +61,7 @@ public class BFSObject extends Ghost implements GameObject {
 
             mapToRoot(current);
             goPath = bfsPath;
+            System.out.println(bfsPath.get(bfsPath.size()-1));
             System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
             return true;
 
@@ -118,11 +120,10 @@ return false;
 
     @Override
     public void update() {
-        if (visualPosition != goPath.size()-1) {
-            visualPosition++;
-//            this.position = goPath.get(visualPosition);
-        }
-
+if (visualPositionIndex != -(bfsPath.size())) {
+    this.position = bfsPath.get(visualPositionIndex + bfsPath.size() - 1);
+    visualPositionIndex--;
+}
 
     }
 
@@ -178,11 +179,11 @@ return false;
     }
 
     public int getVisualPosition() {
-        return visualPosition;
+        return visualPositionIndex;
     }
 
     public void setVisualPosition(int visualPosition) {
-        this.visualPosition = visualPosition;
+        this.visualPositionIndex = visualPosition;
     }
 
     public PositionTree<Position> getTree() {

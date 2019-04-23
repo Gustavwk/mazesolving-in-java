@@ -1,7 +1,7 @@
 
+‘squid:S1319Ö"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÛäÃ¥¤-
+squid:S1319Ò"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÛäÃ¥¤-
+psquid:S3776D"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(§²ïó8²Î¥¥¤-
+vsquid:S3776¤"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(úÔ©Şşÿÿÿÿ8ÛäÃ¥¤-
 Rsquid:S1066S"/Merge this if statement with the enclosing one.( ú¸èøÿÿÿÿ8²Î¥¥¤-
 ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ8‘Ú§£-
-squid:S1319Ğ"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÛäÃ¥¤-
-‘squid:S1319Ô"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÛäÃ¥¤-
-psquid:S3776D"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(§²ïó8²Î¥¥¤-
-vsquid:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(úÔ©Şşÿÿÿÿ8ÛäÃ¥¤-

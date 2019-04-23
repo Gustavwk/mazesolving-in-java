@@ -29,7 +29,6 @@ public class Controller {
     private int gameLoopDelay = 500;
     private float refreshRate = 300;
     private KeyCode keyPressed = KeyCode.BACK_SPACE;
-    private boolean takeoff = false;
     private Position startingPoint = new Position(1,1);
     private Player player = new Player(5,5, Color.WHITE);
     private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
@@ -39,7 +38,7 @@ public class Controller {
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
-    private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.GREEN, goal,maze);
+    private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.DARKORANGE, goal,maze);
 
 
     public void btnStartAction(ActionEvent event)
@@ -80,10 +79,11 @@ public class Controller {
     {
 
         goal.initMazeCost(maze);
-        bfsObject.bfs(bfsObject.getPosition());
         dfsObject.dfs(goal.getPosition());
         greedyObject.bestFirst(goal.getPosition());
-        takeoff = true;
+        bfsObject.bfs(bfsObject.getPosition());
+
+
 
         addItems();
         calculateFields();
@@ -110,15 +110,14 @@ public class Controller {
     {
         drawCanvas();
 
-        if (takeoff) {
+
             player.update();
             ranRam.update();
             ranRam.wallCollision(items);
             dfsObject.update();
-            goal.update();
             greedyObject.update();
             bfsObject.update();
-        }
+
 
     }
 
@@ -145,8 +144,10 @@ public class Controller {
         player.drawObject(g,fieldWidth,fieldHeight);
         ranRam.drawObject(g,fieldWidth,fieldHeight);
         dfsObject.drawObject(g,fieldWidth,fieldHeight);
+        bfsObject.drawObject(g,fieldWidth,fieldHeight);
         goal.drawObject(g,fieldWidth,fieldHeight);
         greedyObject.drawObject(g,fieldWidth,fieldHeight);
+
 
 
 
