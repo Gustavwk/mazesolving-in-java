@@ -87,7 +87,7 @@
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="14" />
           <entry key="project.open.time.10" value="8" />
-          <entry key="project.open.time.11" value="5" />
+          <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="7" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="4" />
@@ -100,7 +100,7 @@
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="7" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="75" />
+          <entry key="project.opened" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -118,12 +118,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="25" />
-          <entry key="java" value="41409" />
+          <entry key="java" value="41504" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="41409" />
+          <entry key="JAVA" value="41504" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -169,7 +169,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
+            <state relative-caret-position="1770">
               <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
             </state>
           </provider>
@@ -178,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
+            <state relative-caret-position="525">
               <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -190,15 +190,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="196" column="13" lean-forward="true" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+            <state relative-caret-position="113">
+              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
               <folding>
-                <element signature="e#8439#8440#0" expanded="true" />
-                <element signature="e#8466#8467#0" expanded="true" />
-                <element signature="e#8513#8514#0" expanded="true" />
-                <element signature="e#8542#8543#0" expanded="true" />
-                <element signature="e#8600#8601#0" expanded="true" />
-                <element signature="e#8636#8637#0" expanded="true" />
+                <element signature="e#6697#6698#0" expanded="true" />
+                <element signature="e#6724#6725#0" expanded="true" />
+                <element signature="e#6771#6772#0" expanded="true" />
+                <element signature="e#6800#6801#0" expanded="true" />
+                <element signature="e#6858#6859#0" expanded="true" />
+                <element signature="e#6894#6895#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,7 +207,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="6630">
               <caret line="475" selection-start-line="475" selection-end-line="475" />
             </state>
           </provider>
@@ -216,8 +216,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="255">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -346,8 +346,8 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/GameObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/Room.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/BFSObject.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/Room.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
       </list>
     </option>
@@ -438,7 +438,7 @@
     <property name="SearchEverywhereHistoryKey" value="prese&#9;ACTION&#9;TogglePresentationMode&#10;setting&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555965269514" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556005612122" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -864,6 +864,7 @@
       <workItem from="1555925079117" duration="7358000" />
       <workItem from="1555940474724" duration="1134000" />
       <workItem from="1555954047554" duration="2431000" />
+      <workItem from="1556004822738" duration="780000" />
     </task>
     <servers />
   </component>
@@ -900,7 +901,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304026000" />
+    <option name="totallyTimeSpent" value="304806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1054,12 +1055,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/sample.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Position.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1132,20 +1133,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6630">
+          <caret line="475" selection-start-line="475" selection-end-line="475" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,48 +1185,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="475" selection-start-line="475" selection-end-line="475" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="196" column="13" lean-forward="true" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
           <folding>
-            <element signature="e#8439#8440#0" expanded="true" />
-            <element signature="e#8466#8467#0" expanded="true" />
-            <element signature="e#8513#8514#0" expanded="true" />
-            <element signature="e#8542#8543#0" expanded="true" />
-            <element signature="e#8600#8601#0" expanded="true" />
-            <element signature="e#8636#8637#0" expanded="true" />
+            <element signature="e#6697#6698#0" expanded="true" />
+            <element signature="e#6724#6725#0" expanded="true" />
+            <element signature="e#6771#6772#0" expanded="true" />
+            <element signature="e#6800#6801#0" expanded="true" />
+            <element signature="e#6858#6859#0" expanded="true" />
+            <element signature="e#6894#6895#0" expanded="true" />
           </folding>
         </state>
       </provider>

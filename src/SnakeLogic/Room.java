@@ -19,7 +19,7 @@ public class Room {
         Position[][] maze = new Position[width][height];
         maze = initMazArray(maze);
         layFloor(objects, maze);
-        mazeBoarders(width, height, objects, maze);
+        //mazeBoarders(width, height, objects, maze);
         //createPacManMaze(objects,maze);
         //createHardManMaze(objects,maze);
         createSimpleMaze(objects,maze);
