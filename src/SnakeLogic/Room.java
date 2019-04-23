@@ -21,8 +21,8 @@ public class Room {
         layFloor(objects, maze);
         //mazeBoarders(width, height, objects, maze);
         //createPacManMaze(objects,maze);
-        //createHardManMaze(objects,maze);
-        createSimpleMaze(objects,maze);
+        createHardManMaze(objects,maze);
+        //createSimpleMaze(objects,maze);
 
 
         return maze;

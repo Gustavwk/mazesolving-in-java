@@ -3,7 +3,6 @@ package SnakeLogic;
 import SnakeGUI.Position;
 import javafx.scene.paint.Color;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -38,9 +37,9 @@ public class DFSObject extends Ghost implements GameObject {
 
     @Override
     public void update() {
-        if (visualPosition != goPath.size()-1) {
-            visualPosition++;
-          this.position = goPath.get(visualPosition);
+        if (visualPositionIndex != goPath.size()-1) {
+            visualPositionIndex++;
+          this.position = goPath.get(visualPositionIndex);
         }
 
     }

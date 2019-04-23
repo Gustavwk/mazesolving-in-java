@@ -14,7 +14,7 @@ public abstract class Ghost implements GameObject {
     protected  Color color;
     protected Goal goal;
     protected  Position position;
-    protected  int visualPosition = 0;
+    protected  int visualPositionIndex = 0;
     protected  Position[][] maze;
     protected LinkedList<Position> visited = new LinkedList<>();
     protected  LinkedList<Position> goPath = new LinkedList<>();

@@ -78,7 +78,7 @@ public class PositionTree<T extends Comparable<T>> {
             Position parentNorth = maze[start.getX()][start.getY() - 1];
             Position parentSouth = maze[start.getX()][start.getY() + 1];
 
-            if (!marked.contains(child)) {
+
 
                 if ((child.equals(parentEast) || child.equals(parentWest) || child.equals(parentSouth) || child.equals(parentNorth)) && !child.isOccupied() && !start.isOccupied() ){
 
@@ -130,7 +130,7 @@ public class PositionTree<T extends Comparable<T>> {
 
 
             }
-        }
+
 
         return start;
     }

@@ -74,6 +74,7 @@ public class GreedObject extends Ghost implements GameObject {
                 } else {
                     steps++;
                     current = (Position) path.pop();
+                    visited.add(current);
                 }
 
             }
@@ -132,9 +133,9 @@ public class GreedObject extends Ghost implements GameObject {
 
     @Override
     public void update() {
-        if (visualPosition != goPath.size() - 1) {
-            visualPosition++;
-            this.position = goPath.get(visualPosition);
+        if (visualPositionIndex != goPath.size() - 1) {
+            visualPositionIndex++;
+            this.position = goPath.get(visualPositionIndex);
         }
 
 
