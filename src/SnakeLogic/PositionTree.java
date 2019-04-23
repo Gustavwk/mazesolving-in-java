@@ -31,6 +31,7 @@ public class PositionTree<T extends Comparable<T>> {
     /**
      * Add a root to the tree of Positions
      */
+
     public boolean addRoot(Position newPosition) {
 
         if (rootNode == null) {
@@ -47,11 +48,15 @@ public class PositionTree<T extends Comparable<T>> {
      *
      * if  x and y of the child and start is above 0
      *      assign which direction the adjacent positions of the "start" position has - this node is to become the parent.
+     *
      *          if marked does not contain the to-be child of start
+     *
      *              if child is equal to the start/parents north/south/east/west
+     *
      *                  set starts north/south/east/west equal to the child position,
      *                  set child parent to be starts position
      *                  add child to the marked list.
+     *
      *                      if marked does not contain start
      *                          add start to the marked list.
      *
@@ -59,6 +64,7 @@ public class PositionTree<T extends Comparable<T>> {
      * @param start the Position that should become the parent.
      * @return returns the start position.
      */
+
     public Position addChild (Position child, Position start) {
 
 
