@@ -140,9 +140,11 @@ public class PositionTree<T extends Comparable<T>> {
      *
      *
      *  if x and y of the start startingPosition is above 0
-     *      creates a new list "adjacent".
+     *
+     *     creates a new list "adjacent".
      *      assign directions according to startingPosition
-     *          if south/west/east/north is not null and marked does not contain them and they are not occupied
+     *
+     *         if south/west/east/north is not null and marked does not contain them and they are not occupied
      *              add them to the adjacent list
      *
      *              Sort adjacent according to the cost / weight of each Position

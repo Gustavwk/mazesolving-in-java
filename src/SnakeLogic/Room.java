@@ -59,6 +59,7 @@ public class Room {
      * @param maze the 2D array of positions resembling the maze.
      * @return True when the task is done
      */
+
     public boolean addWallToRoom(int x, int y, List<Item> objects, Position[][] maze) {
 
         Wall wall = new Wall(x, y);
@@ -83,6 +84,7 @@ public class Room {
      * @param objects List of items called objects
      * @return True when the task is done
      */
+
     public boolean addTileToRoom(int x, int y, List<Item> objects) {
 
         Tile tile = new Tile(x, y, Color.BLACK);
@@ -102,6 +104,7 @@ public class Room {
      * @param color The desired color of the tile
      * @return True when the task is done
      */
+
     public boolean addMarkedTileToRoom(int x, int y, List<Item> objects, Color color) {
 
         Tile tile = new Tile(x, y, color);
@@ -119,6 +122,7 @@ public class Room {
      * @param maze The 2D array of positions resembling the maze
      * @return
      */
+
     public boolean mazeBoarders(int width, int height, List objects, Position[][] maze) {
 
         for (int i = 0; i < width; i++) {
