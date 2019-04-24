@@ -65,18 +65,23 @@ public class DFSObject extends Ghost implements GameObject {
         path.push(this.position);
         Position current = (Position) path.peek();
 
+
+
         while (!path.empty()){
 
-            if (visited.contains(goal)){
-                goPath = visited;
+
+
+            if (getVisited().contains(goal)){
+                this.setPossible(true);
+                goPath = getVisited();
                 System.out.println("MAZE SOLVED WITH DEPTH FIST SEARCH - STEPS TAKEN: " + steps );
                 return true;
             }
 
-            while (!visited.contains(goal)){
-                visited.add(current);
+            while (!getVisited().contains(goal)){
+                getVisited().add(current);
 
-                if (canMove(current, "west")&& !visited.contains(maze[current.getX()-1][current.getY()])){
+                if (canMove(current, "west")&& !getVisited().contains(maze[current.getX()-1][current.getY()])){
                     Position temp = maze[current.getX()-1][current.getY()];
                     current = temp;
                     steps++;
@@ -84,44 +89,52 @@ public class DFSObject extends Ghost implements GameObject {
 
                 }
 
-                else if (canMove(current, "south") && !visited.contains(maze[current.getX()][current.getY()+1])){
+                else if (canMove(current, "south") && !getVisited().contains(maze[current.getX()][current.getY()+1])){
                     Position temp = maze[current.getX()][current.getY() +1];
                     current = temp;
                     steps++;
                     path.push(current);
 
                 }
-                else  if (canMove(current, "east") && !visited.contains(maze[current.getX()+1][current.getY()])){
+                else  if (canMove(current, "east") && !getVisited().contains(maze[current.getX()+1][current.getY()])){
                     Position temp = maze[current.getX()+1][current.getY()];
                     current = temp;
                     steps++;
                     path.push(current);
 
                 }
-                 else if (canMove(current, "north")&& !visited.contains(maze[current.getX()][current.getY()-1])){
+                 else if (canMove(current, "north")&& !getVisited().contains(maze[current.getX()][current.getY()-1])){
                     Position temp = maze[current.getX()][current.getY()-1];
                     current = temp;
                     steps++;
                     path.push(current);
 
-                } else if (cantMove(visited,current) )
+                } else if (cantMove(getVisited(),current) )
                 {
 
+                    if (path.empty()){
+                        this.setPossible(false);
+                        System.out.println("STACK EMPTY - DFS PATH CANNOT BE FOUND");
+                        return false;
+                    }
 
                     steps++;
                     current = (Position) path.pop();
 
 
+
+
+
+
                 }
+
             }
 
         }
-        System.out.println("Not Solvable");
-        goPath = visited;
-        return false;
 
 
 
+return true;
 }
 
     @Override

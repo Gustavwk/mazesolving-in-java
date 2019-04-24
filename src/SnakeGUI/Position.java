@@ -1,6 +1,7 @@
 package SnakeGUI;
 
 
+import java.text.DecimalFormat;
 
 public class Position implements Comparable<Position> {
 
@@ -20,7 +21,7 @@ public class Position implements Comparable<Position> {
 
 
     private String[] occupiedString = {"Occopied", "Not Occupied"};
-
+    private  DecimalFormat df2 = new DecimalFormat("#.##");
 
     public Position(int x, int y) {
         this.setX(x);
@@ -75,7 +76,7 @@ public class Position implements Comparable<Position> {
         } else {
             s = 1;
         }
-        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s] + " COST: " + this.cost;
+        return "X Coordinat: (" + this.getX() + ") Y Coordinat (" + this.getY() + ") and it is " + getOccupiedString()[s] + " COST: " + ( df2.format(this.cost));
     }
 
     @Override

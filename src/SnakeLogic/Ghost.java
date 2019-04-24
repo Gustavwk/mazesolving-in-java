@@ -16,8 +16,9 @@ public abstract class Ghost implements GameObject {
     protected  Position position;
     protected  int visualPositionIndex = 0;
     protected  Position[][] maze;
-    protected LinkedList<Position> visited = new LinkedList<>();
+    private LinkedList<Position> visited = new LinkedList<>();
     protected  LinkedList<Position> goPath = new LinkedList<>();
+    protected boolean possible;
 
     @Override
     public void update() {
@@ -124,4 +125,19 @@ public abstract class Ghost implements GameObject {
         return goPath;
     }
 
+    public boolean isPossible() {
+        return possible;
+    }
+
+    public void setPossible(boolean possible) {
+        this.possible = possible;
+    }
+
+    public LinkedList<Position> getVisited() {
+        return visited;
+    }
+
+    public void setVisited(LinkedList<Position> visited) {
+        this.visited = visited;
+    }
 }

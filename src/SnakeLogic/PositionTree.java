@@ -187,14 +187,14 @@ public class PositionTree<T extends Comparable<T>> {
                 }
 
 
-                Collections.sort(adjacent);
+                //Collections.sort(adjacent);
 
-                if (!marked.contains(goal)) {
+               // if (!marked.contains(goal)) {
                     for (Position pos : adjacent) {
                         addChild(pos, startingPosition);
                         addChildrenToAdjacent(pos);
 
-                    }
+                  //  }
 
                 }
             }

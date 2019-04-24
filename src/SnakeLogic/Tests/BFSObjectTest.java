@@ -3,7 +3,6 @@ package SnakeLogic.Tests;
 import SnakeGUI.Position;
 import SnakeLogic.*;
 import javafx.scene.paint.Color;
-import org.junit.Assert;
 
 import java.util.ArrayList;
 
@@ -15,32 +14,71 @@ public class BFSObjectTest {
     private int width = 30;
     private int height = 20;
     private Room room = new Room();
-    private Position[][] maze = room.populate(items,width,height);
-    private Goal goal = new Goal(Color.GREEN, 1 ,28,maze,items);
-    private BFSObject bfsObject = new BFSObject(1,1, Color.YELLOW,goal,maze);
+    private Position[][] emptyMaze;
+    private Position[][] simpleMaze;
+    private Position[][] pacManMaze;
+    private Position[][] closedMaze;
+    private Position[][] impossibleMaze;
+    private Goal goal;
+    private BFSObject bfsObjectEmpty;
+    private BFSObject bfsObjectPacMan;
+    private BFSObject bfsObjectClosed;
+    private BFSObject bfsObjectSimple;
+    private BFSObject bfsObjectImpossible;
 
 
 
     @org.junit.Before
-    public void setUp() throws Exception {
+    public void setUp() {
 
-        maze = room.populate(items,width,height);
-        goal.initMazeCost(maze);
+        this.emptyMaze = room.populate(items,width,height,0);
+        this.pacManMaze = room.populate(items,width,height,1);
+        this.closedMaze = room.populate(items,width,height,2);
+        this.simpleMaze = room.populate(items,width,height,3);
+        this.impossibleMaze = room.populate(items,width,height,4);
+        this.emptyMaze = room.populate(items,width,height,0);
+        this.goal = new Goal(Color.GREEN,28,18,emptyMaze,items);
+        this.bfsObjectEmpty = new BFSObject(1,1,Color.RED,goal,emptyMaze);
+        this.bfsObjectPacMan = new BFSObject(1,1,Color.RED,goal,pacManMaze);
+        this.bfsObjectClosed= new BFSObject(1,1,Color.RED,goal,closedMaze);
+        this.bfsObjectSimple= new BFSObject(1,1,Color.RED,goal,simpleMaze);
+        this.bfsObjectImpossible= new BFSObject(1,1,Color.RED,goal,impossibleMaze);
+
+
     }
 
-    @org.junit.After
-    public void tearDown() throws Exception {
-    }
 
     @org.junit.Test
-    public void mapToRoot() {
+    public void bfsOnEmptyMaze() {
+        System.out.println("TESTING ON : Empty Maze");
+        assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
+        System.out.println();
     }
-
     @org.junit.Test
     public void bfsOnPacManMaze() {
-
-        assertEquals(bfsObject.bfs(bfsObject.getPosition()),true);
+        System.out.println("TESTING ON : PacMan Maze");
+        assertEquals(bfsObjectPacMan.bfs(bfsObjectPacMan.getPosition()),true);
+        System.out.println();
     }
+    @org.junit.Test
+    public void bfsOnClosedMaze() {
+        System.out.println("TESTING ON : Closed Maze");
+        assertEquals(bfsObjectClosed.bfs(bfsObjectClosed.getPosition()),true);
+        System.out.println();
+    }
+    @org.junit.Test
+    public void bfsOnSimpleMaze() {
+        System.out.println("TESTING ON : Simple Maze");
+        assertEquals(bfsObjectSimple.bfs(bfsObjectSimple.getPosition()),true);
+        System.out.println();
+    }
+    @org.junit.Test
+    public void bfsOnImpossibleMaze() {
+        System.out.println("TESTING ON : Impossible Maze");
+        assertEquals(bfsObjectImpossible.bfs(bfsObjectImpossible.getPosition()),true);
+        System.out.println();
+    }
+
 
 
 }

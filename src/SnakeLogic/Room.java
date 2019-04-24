@@ -4,7 +4,6 @@ import SnakeGUI.Position;
 
 import javafx.scene.paint.Color;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -13,19 +12,45 @@ import java.util.List;
  */
 public class Room {
 
+    private int whichMaze;
 
-    public Position[][] populate(List<Item> objects, int width, int height) {
+
+    public Position[][] populate(List<Item> objects, int width, int height, int which) {
 
         Position[][] maze = new Position[width][height];
         maze = initMazArray(maze);
         layFloor(objects, maze);
-        //mazeBoarders(width, height, objects, maze);
-        //createPacManMaze(objects,maze);
-        createHardManMaze(objects,maze);
-        //createSimpleMaze(objects,maze);
+
+        this.whichMaze = which;
+
+        selectMaze(objects, width, height, maze);
 
 
         return maze;
+    }
+
+    private void selectMaze(List<Item> objects, int width, int height, Position[][] maze) {
+        if (this.whichMaze == 0){
+
+            mazeBoarders(width, height, objects, maze);
+
+        } else if (this.whichMaze == 1){
+
+            createPacManMaze(objects,maze);
+
+        } else if (this.whichMaze == 2){
+
+            createHardManMaze(objects,maze);
+
+        } else if (this.whichMaze == 3){
+
+            createSimpleMaze(objects,maze);
+
+        } else if (this.whichMaze == 4){
+
+            createImpossibleMaze(objects,maze);
+
+        }
     }
 
     /**
@@ -230,6 +255,8 @@ public class Room {
 
     }
 
+
+
     /**
      * Same as above, but the maze if different. This is an open pacMan Like maze, the one above is closed.
      */
@@ -282,6 +309,55 @@ public class Room {
 
     }
 
+    public void createImpossibleMaze( List<Item> objects, Position[][] maze) {
+        int [][] Impossible = {
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1},
+                {1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,0,1},
+                {1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1},
+                {1,0,1,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1},
+                {1,0,1,0,1,1,0,0,0,0,0,1,0,1,0,1,0,1,0,1},
+                {1,0,1,0,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,1},
+                {1,1,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,1},
+                {1,1,1,1,0,1,0,1,1,1,0,1,0,1,0,0,0,1,0,1},
+                {1,1,1,0,0,1,0,0,0,0,0,1,0,1,1,1,1,1,0,1},
+                {1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1},
+                {1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1},
+                {1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+                {1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+                {1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+                {1,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1},
+                {1,0,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1},
+                {1,0,1,0,1,0,1,0,1,1,0,1,0,1,1,1,1,1,1,1},
+                {1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,0,0,0,1},
+                {1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,1,1,0,1},
+                {1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,0,0,1},
+                {1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,1,1},
+                {1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1},
+                {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+                {1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+                {1,0,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1},
+                {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},};
+
+        for (int i = 0; i < Impossible.length ; i++) {
+            for (int j = 0; j < Impossible[i].length ; j++) {
+                if (Impossible[i][j] == 1){
+                    addWallToRoom(i,j,objects,maze);
+                }
+            }
+        }
+
+
+
+
+
+
+    }
+
+
     public void createSimpleMaze( List<Item> objects, Position[][] maze) {
         int [][] simpleMaze = {
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -332,5 +408,11 @@ public class Room {
     }
 
 
+    public int getWhichMaze() {
+        return whichMaze;
+    }
 
+    public void setWhichMaze(int whichMaze) {
+        this.whichMaze = whichMaze;
+    }
 }

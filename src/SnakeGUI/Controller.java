@@ -34,7 +34,8 @@ public class Controller {
     private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
-    private Position[][] maze = room.populate(items,width,height);
+    int whichMaze = 3;
+    private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
@@ -43,7 +44,7 @@ public class Controller {
 
     public void btnStartAction(ActionEvent event)
     {
-        room.populate(items,width,height);
+        room.populate(items,width,height, whichMaze);
         drawCanvas();
     }
 
@@ -65,7 +66,6 @@ public class Controller {
     {
 
         room.markPath(bfsObject.getTree().getMarked(),items,Color.DARKGOLDENROD);
-
         room.markPath(bfsObject.getGoPath(),items, Color.YELLOW);
         drawCanvas();
     }
@@ -108,15 +108,23 @@ public class Controller {
 
     private void update(long now)
     {
+        player.update();
+        ranRam.update();
+        ranRam.wallCollision(items);
         drawCanvas();
-
-
-            player.update();
-            ranRam.update();
-            ranRam.wallCollision(items);
+        if (dfsObject.isPossible()){
             dfsObject.update();
+        }
+        if (greedyObject.isPossible()){
             greedyObject.update();
+        }
+        if (bfsObject.isPossible()){
             bfsObject.update();
+        }
+
+
+
+
 
 
     }
@@ -141,8 +149,8 @@ public class Controller {
 
         }
 
-        player.drawObject(g,fieldWidth,fieldHeight);
-        ranRam.drawObject(g,fieldWidth,fieldHeight);
+       // player.drawObject(g,fieldWidth,fieldHeight);
+       // ranRam.drawObject(g,fieldWidth,fieldHeight);
         dfsObject.drawObject(g,fieldWidth,fieldHeight);
         bfsObject.drawObject(g,fieldWidth,fieldHeight);
         goal.drawObject(g,fieldWidth,fieldHeight);

@@ -4,6 +4,7 @@ import SnakeGUI.Position;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.sql.SQLOutput;
 import java.util.LinkedList;
 
 /**
@@ -57,15 +58,14 @@ public class BFSObject extends Ghost implements GameObject {
         visited.add(current);
         LinkedList<Position> split = new LinkedList<>();
 
-        if (visited.contains(goal.getPosition())){
-
+        if (visited.contains(goal.getPosition())) {
+            this.setPossible(true);
             mapToRoot(current);
             goPath = bfsPath;
-            System.out.println(bfsPath.get(bfsPath.size()-1));
             System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
             return true;
 
-    } else {
+        } else if (!visited.contains(goal.getPosition())) {
 
             if (current.getEast() != null) {
                 split.add(current.getEast());
@@ -92,10 +92,14 @@ public class BFSObject extends Ghost implements GameObject {
             }
 
 
+
+
 }
 
 
-return false;
+
+return true;
+
     }
 
     /**
@@ -108,6 +112,7 @@ return false;
      * @param here the place from where you want you mapping to begin
      * @return Returns true when the task is done.
      */
+
     public boolean mapToRoot(Position here){
         if (here.getParent() != null){
             bfsPath.add(here.getParent());
@@ -118,6 +123,9 @@ return false;
         return true;
     }
 
+    /**
+     * Dette skal forklares
+     */
     @Override
     public void update() {
 if (visualPositionIndex != -(bfsPath.size())) {

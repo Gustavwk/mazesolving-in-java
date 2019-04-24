@@ -56,6 +56,7 @@ public class GreedObject extends Ghost implements GameObject {
 
 
             if (visited.contains(goal)) {
+                this.setPossible(true);
                 System.out.println("MAZE SOLVED WITH BEST FIRST SEARCH - STEPS TAKEN: " + steps);
                 goPath = visited;
                 return true;
@@ -66,13 +67,17 @@ public class GreedObject extends Ghost implements GameObject {
 
                 if (!cantMove(visited,current)) {
 
-                    //System.out.println("My Current Position: " + current);
                     current = (nextStep(current, visited));
                     visited.add(current);
                     path.push(current);
                     steps++;
                 } else {
                     steps++;
+                    if (path.isEmpty()){
+                        this.setPossible(false);
+                        System.out.println("STACK EMPTY - GREEDY / BEST FIRST PATH CANNOT BE FOUND");
+                        return false;
+                    }
                     current = (Position) path.pop();
                     visited.add(current);
                 }
