@@ -1,17 +1,15 @@
 package SnakeLogic.Tests;
 
-import SnakeGUI.Position;
+import SnakeLogic.Position;
 import SnakeLogic.Goal;
 import SnakeLogic.GreedObject;
 import SnakeLogic.Item;
 import SnakeLogic.Room;
-import javafx.geometry.Pos;
 import javafx.scene.paint.Color;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 import static org.junit.Assert.*;
 

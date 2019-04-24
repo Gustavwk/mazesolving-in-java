@@ -1,9 +1,5 @@
 package SnakeLogic;
 
-import SnakeGUI.Position;
-import javafx.geometry.Pos;
-
-import java.util.Collections;
 import java.util.LinkedList;
 
 /**

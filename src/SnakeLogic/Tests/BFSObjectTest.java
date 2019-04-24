@@ -1,6 +1,6 @@
 package SnakeLogic.Tests;
 
-import SnakeGUI.Position;
+import SnakeLogic.Position;
 import SnakeLogic.*;
 import javafx.scene.paint.Color;
 

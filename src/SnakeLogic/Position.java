@@ -1,4 +1,4 @@
-package SnakeGUI;
+package SnakeLogic;
 
 
 import java.text.DecimalFormat;

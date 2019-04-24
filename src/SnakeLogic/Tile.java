@@ -1,7 +1,5 @@
 package SnakeLogic;
 
-import SnakeGUI.Position;
-import javafx.geometry.Pos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 

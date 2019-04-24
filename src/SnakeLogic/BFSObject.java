@@ -1,10 +1,8 @@
 package SnakeLogic;
 
-import SnakeGUI.Position;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import java.sql.SQLOutput;
 import java.util.LinkedList;
 
 /**
