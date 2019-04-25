@@ -15,14 +15,21 @@ public class PositionTree<T extends Comparable<T>> {
     private int size = 0;
     private Position goal;
     private LinkedList<Position> availablePositions = new LinkedList();
+    private boolean impossible = false;
+
 
 
     public PositionTree(Position[][] maze, Position rootNode, Position goal) {
         this.maze = maze;
         this.goal = goal;
+
         addAvailablePositions(maze);
         addRoot(rootNode);
         addChildrenToAdjacent(rootNode);
+
+        if (!marked.contains(goal)){
+            impossible = true;
+        }
 
 
 
@@ -63,9 +70,9 @@ public class PositionTree<T extends Comparable<T>> {
      *
      *              if child is equal to the parent/parents north/south/east/west
      *
-     *                  set starts north/south/east/west equal to the child position,
-     *                  set child parent to be starts position
-     *                  add child to the marked list.
+     *                     set parent north/south/east/west equal to the child position,
+     *                     set child parent to be parents position
+     *                     add child to the marked list.
      *
      *                      if marked does not contain parent
      *                          add parent to the marked list.
@@ -155,12 +162,12 @@ public class PositionTree<T extends Comparable<T>> {
      *         if south/west/east/north is not null and marked does not contain them and they are not occupied
      *              add them to the adjacent list
      *
-     *              Sort adjacent according to the cost / weight of each Position
+     *              Sort adjacent according to the cost / weight of each Position to avoid "left-turning" and increase accuracy/efficiency
      *
      *                  for pos Position in adjacent
      *                      addChild(startingPosition, pos)
      *
-     *                  if marked does not contain goal
+     *                  if marked does not contain goal - this is done to avoid endless children/parent adding & reduce inefficiency
      *                      for pos Position in adjacent
      *                          addChildrenToAdjacent(pos)
      *
@@ -231,6 +238,14 @@ public class PositionTree<T extends Comparable<T>> {
 
     public void setAvailablePositions(LinkedList<Position> availablePositions) {
         this.availablePositions = availablePositions;
+    }
+
+    public boolean isImpossible() {
+        return impossible;
+    }
+
+    public void setImpossible(boolean impossible) {
+        this.impossible = impossible;
     }
 }
 

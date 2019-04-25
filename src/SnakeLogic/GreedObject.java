@@ -134,6 +134,17 @@ public class GreedObject extends Ghost implements GameObject {
 
     }
 
+    /**
+     * The Pathfinder method return a list of all the visited positions in the maze.
+     * This update method makes a nice visual representation of the ghost walking through the maze
+     *
+     *
+     * Update runs continuously
+     * The visual Position is the drawn position of the ghost.
+     * If the Visual Position is not the same position as the last element in goPath, the Visual Position
+     * becomes the position on the next index in the list.
+     *
+     */
 
     @Override
     public void update() {

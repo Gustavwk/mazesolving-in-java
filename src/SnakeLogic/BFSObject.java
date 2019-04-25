@@ -3,9 +3,7 @@ package SnakeLogic;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * This ghost can find a way true a maze be traversing through a tree of positions. it does this be checking each layer of childs
@@ -58,6 +56,10 @@ public class BFSObject extends Ghost implements GameObject {
         visited.add(current);
         LinkedList<Position> split = new LinkedList<>();
 
+        if (tree.isImpossible()){
+            System.out.println("GOAL IS NOT IN THE MARKED POSITIONS - PATH COULD NOT BE FOUND");
+            return false;
+        }
 
         if (visited.contains(goal.getPosition())) {
             this.setPossible(true);
@@ -124,8 +126,21 @@ return true;
     }
 
     /**
-     * Dette skal forklares
+     * The Pathfinder method return a list of all the visited positions in the maze.
+     * This update method makes a nice visual representation of the ghost walking through the maze
+     *
+     * This update method sets the position of this ghost to be the index of the path list.
+     * Because the path list of an BFS 0'th index is the goal's position and the last index is the start position this method has to turned upside down if you will..
+     * The visualPositionIndex has to decrement until it is the negative size of the bfsPath list.
+     *
+     * This is achieved the following way:
+     *
+     *
+     * if visualPositionIndex is not the negative of bfsPath's size
+     *      the position of this ghost becomes equal to the index of bfsPath equal to visualPositionIndex + bfsPath's size.
+     *      then visualPositionIndex subtracts 1
      */
+
     @Override
     public void update() {
 if (visualPositionIndex != -(bfsPath.size())) {
