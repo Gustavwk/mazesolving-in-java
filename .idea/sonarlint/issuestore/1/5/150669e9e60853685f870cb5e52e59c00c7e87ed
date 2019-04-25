@@ -1,6 +1,6 @@
 
-@squid:S1068")Remove this unused "north" private field.(ÓÈ‡Ì
-Dsquid:S1068"(Remove this unused "east" private field.(ùµ¹ýúÿÿÿÿ
-Esquid:S1068")Remove this unused "south" private field.(Ô—Ñôþÿÿÿÿ
-?squid:S1068"(Remove this unused "west" private field.(×½Õ¯
+Esquid:S1068")Remove this unused "south" private field.(Ô—Ñôþÿÿÿÿ
+@squid:S1068")Remove this unused "north" private field.(ÓÈ‡Ì
+?squid:S1068	"(Remove this unused "west" private field.(×½Õ¯
+Dsquid:S1068"(Remove this unused "east" private field.(ùµ¹ýúÿÿÿÿ
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æÁëÏ

@@ -27,6 +27,15 @@ public class Room {
         return maze;
     }
 
+    /**
+     * This method make it possible to change witch maze you want to run the algorithms in! There are currently 4 different mazes.
+     * This is really good for testing since it makes me able to test all the different mazes at once
+     *
+     * @param objects The list in witch every item is drawn
+     * @param width the width of the maze
+     * @param height the height of the maze
+     * @param maze the 2D array of positions
+     */
     private void selectMaze(List<Item> objects, int width, int height, Position[][] maze) {
         if (this.whichMaze == 0){
 
@@ -258,6 +267,7 @@ public class Room {
     /**
      * Same as above, but the maze if different. This is an open pacMan Like maze, the one above is closed.
      */
+
     public void createPacManMaze( List<Item> objects, Position[][] maze) {
         int [][] PacManMaze = {
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -306,6 +316,10 @@ public class Room {
 
 
     }
+
+    /**
+     * This is an impossible maze, used to test if the algorithm can say if it cannot find a path.
+     */
 
     public void createImpossibleMaze( List<Item> objects, Position[][] maze) {
         int [][] Impossible = {
@@ -356,6 +370,9 @@ public class Room {
     }
 
 
+    /**
+     * This is a very simple maze that is used to get an idea of how the maze works with only 2 walls
+     */
     public void createSimpleMaze( List<Item> objects, Position[][] maze) {
         int [][] simpleMaze = {
                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},

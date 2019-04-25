@@ -1,9 +1,29 @@
 
-¢%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‚ëô¡şÿÿÿÿ
-Psquid:UselessImportCheck"-Remove this unused import 'org.junit.Assert'.(­ŞL
-^squid:S00112 "FDefine and throw a dedicated exception instead of using a generic one.(«¤ÜÕ
-˜squid:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«¤ÜÕ
-psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰Äë®
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ
-squid:S1186$"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ô‚„éúÿÿÿÿ
+vsquid:S1450"SRemove the "goal" field and declare it as a local variable in the relevant methods.(æİÃ¯şÿÿÿÿ8ƒ·ø¤-
+|squid:S1450"YRemove the "pacManMaze" field and declare it as a local variable in the relevant methods.(òá§×ùÿÿÿÿ8úã¼ø¤-
+[
+squid:S1067"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¥âÖø¤-
+{squid:S1450"]Remove the "impossibleMaze" field and declare it as a local variable in the relevant methods.(ÉŠ‚¨8úã¼ø¤-
+V
+squid:S106M"9Replace this use of System.out or System.err by a logger.(¥Ùàü8ï½Òø¤-
+|squid:S1450"YRemove the "simpleMaze" field and declare it as a local variable in the relevant methods.(­®ööüÿÿÿÿ8úã¼ø¤-
+[
+squid:S106C"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¥âÖø¤-
+wsquid:S1450"YRemove the "closedMaze" field and declare it as a local variable in the relevant methods.(ÁğŞì8úã¼ø¤-
+[
+squid:S106I"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Ã›Öø¤-
+vsquid:S1450"XRemove the "emptyMaze" field and declare it as a local variable in the relevant methods.(…Æ•8Õš´ø¤-
+[
+squid:S106O"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¥âÖø¤-
+V
+squid:S106A"9Replace this use of System.out or System.err by a logger.(İÈşÍ8ï½Òø¤-
+psquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰Äë®
+[
+squid:S106;"9Replace this use of System.out or System.err by a logger.(ñÀÕÒşÿÿÿÿ8ï½Òø¤-
+[
+squid:S106="9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¥âÖø¤-
+[
+squid:S106G"9Replace this use of System.out or System.err by a logger.(¾¤İãøÿÿÿÿ8ï½Òø¤-
+[
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ÁìÛûÿÿÿÿ8ĞÈÑø¤-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯Ç¥ø

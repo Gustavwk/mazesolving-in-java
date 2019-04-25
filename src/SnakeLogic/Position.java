@@ -3,6 +3,10 @@ package SnakeLogic;
 
 import java.text.DecimalFormat;
 
+/**
+ * This is the primary node of the maze. The directions north,south,west,east is the
+ * children og the node and parent is the parent of the node.
+ */
 public class Position implements Comparable<Position> {
 
 
@@ -21,6 +25,11 @@ public class Position implements Comparable<Position> {
 
 
     private String[] occupiedString = {"Occopied", "Not Occupied"};
+
+    /**
+     * This is a tool gathered from the internet, that help me cut down the digits the to string displays!
+     */
+
     private  DecimalFormat df2 = new DecimalFormat("#.##");
 
     public Position(int x, int y) {
@@ -68,6 +77,9 @@ public class Position implements Comparable<Position> {
         this.occupied = occupied;
     }
 
+    /**
+     * @return This method return a very descriptive string telling almost all information about a giving note..
+     */
     @Override
     public String toString() {
         int s;

@@ -34,7 +34,7 @@ public class Controller {
     private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
-    int whichMaze = 1;
+    int whichMaze = 2;
     private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
@@ -71,9 +71,7 @@ public class Controller {
     }
 
 
-    /**
-     * Executed when JavaFX is initialized. Used to setup the Snake game
-     */
+
 
     public void initialize()
     {
@@ -149,8 +147,7 @@ public class Controller {
 
         }
 
-       // player.drawObject(g,fieldWidth,fieldHeight);
-       // ranRam.drawObject(g,fieldWidth,fieldHeight);
+
         dfsObject.drawObject(g,fieldWidth,fieldHeight);
         bfsObject.drawObject(g,fieldWidth,fieldHeight);
         goal.drawObject(g,fieldWidth,fieldHeight);

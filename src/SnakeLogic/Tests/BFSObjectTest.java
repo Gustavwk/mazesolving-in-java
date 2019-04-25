@@ -55,6 +55,14 @@ public class BFSObjectTest {
         System.out.println();
     }
     @org.junit.Test
+    public void bfsOnEmptyMazeReverse() {
+        goal.setPosition(emptyMaze[28][18]);
+        bfsObjectEmpty.setPosition(emptyMaze[1][1]);
+        System.out.println("TESTING ON : Empty Maze Reversed");
+        assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
+        System.out.println();
+    }
+    @org.junit.Test
     public void bfsOnPacManMaze() {
         System.out.println("TESTING ON : PacMan Maze");
         assertEquals(bfsObjectPacMan.bfs(bfsObjectPacMan.getPosition()),true);
@@ -75,7 +83,7 @@ public class BFSObjectTest {
     @org.junit.Test
     public void bfsOnImpossibleMaze() {
         System.out.println("TESTING ON : Impossible Maze");
-        assertEquals(bfsObjectImpossible.bfs(bfsObjectImpossible.getPosition()),true);
+        assertEquals(bfsObjectImpossible.bfs(bfsObjectImpossible.getPosition()),false);
         System.out.println();
     }
 

@@ -3,7 +3,9 @@ package SnakeLogic;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * This ghost can find a way true a maze be traversing through a tree of positions. it does this be checking each layer of childs
@@ -56,6 +58,7 @@ public class BFSObject extends Ghost implements GameObject {
         visited.add(current);
         LinkedList<Position> split = new LinkedList<>();
 
+
         if (visited.contains(goal.getPosition())) {
             this.setPossible(true);
             mapToRoot(current);
@@ -88,7 +91,6 @@ public class BFSObject extends Ghost implements GameObject {
 
 
             }
-
 
 
 

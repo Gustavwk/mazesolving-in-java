@@ -3,8 +3,6 @@ F
 src/SnakeGUI/Main.java,4\a\4ae33c90107f71120035ede81ad9874c640faea9
 H
 src/SnakeGUI/sample.fxml,c\6\c64a26e091900825bd191dc08cb65dfaaecb30a1
-J
-src/SnakeGUI/Position.java,8\6\86eeca49ba509c349b4020b5f3e41f78e5c52d30
 K
 src/SnakeGUI/Direction.java,1\5\150669e9e60853685f870cb5e52e59c00c7e87ed
 K
@@ -50,3 +48,7 @@ W
 'src/SnakeLogic/Tests/DFSObjectTest.java,a\0\a083fb6435a704c93d0f4e97b7b590433dca2ced
 W
 'src/SnakeLogic/Tests/BFSObjectTest.java,6\7\67d5df62111b6799976a33cd1bf01da1875165eb
+Y
+)src/SnakeLogic/Tests/GreedObjectTest.java,5\3\530609621b242aa798fd49a7305dfc99e5863433
+L
+src/SnakeLogic/Position.java,3\e\3e97b48d128220860dfe273a331215b736bbf13e
