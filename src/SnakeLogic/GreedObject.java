@@ -39,7 +39,7 @@ public class GreedObject extends Ghost implements GameObject {
      *      else (if the ghost cantMove) : the ghost will backtrack by popping the stack and setting the current position equal to the popped element.
      *
      * @param goal the desired end Position of the ghost.
-     * @return Returns true if visited contains the desired end position "goal".
+     * @return return true when the task is done, false is its impossible.
      */
 
 

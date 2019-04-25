@@ -20,7 +20,7 @@ public class BFSObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
-
+        this.tree = new PositionTree<>(this.maze, this.getPosition(), goal.getPosition());
 
 
     }
@@ -44,12 +44,12 @@ public class BFSObject extends Ghost implements GameObject {
      *
      *
      * @param current the current position of the ghost
-     * @return return true when the task is done.
+     * @return return true when the task is done, false is its impossible.
      */
 
     public boolean bfs(Position current){
 
-        this. tree = new PositionTree<>(this.maze, this.getPosition(), goal.getPosition());
+
 
 
 
@@ -58,6 +58,7 @@ public class BFSObject extends Ghost implements GameObject {
 
         if (tree.isImpossible()){
             System.out.println("GOAL IS NOT IN THE MARKED POSITIONS - PATH COULD NOT BE FOUND");
+            System.out.println("POSITIONS EXPLORED: " + this.tree.getMarked().size());
             return false;
         }
 
@@ -66,6 +67,8 @@ public class BFSObject extends Ghost implements GameObject {
             mapToRoot(current);
             goPath = bfsPath;
             System.out.println("MAZE SOLVED WITH BREATH FIRST SEARCH - STEPS TAKEN: " + bfsPath.size());
+            System.out.println("POSITIONS EXPLORED: " + this.tree.getMarked().size());
+
             return true;
 
         } else if (!visited.contains(goal.getPosition())) {

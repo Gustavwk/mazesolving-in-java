@@ -52,7 +52,7 @@ public class DFSObject extends Ghost implements GameObject {
      *              else if it cant move - pops the stack and moves to that place - successfully backtracking
      *
      * @param goal is the desired goal of the Depth first Search.
-     * @return This method return True if the path is Possible, and false if its not possible.
+     * @return return true when the task is done, false is its impossible.
      *
      *
      */

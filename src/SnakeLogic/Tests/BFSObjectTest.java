@@ -36,7 +36,6 @@ public class BFSObjectTest {
         this.closedMaze = room.populate(items,width,height,2);
         this.simpleMaze = room.populate(items,width,height,3);
         this.impossibleMaze = room.populate(items,width,height,4);
-        this.emptyMaze = room.populate(items,width,height,0);
         this.goal = new Goal(Color.GREEN,28,18,emptyMaze,items);
         this.bfsObjectEmpty = new BFSObject(1,1,Color.RED,goal,emptyMaze);
         this.bfsObjectPacMan = new BFSObject(1,1,Color.RED,goal,pacManMaze);
@@ -45,11 +44,13 @@ public class BFSObjectTest {
         this.bfsObjectImpossible= new BFSObject(1,1,Color.RED,goal,impossibleMaze);
 
 
+
     }
 
 
     @org.junit.Test
     public void bfsOnEmptyMaze() {
+
         System.out.println("TESTING ON : Empty Maze");
         assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
         System.out.println();
@@ -61,6 +62,7 @@ public class BFSObjectTest {
         System.out.println("TESTING ON : Empty Maze Reversed");
         assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
         System.out.println();
+
     }
     @org.junit.Test
     public void bfsOnPacManMaze() {
