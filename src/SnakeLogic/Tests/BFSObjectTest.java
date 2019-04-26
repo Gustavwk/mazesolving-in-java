@@ -54,6 +54,12 @@ public class BFSObjectTest {
         this.goalSimple = new Goal(Color.GREEN,goal.getX(),goal.getY(),simpleMaze,items);
         this.goalImpossible = new Goal(Color.GREEN,goal.getX(),goal.getY(),impossibleMaze,items);
 
+        goalEmpty.initMazeCost(emptyMaze);
+        goalPacMan.initMazeCost(pacManMaze);
+        goalClosed.initMazeCost(closedMaze);
+        goalSimple.initMazeCost(simpleMaze);
+        goalImpossible.initMazeCost(impossibleMaze);
+
         this.bfsObjectEmpty = new BFSObject(start.getX(),start.getY(),Color.RED,goalEmpty,emptyMaze);
         this.bfsObjectPacMan = new BFSObject(start.getX(),start.getY(),Color.RED,goalPacMan,pacManMaze);
         this.bfsObjectClosed= new BFSObject(start.getX(),start.getY(),Color.RED,goalClosed,closedMaze);
@@ -68,6 +74,7 @@ public class BFSObjectTest {
     /**
      * Testing the BFS Object in an Empty room
      */
+
     @org.junit.Test
     public void bfsOnEmptyMaze() {
 
@@ -81,6 +88,7 @@ public class BFSObjectTest {
     /**
      * Same as above, but with goal and start switched
      */
+
     @org.junit.Test
     public void bfsOnEmptyMazeReverse() {
         goalEmpty.setPosition(emptyMaze[28][18]);
@@ -94,6 +102,8 @@ public class BFSObjectTest {
     /**
      * Tests the BFS Object on a Pac-Mac-like maze
      */
+
+
     @org.junit.Test
     public void bfsOnPacManMaze() {
         System.out.println("TESTING ON : PacMan Maze");
@@ -104,6 +114,8 @@ public class BFSObjectTest {
     /**
      * This is a test om how the BFS Object performs in a maze with dead-ends
      */
+
+
     @org.junit.Test
     public void bfsOnClosedMaze() {
         System.out.println("TESTING ON : Closed Maze");
@@ -114,6 +126,8 @@ public class BFSObjectTest {
     /**
      * This is a test on how the BFS Object performs on a Empty room with just 2 walls - therefor the name "Simple Maze".
      */
+
+
     @org.junit.Test
     public void bfsOnSimpleMaze() {
         System.out.println("TESTING ON : Simple Maze");
@@ -124,6 +138,8 @@ public class BFSObjectTest {
     /**
      * This is a test on how to BFS Object performs on an Unsolvable/Impossible Maze
      */
+
+
     @org.junit.Test
     public void bfsOnImpossibleMaze() {
         System.out.println("TESTING ON : Impossible Maze");

@@ -1,22 +1,22 @@
 
-usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Œ²Ùıÿÿÿÿ8“Ã¦§£-
-V
-squid:S106F"9Replace this use of System.out or System.err by a logger.(ìÙîÈ8ñéèÈ¥-
-^squid:S1161º":Add the "@Override" annotation above this method signature(ÂÃÁÒøÿÿÿÿ8»ˆÏ™¥-
-^squid:S1161Â":Add the "@Override" annotation above this method signature(áÍù¦şÿÿÿÿ8»ˆÏ™¥-
-^squid:S1161Ç":Add the "@Override" annotation above this method signature(ğğÇøüÿÿÿÿ8»ˆÏ™¥-
 ^squid:S1161¦":Add the "@Override" annotation above this method signature(…Æ¸Íùÿÿÿÿ8»ˆÏ™¥-
-•squid:S1319Ç"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ğğÇøüÿÿÿÿ8»ˆÏ™¥-
-Ysquid:S1161®":Add the "@Override" annotation above this method signature(Éèà—8»ˆÏ™¥-
-V
-squid:S106="9Replace this use of System.out or System.err by a logger.(ìÙîÈ8ñéèÈ¥-
-‘squid:S1319Ë"rThe type of the "goPath" object should be an interface such as "List" rather than the implementation "LinkedList".(„•éº8»ˆÏ™¥-
-Ysquid:S1161ª":Add the "@Override" annotation above this method signature(¯Ï¸Õ8»ˆÏ™¥-
 usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Œ²Ùıÿÿÿÿ8“Ã¦§£-
-V
-squid:S106E"9Replace this use of System.out or System.err by a logger.(Ú²Õã8î¬ú£-
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ8“Ã¦§£-
+Ysquid:S1161®":Add the "@Override" annotation above this method signature(Éèà—8»ˆÏ™¥-
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Œ²Ùıÿÿÿÿ8“Ã¦§£-
+^squid:S1161Ç":Add the "@Override" annotation above this method signature(ğğÇøüÿÿÿÿ8»ˆÏ™¥-
+•squid:S1319Ç"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ğğÇøüÿÿÿÿ8»ˆÏ™¥-
 psquid:S37762"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ˆ˜ŸŞ8ÀşÆŸ¥-
+Xsquid:S1161¾":Add the "@Override" annotation above this method signature(ÍÂŒ?8»ˆÏ™¥-
 [
 squid:S106<"9Replace this use of System.out or System.err by a logger.(ğì±Áúÿÿÿÿ8ØÉŸ¥-
-Xsquid:S1161¾":Add the "@Override" annotation above this method signature(ÍÂŒ?8»ˆÏ™¥-
+V
+squid:S106E"9Replace this use of System.out or System.err by a logger.(Ú²Õã8î¬ú£-
+^squid:S1161º":Add the "@Override" annotation above this method signature(ÂÃÁÒøÿÿÿÿ8»ˆÏ™¥-
+Ysquid:S1161ª":Add the "@Override" annotation above this method signature(¯Ï¸Õ8»ˆÏ™¥-
+‘squid:S1319Ë"rThe type of the "goPath" object should be an interface such as "List" rather than the implementation "LinkedList".(„•éº8»ˆÏ™¥-
+^squid:S1161Â":Add the "@Override" annotation above this method signature(áÍù¦şÿÿÿÿ8»ˆÏ™¥-
+V
+squid:S106="9Replace this use of System.out or System.err by a logger.(ìÙîÈ8ñéèÈ¥-
+V
+squid:S106F"9Replace this use of System.out or System.err by a logger.(ìÙîÈ8ñéèÈ¥-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ8“Ã¦§£-
