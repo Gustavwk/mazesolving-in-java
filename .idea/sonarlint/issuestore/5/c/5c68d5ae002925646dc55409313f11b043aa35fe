@@ -1,6 +1,6 @@
 
 Vsquid:S1161!":Add the "@Override" annotation above this method signature(°¿´üÿÿÿÿ
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
-Esquid:S2387")"color" is the name of a field in "Item".(ùá²ñÿÿÿÿÿ
-Qsquid:S1161)":Add the "@Override" annotation above this method signature(Éèà—
 ˜squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ö×õÄ
+Esquid:S2387")"color" is the name of a field in "Item".(ùá²ñÿÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+Qsquid:S1161)":Add the "@Override" annotation above this method signature(Éèà—

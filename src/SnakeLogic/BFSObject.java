@@ -20,7 +20,7 @@ public class BFSObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
-        this.tree = new PositionTree<>(this.maze, this.getPosition(), goal.getPosition());
+
 
 
     }
@@ -50,7 +50,7 @@ public class BFSObject extends Ghost implements GameObject {
     public boolean bfs(Position current){
 
 
-
+        this.tree = new PositionTree<>(this.maze, this.getPosition(), goal.getPosition());
 
 
         visited.add(current);

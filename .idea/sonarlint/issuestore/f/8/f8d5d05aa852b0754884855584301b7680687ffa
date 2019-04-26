@@ -1,8 +1,8 @@
 
+usquid:S3776S"RRefactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.(¹Ï°úÿÿÿÿ8²Î¥¥¤-
+squid:S1319é"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ÉÉæĞ8¦Ô¡˜¥-
+œsquid:S1319í"~The type of the "availablePositions" object should be an interface such as "List" rather than the implementation "LinkedList".(àÊÄg8¦Ô¡˜¥-
+‘squid:S1319å"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÛäÃ¥¤-
+squid:S1319á"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÛäÃ¥¤-
 ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ8‘Ú§£-
-vsquid:S3776³"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(úÔ©Şşÿÿÿÿ8ÛäÃ¥¤-
-‘squid:S1319ç"rThe type of the "marked" object should be an interface such as "List" rather than the implementation "LinkedList".(“áôû8ÛäÃ¥¤-
-œsquid:S1319ï"~The type of the "availablePositions" object should be an interface such as "List" rather than the implementation "LinkedList".(àÊÄg8¦Ô¡˜¥-
-squid:S1319ã"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(àßì8ÛäÃ¥¤-
-squid:S1319ë"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ÉÉæĞ8¦Ô¡˜¥-
-usquid:S3776U"RRefactor this method to reduce its Cognitive Complexity from 34 to the 15 allowed.(¹Ï°úÿÿÿÿ8²Î¥¥¤-
+vsquid:S3776±"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(úÔ©Şşÿÿÿÿ8ÛäÃ¥¤-

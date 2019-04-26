@@ -4,8 +4,6 @@ F
 H
 src/SnakeGUI/sample.fxml,c\6\c64a26e091900825bd191dc08cb65dfaaecb30a1
 K
-src/SnakeGUI/Direction.java,1\5\150669e9e60853685f870cb5e52e59c00c7e87ed
-K
 src/SnakeGUI/stylesheet.css,1\0\10912b14ce60605f5511b631e2f29d2b7c8a3cc3
 =
 src/notes.txt,1\8\1816a902f227c9f0ce049385aa4760625b201143
