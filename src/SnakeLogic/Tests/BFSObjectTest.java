@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * This is a testing class for the BFS algorithm. It can test the algorithm on a number of mazes and give back relevant stats
+ */
 public class BFSObjectTest {
 
     private ArrayList<Item> items = new ArrayList<Item>();
@@ -27,7 +30,9 @@ public class BFSObjectTest {
     private BFSObject bfsObjectImpossible;
 
 
-
+    /**
+     * This test uses 4 different BFS Objects and 4 different mazes. The setup has to construct every one of them before the test begins.
+     */
     @org.junit.Before
     public void setUp() {
 
@@ -48,6 +53,9 @@ public class BFSObjectTest {
     }
 
 
+    /**
+     * Testing the BFS Object in an Empty room
+     */
     @org.junit.Test
     public void bfsOnEmptyMaze() {
 
@@ -55,6 +63,10 @@ public class BFSObjectTest {
         assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * Same as above, but with goal and start switched
+     */
     @org.junit.Test
     public void bfsOnEmptyMazeReverse() {
         goal.setPosition(emptyMaze[28][18]);
@@ -64,24 +76,40 @@ public class BFSObjectTest {
         System.out.println();
 
     }
+
+    /**
+     * Tests the BFS Object on a Pac-Mac-like maze
+     */
     @org.junit.Test
     public void bfsOnPacManMaze() {
         System.out.println("TESTING ON : PacMan Maze");
         assertEquals(bfsObjectPacMan.bfs(bfsObjectPacMan.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test om how the BFS Object performs in a maze with dead-ends
+     */
     @org.junit.Test
     public void bfsOnClosedMaze() {
         System.out.println("TESTING ON : Closed Maze");
         assertEquals(bfsObjectClosed.bfs(bfsObjectClosed.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the BFS Object performs on a Empty room with just 2 walls - therefor the name "Simple Maze".
+     */
     @org.junit.Test
     public void bfsOnSimpleMaze() {
         System.out.println("TESTING ON : Simple Maze");
         assertEquals(bfsObjectSimple.bfs(bfsObjectSimple.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how to BFS Object performs on an Unsolvable/Impossible Maze
+     */
     @org.junit.Test
     public void bfsOnImpossibleMaze() {
         System.out.println("TESTING ON : Impossible Maze");

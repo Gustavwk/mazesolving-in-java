@@ -80,6 +80,7 @@ public class Position implements Comparable<Position> {
     /**
      * @return This method return a very descriptive string telling almost all information about a giving note..
      */
+
     @Override
     public String toString() {
         int s;

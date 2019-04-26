@@ -30,6 +30,9 @@ public class GreedObjectTest {
     private GreedObject greedyObjectSimple;
     private GreedObject greedyObjectImpossible;
 
+    /**
+     * This test uses 4 different Greed Objects and 4 different mazes. The setup has to construct every one of them before the test begins.
+     */
     @Before
     public void setUp() throws Exception {
         this.emptyMaze = room.populate(items,width,height,0);
@@ -46,6 +49,9 @@ public class GreedObjectTest {
 
     }
 
+    /**
+     * This is a test on how the Greed Object Performs in an empty room
+     */
     @Test
     public void bestFirst() {
         System.out.println("TESTING ON : Empty Maze");
@@ -53,6 +59,10 @@ public class GreedObjectTest {
         assertEquals(greedyObjectEmpty.bestFirst(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the Greed Object Performs in an empty room, but with the goal and the start positions switched
+     */
     @Test
     public void bestFirstReverse() {
         System.out.println("TESTING ON : Empty Maze - Reversed");
@@ -63,6 +73,10 @@ public class GreedObjectTest {
         System.out.println();
 
     }
+
+    /**
+     * This is a test on how the Greed Object Performs in a "Pac-Man-Like" maze
+     */
     @Test
     public void bestFirstPacMan() {
         System.out.println("TESTING ON : PacMan Maze");
@@ -71,6 +85,10 @@ public class GreedObjectTest {
         System.out.println();
 
     }
+
+    /**
+     * This is a test on how the Greed Object Performs in a maze with dead-ends
+     */
     @Test
     public void bestFirstClosed() {
         System.out.println("TESTING ON : Closed Maze");
@@ -79,6 +97,10 @@ public class GreedObjectTest {
         System.out.println();
 
     }
+
+    /**
+     * This is a test on how the Greed Object Performs in an Empty Room with only 2 walls
+     */
     @Test
     public void bestFirstSimple() {
         System.out.println("TESTING ON : Simple Maze");
@@ -87,6 +109,10 @@ public class GreedObjectTest {
         System.out.println();
 
     }
+
+    /**
+     * This is a test on how the Greed Object Performs in an unsolvable / impossible maze
+     */
     @Test
     public void bestFirstImpossible() {
         System.out.println("TESTING ON : Impossible Maze");
@@ -96,6 +122,9 @@ public class GreedObjectTest {
 
     }
 
+    /**
+     * This is a test on how to Greedy Object evaluates the "next step" on its path to the goal.
+     */
     @Test
     public void nextStep() {
         goal.initMazeCost(emptyMaze);

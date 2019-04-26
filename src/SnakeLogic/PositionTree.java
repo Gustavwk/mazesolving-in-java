@@ -66,8 +66,6 @@ public class PositionTree<T extends Comparable<T>> {
      * if  x and y of the child and parent is above 0
      *      assign which direction the adjacent positions of the "parent" position has - this node is to become the parent.
      *
-     *          if marked does not contain the to-be child of parent
-     *
      *              if child is equal to the parent/parents north/south/east/west
      *
      *                     set parent north/south/east/west equal to the child position,

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
+
 public class DFSObjectTest {
 
     private ArrayList<Item> items = new ArrayList<Item>();
@@ -28,6 +29,9 @@ public class DFSObjectTest {
     private DFSObject ddsObjectSimple;
     private DFSObject dfsObjectImpossible;
 
+    /**
+     * This test uses 4 different DFS Objects and 4 different mazes. The setup has to construct every one of them before the test begins.
+     */
     @Before
     public void setUp() throws Exception {
 
@@ -45,12 +49,20 @@ public class DFSObjectTest {
 
 
     }
+
+    /**
+     * This is a test on how the DFS Object performs in an empty room.
+     */
     @Test
     public void dfs() {
         System.out.println("TESTING ON : Empty Maze");
         assertEquals(dfsObjectEmpty.dfs(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the DFS Object perform in an empty room, but with the goal and start position switched
+     */
     @Test
     public void dfsReverse() {
         System.out.println("TESTING ON : Empty Maze");
@@ -59,6 +71,10 @@ public class DFSObjectTest {
         assertEquals(dfsObjectEmpty.dfs(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the DFS Object performs in a "Pac-man-Like maze"
+     */
     @Test
     public void dfsPacMan(){
 
@@ -66,6 +82,10 @@ public class DFSObjectTest {
         assertEquals(dfsObjectPacMan.dfs(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the DFS Object perform in a maze with dead-ends
+     */
     @Test
     public void dfsClosedMaze(){
 
@@ -74,6 +94,10 @@ public class DFSObjectTest {
         assertEquals(dfsObjectClosed.dfs(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the DFS object performs in a empty room with 2 walls
+     */
     @Test
     public void dfsSimpleMaze(){
 
@@ -82,6 +106,10 @@ public class DFSObjectTest {
         assertEquals(ddsObjectSimple.dfs(goal.getPosition()),true);
         System.out.println();
     }
+
+    /**
+     * This is a test on how the DFS Objects performs in an unsolvable/impossible maze.
+     */
     @Test
     public void dfsImpossibleMaze(){
 

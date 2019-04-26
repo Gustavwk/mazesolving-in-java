@@ -28,13 +28,13 @@ public class BFSObject extends Ghost implements GameObject {
 
     /**
      * This methods traverses a tree of positions be recursively asking each of its children for the goal position.
-     * When the goal is found, a path form made recursively from marking the goal parent and then that Positions parent and so on.
+     * When the goal is found, a path is made recursively from marking the goal parent and then that Positions parent and so on.
      *
      * The tree is initialized
      * the current position is added to the visited list.
      * a new list "split" is made.
      *      if visited contains goal
-     *          the search is done and a path is formed using the mapToRoot() method
+     *          the search is done and a path is made using the mapToRoot() method
      *              else
      *                  if the current position's east/south/west/north position is not null
      *                      add it to the split list
