@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java" line="103" />
+    <bookmark url="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java" line="115" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
@@ -116,24 +116,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="5" />
-          <entry key="java" value="282" />
+          <entry key="java" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="282" />
+          <entry key="JAVA" value="284" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="25" />
-          <entry key="java" value="49207" />
+          <entry key="java" value="49442" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="49207" />
+          <entry key="JAVA" value="49442" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -175,101 +175,118 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-504">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="32" column="137" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="137" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="867">
+                  <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="480">
+                  <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="251">
+                  <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="32" column="137" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="137" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="67">
+                  <caret line="56" column="85" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="859">
+                  <caret line="90" selection-start-line="90" selection-end-line="90" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="915">
+                  <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Item.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="450">
+                  <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Player.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Position.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1170">
+                  <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3042">
+                  <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -346,11 +363,11 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/DFSObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Position.java" />
-        <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/BFSObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
       </list>
     </option>
   </component>
@@ -439,7 +456,7 @@
     <property name="SearchEverywhereHistoryKey" value="prese&#9;ACTION&#9;TogglePresentationMode&#10;setting&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556282062570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556282899969" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -481,7 +498,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SnakeLogic in snakeFX">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -898,23 +915,11 @@
       <workItem from="1556194089813" duration="651000" />
       <workItem from="1556273036478" duration="2932000" />
       <workItem from="1556277593480" duration="2920000" />
-      <workItem from="1556281759757" duration="303000" />
+      <workItem from="1556281759757" duration="1140000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 01m 30s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 02m 31s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 03m 33s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 04m 48s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BFSObjectTest_bfsOnEmptyMaze - 2019.04.26 at 14h 06m 10s.xml">
       <configuration name="BFSObjectTest.bfsOnEmptyMaze" configurationId="JUnit" />
     </history-entry>
@@ -933,9 +938,21 @@
     <history-entry file="SnakeLogic_in_snakeFX - 2019.04.26 at 14h 34m 05s.xml">
       <configuration name="SnakeLogic in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SnakeLogic_in_snakeFX - 2019.04.26 at 14h 35m 37s.xml">
+      <configuration name="SnakeLogic in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SnakeLogic_in_snakeFX - 2019.04.26 at 14h 36m 54s.xml">
+      <configuration name="SnakeLogic in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SnakeLogic_in_snakeFX - 2019.04.26 at 14h 40m 34s.xml">
+      <configuration name="SnakeLogic in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SnakeLogic_in_snakeFX - 2019.04.26 at 14h 44m 57s.xml">
+      <configuration name="SnakeLogic in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="346253000" />
+    <option name="totallyTimeSpent" value="347090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -958,7 +975,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.324295" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.6659436" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.27874187" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1167,20 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3210">
-          <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -1216,16 +1219,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="859">
@@ -1240,10 +1233,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        <state relative-caret-position="67">
+          <caret line="56" column="85" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

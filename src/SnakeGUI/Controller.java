@@ -34,7 +34,19 @@ public class Controller {
     private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
-    int whichMaze = 0;
+
+    /**
+     * Change "whichMaze" to change the maze!
+     *
+     * 0 -> Empty room
+     * 1 -> PacMan maze
+     * 2 -> Maze with dead-ends
+     * 3 -> Simple maze
+     * 4 -> Unsolvable/Impossible Maze
+     *
+     */
+
+    int whichMaze = 1;
     private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);

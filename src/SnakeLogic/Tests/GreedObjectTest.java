@@ -23,7 +23,11 @@ public class GreedObjectTest {
     private Position[][] pacManMaze;
     private Position[][] closedMaze;
     private Position[][] impossibleMaze;
-    private Goal goal;
+    private Goal goalEmpty;
+    private Goal goalPacman;
+    private Goal goalSimple;
+    private Goal goalClosed;
+    private Goal goalImpossible;
     private GreedObject greedyObjectEmpty;
     private GreedObject greedyObjectPacMan;
     private GreedObject greedyObjectClosed;
@@ -40,12 +44,18 @@ public class GreedObjectTest {
         this.closedMaze = room.populate(items,width,height,2);
         this.simpleMaze = room.populate(items,width,height,3);
         this.impossibleMaze = room.populate(items,width,height,4);
-        this.goal = new Goal(Color.GREEN, 28,18,emptyMaze,items);
-        this.greedyObjectEmpty = new GreedObject(1,1,Color.RED,goal,emptyMaze);
-        this.greedyObjectPacMan = new GreedObject(1,1,Color.RED,goal,simpleMaze);
-        this.greedyObjectClosed = new GreedObject(1,1,Color.RED,goal,pacManMaze);
-        this.greedyObjectSimple = new GreedObject(1,1,Color.RED,goal,closedMaze);
-        this.greedyObjectImpossible = new GreedObject(1,1,Color.RED,goal,impossibleMaze);
+
+        this.goalEmpty = new Goal(Color.GREEN, 28,18,emptyMaze,items);
+        this.goalClosed = new Goal(Color.GREEN, 28,18,emptyMaze,items);
+        this.goalImpossible = new Goal(Color.GREEN, 28,18,emptyMaze,items);
+        this.goalPacman = new Goal(Color.GREEN, 28,18,emptyMaze,items);
+        this.goalSimple = new Goal(Color.GREEN, 28,18,emptyMaze,items);
+
+        this.greedyObjectEmpty = new GreedObject(1,1,Color.RED,goalEmpty,emptyMaze);
+        this.greedyObjectPacMan = new GreedObject(1,1,Color.RED,goalPacman,pacManMaze);
+        this.greedyObjectClosed = new GreedObject(1,1,Color.RED,goalClosed,closedMaze);
+        this.greedyObjectSimple = new GreedObject(1,1,Color.RED,goalSimple,simpleMaze);
+        this.greedyObjectImpossible = new GreedObject(1,1,Color.RED,goalImpossible,impossibleMaze);
 
     }
 
@@ -55,8 +65,8 @@ public class GreedObjectTest {
     @Test
     public void bestFirst() {
         System.out.println("TESTING ON : Empty Maze");
-        goal.initMazeCost(emptyMaze);
-        assertEquals(greedyObjectEmpty.bestFirst(goal.getPosition()),true);
+        goalEmpty.initMazeCost(emptyMaze);
+        assertEquals(greedyObjectEmpty.bestFirst(goalEmpty.getPosition()),true);
         System.out.println();
     }
 
@@ -66,10 +76,10 @@ public class GreedObjectTest {
     @Test
     public void bestFirstReverse() {
         System.out.println("TESTING ON : Empty Maze - Reversed");
-        goal.setPosition(emptyMaze[1][1]);
-        goal.initMazeCost(emptyMaze);
+        goalEmpty.setPosition(emptyMaze[1][1]);
+        goalEmpty.initMazeCost(emptyMaze);
         greedyObjectEmpty.setPosition(emptyMaze[28][18]);
-        assertEquals(greedyObjectEmpty.bestFirst(goal.getPosition()),true);
+        assertEquals(greedyObjectEmpty.bestFirst(goalEmpty.getPosition()),true);
         System.out.println();
 
     }
@@ -80,8 +90,8 @@ public class GreedObjectTest {
     @Test
     public void bestFirstPacMan() {
         System.out.println("TESTING ON : PacMan Maze");
-        goal.initMazeCost(pacManMaze);
-        assertEquals(greedyObjectPacMan.bestFirst(goal.getPosition()),true);
+        goalPacman.initMazeCost(pacManMaze);
+        assertEquals(greedyObjectPacMan.bestFirst(goalPacman.getPosition()),true);
         System.out.println();
 
     }
@@ -92,8 +102,8 @@ public class GreedObjectTest {
     @Test
     public void bestFirstClosed() {
         System.out.println("TESTING ON : Closed Maze");
-        goal.initMazeCost(closedMaze);
-        assertEquals(greedyObjectClosed.bestFirst(goal.getPosition()),true);
+        goalClosed.initMazeCost(closedMaze);
+        assertEquals(greedyObjectClosed.bestFirst(goalClosed.getPosition()),true);
         System.out.println();
 
     }
@@ -104,8 +114,8 @@ public class GreedObjectTest {
     @Test
     public void bestFirstSimple() {
         System.out.println("TESTING ON : Simple Maze");
-        goal.initMazeCost(simpleMaze);
-        assertEquals(greedyObjectSimple.bestFirst(goal.getPosition()),true);
+        goalSimple.initMazeCost(simpleMaze);
+        assertEquals(greedyObjectSimple.bestFirst(goalSimple.getPosition()),true);
         System.out.println();
 
     }
@@ -116,8 +126,8 @@ public class GreedObjectTest {
     @Test
     public void bestFirstImpossible() {
         System.out.println("TESTING ON : Impossible Maze");
-        goal.initMazeCost(impossibleMaze);
-        assertEquals(greedyObjectImpossible.bestFirst(goal.getPosition()),false);
+        goalImpossible.initMazeCost(impossibleMaze);
+        assertEquals(greedyObjectImpossible.bestFirst(goalImpossible.getPosition()),false);
         System.out.println();
 
     }
@@ -127,7 +137,7 @@ public class GreedObjectTest {
      */
     @Test
     public void nextStep() {
-        goal.initMazeCost(emptyMaze);
+        goalEmpty.initMazeCost(emptyMaze);
         Position startPosition = emptyMaze[5][5];
         Position expectedPosition = emptyMaze[6][5];
         System.out.println("TESTING ON : Greedy nextStep() :" + "\nStartPosition: " + startPosition + "\nExpected Position: " + expectedPosition);
