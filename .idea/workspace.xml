@@ -116,24 +116,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="5" />
-          <entry key="java" value="279" />
+          <entry key="java" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="279" />
+          <entry key="JAVA" value="281" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="25" />
-          <entry key="java" value="48849" />
+          <entry key="java" value="49158" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="48849" />
+          <entry key="JAVA" value="49158" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
@@ -186,10 +186,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="199" column="17" lean-forward="true" selection-start-line="199" selection-start-column="17" selection-end-line="199" selection-end-column="17" />
+            <state relative-caret-position="152">
+              <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+              <folding>
+                <element signature="e#7238#7239#0" expanded="true" />
+                <element signature="e#7265#7266#0" expanded="true" />
+                <element signature="e#7312#7313#0" expanded="true" />
+                <element signature="e#7341#7342#0" expanded="true" />
+                <element signature="e#7399#7400#0" expanded="true" />
+                <element signature="e#7435#7436#0" expanded="true" />
+                <element signature="e#7494#7495#0" expanded="true" />
+                <element signature="e#7535#7536#0" expanded="true" />
+                <element signature="e#7714#7715#0" expanded="true" />
+                <element signature="e#7747#7748#0" expanded="true" />
+                <element signature="e#7800#7801#0" expanded="true" />
+                <element signature="e#7844#7845#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,40 +230,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Wall.java">
+        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+            <state relative-caret-position="-414">
+              <caret line="32" column="137" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="137" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
+        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="300">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GreedObject.java">
+        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="74" selection-start-line="41" selection-start-column="74" selection-end-line="41" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="319">
+              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -350,10 +361,10 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/DFSObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Position.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/BFSObject.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/PositionTree.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java" />
       </list>
     </option>
   </component>
@@ -442,7 +453,7 @@
     <property name="SearchEverywhereHistoryKey" value="prese&#9;ACTION&#9;TogglePresentationMode&#10;setting&#9;ACTION&#9;Database.Settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556275983521" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556280460104" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -484,7 +495,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BFSObjectTest.bfsOnEmptyMaze">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -642,6 +653,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BFSObjectTest.bfsOnEmptyMazeReverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SnakeLogic.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SnakeLogic.Tests" />
+      <option name="MAIN_CLASS_NAME" value="SnakeLogic.Tests.BFSObjectTest" />
+      <option name="METHOD_NAME" value="bfsOnEmptyMazeReverse" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BFSObjectTest.bfsOnImpossibleMaze" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
@@ -671,24 +702,6 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SnakeLogic" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SnakeLogic.Tests in snakeFX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SnakeLogic.Tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SnakeLogic.Tests" />
       <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -773,18 +786,18 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.BFSObjectTest" />
-      <item itemvalue="JUnit.SnakeLogic.Tests in snakeFX" />
       <item itemvalue="JUnit.SnakeLogic in snakeFX" />
       <item itemvalue="JUnit.BFSObjectTest.bfsOnEmptyMaze" />
       <item itemvalue="JUnit.BFSObjectTest.bfsOnImpossibleMaze" />
+      <item itemvalue="JUnit.BFSObjectTest.bfsOnEmptyMazeReverse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BFSObjectTest" />
-        <item itemvalue="JUnit.BFSObjectTest.bfsOnImpossibleMaze" />
         <item itemvalue="JUnit.BFSObjectTest.bfsOnEmptyMaze" />
+        <item itemvalue="JUnit.BFSObjectTest" />
+        <item itemvalue="JUnit.BFSObjectTest.bfsOnEmptyMazeReverse" />
+        <item itemvalue="JUnit.BFSObjectTest.bfsOnImpossibleMaze" />
         <item itemvalue="JUnit.SnakeLogic in snakeFX" />
-        <item itemvalue="JUnit.SnakeLogic.Tests in snakeFX" />
       </list>
     </recent_temporary>
   </component>
@@ -898,44 +911,44 @@
       <workItem from="1556193080468" duration="369000" />
       <workItem from="1556194089813" duration="651000" />
       <workItem from="1556273036478" duration="2932000" />
-      <workItem from="1556277593480" duration="604000" />
+      <workItem from="1556277593480" duration="2864000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 15m 17s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 13h 56m 33s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 15m 44s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 13h 57m 04s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 17m 09s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 13h 58m 35s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 17m 23s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 01m 30s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 17m 36s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 02m 31s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.25 at 14h 18m 23s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 03m 33s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 12h 14m 33s.xml">
+    <history-entry file="BFSObjectTest - 2019.04.26 at 14h 04m 48s.xml">
       <configuration name="BFSObjectTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 12h 44m 16s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
+    <history-entry file="BFSObjectTest_bfsOnEmptyMaze - 2019.04.26 at 14h 06m 10s.xml">
+      <configuration name="BFSObjectTest.bfsOnEmptyMaze" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 12h 46m 47s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
+    <history-entry file="BFSObjectTest_bfsOnEmptyMaze - 2019.04.26 at 14h 06m 28s.xml">
+      <configuration name="BFSObjectTest.bfsOnEmptyMaze" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BFSObjectTest - 2019.04.26 at 12h 50m 14s.xml">
-      <configuration name="BFSObjectTest" configurationId="JUnit" />
+    <history-entry file="BFSObjectTest_bfsOnEmptyMaze - 2019.04.26 at 14h 07m 28s.xml">
+      <configuration name="BFSObjectTest.bfsOnEmptyMaze" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343634000" />
+    <option name="totallyTimeSpent" value="345894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -946,7 +959,7 @@
       <window_info id="Favorites" order="2" weight="0.32995737" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" weight="0.1380597" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.1380597" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -958,7 +971,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.324295" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.25813448" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.6659436" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39804772" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1111,13 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1126,13 +1132,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeGUI/Direction.java" />
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="32" column="137" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="137" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/GreedObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1202,24 +1201,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3210">
           <caret line="216" column="26" selection-start-line="216" selection-start-column="26" selection-end-line="216" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="199" column="17" lean-forward="true" selection-start-line="199" selection-start-column="17" selection-end-line="199" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1233,6 +1218,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/DFSObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="32" column="137" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1240,10 +1232,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/RandomRambler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/BFSObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="319">
+          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/PositionTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+          <folding>
+            <element signature="e#7238#7239#0" expanded="true" />
+            <element signature="e#7265#7266#0" expanded="true" />
+            <element signature="e#7312#7313#0" expanded="true" />
+            <element signature="e#7341#7342#0" expanded="true" />
+            <element signature="e#7399#7400#0" expanded="true" />
+            <element signature="e#7435#7436#0" expanded="true" />
+            <element signature="e#7494#7495#0" expanded="true" />
+            <element signature="e#7535#7536#0" expanded="true" />
+            <element signature="e#7714#7715#0" expanded="true" />
+            <element signature="e#7747#7748#0" expanded="true" />
+            <element signature="e#7800#7801#0" expanded="true" />
+            <element signature="e#7844#7845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Tests/BFSObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>

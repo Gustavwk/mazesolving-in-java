@@ -62,7 +62,7 @@ public class BFSObject extends Ghost implements GameObject {
             return false;
         }
 
-        if (visited.contains(goal.getPosition())) {
+        if (visited.contains(this.goal.getPosition())) {
             this.setPossible(true);
             mapToRoot(current);
             goPath = bfsPath;

@@ -22,12 +22,18 @@ public class BFSObjectTest {
     private Position[][] pacManMaze;
     private Position[][] closedMaze;
     private Position[][] impossibleMaze;
-    private Goal goal;
+    private Goal goalEmpty;
+    private Goal goalPacMan;
+    private Goal goalClosed;
+    private Goal goalSimple;
+    private Goal goalImpossible;
     private BFSObject bfsObjectEmpty;
     private BFSObject bfsObjectPacMan;
     private BFSObject bfsObjectClosed;
     private BFSObject bfsObjectSimple;
     private BFSObject bfsObjectImpossible;
+    private Position goal = new Position(28,18);
+    private Position start = new Position(1,1);
 
 
     /**
@@ -41,12 +47,18 @@ public class BFSObjectTest {
         this.closedMaze = room.populate(items,width,height,2);
         this.simpleMaze = room.populate(items,width,height,3);
         this.impossibleMaze = room.populate(items,width,height,4);
-        this.goal = new Goal(Color.GREEN,28,18,emptyMaze,items);
-        this.bfsObjectEmpty = new BFSObject(1,1,Color.RED,goal,emptyMaze);
-        this.bfsObjectPacMan = new BFSObject(1,1,Color.RED,goal,pacManMaze);
-        this.bfsObjectClosed= new BFSObject(1,1,Color.RED,goal,closedMaze);
-        this.bfsObjectSimple= new BFSObject(1,1,Color.RED,goal,simpleMaze);
-        this.bfsObjectImpossible= new BFSObject(1,1,Color.RED,goal,impossibleMaze);
+
+        this.goalEmpty = new Goal(Color.GREEN,goal.getX(),goal.getY(),emptyMaze,items);
+        this.goalPacMan = new Goal(Color.GREEN,goal.getX(),goal.getY(),pacManMaze,items);
+        this.goalClosed = new Goal(Color.GREEN,goal.getX(),goal.getY(),closedMaze,items);
+        this.goalSimple = new Goal(Color.GREEN,goal.getX(),goal.getY(),simpleMaze,items);
+        this.goalImpossible = new Goal(Color.GREEN,goal.getX(),goal.getY(),impossibleMaze,items);
+
+        this.bfsObjectEmpty = new BFSObject(start.getX(),start.getY(),Color.RED,goalEmpty,emptyMaze);
+        this.bfsObjectPacMan = new BFSObject(start.getX(),start.getY(),Color.RED,goalPacMan,pacManMaze);
+        this.bfsObjectClosed= new BFSObject(start.getX(),start.getY(),Color.RED,goalClosed,closedMaze);
+        this.bfsObjectSimple= new BFSObject(start.getX(),start.getY(),Color.RED,goalSimple,simpleMaze);
+        this.bfsObjectImpossible= new BFSObject(start.getX(),start.getY(),Color.RED,goalImpossible,impossibleMaze);
 
 
 
@@ -59,8 +71,10 @@ public class BFSObjectTest {
     @org.junit.Test
     public void bfsOnEmptyMaze() {
 
+
         System.out.println("TESTING ON : Empty Maze");
         assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);
+
         System.out.println();
     }
 
@@ -69,7 +83,7 @@ public class BFSObjectTest {
      */
     @org.junit.Test
     public void bfsOnEmptyMazeReverse() {
-        goal.setPosition(emptyMaze[28][18]);
+        goalEmpty.setPosition(emptyMaze[28][18]);
         bfsObjectEmpty.setPosition(emptyMaze[1][1]);
         System.out.println("TESTING ON : Empty Maze Reversed");
         assertEquals(bfsObjectEmpty.bfs(bfsObjectEmpty.getPosition()),true);

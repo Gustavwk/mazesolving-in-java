@@ -29,6 +29,7 @@ public class PositionTree<T extends Comparable<T>> {
 
         if (!marked.contains(goal)){
             impossible = true;
+            size = marked.size();
         }
 
 
@@ -101,6 +102,10 @@ public class PositionTree<T extends Comparable<T>> {
                         parent.setEast(child);
                         child.setParent(parent);
 
+                        if (!marked.contains(child)){
+                        marked.add(child);
+                        }
+
                         if (!marked.contains(parent)){
                             marked.add(parent);
                         }
@@ -110,7 +115,9 @@ public class PositionTree<T extends Comparable<T>> {
                         parent.setWest(child);
                         child.setParent(parent);
 
-                        marked.add(child);
+                        if (!marked.contains(child)){
+                            marked.add(child);
+                        }
 
                         if (!marked.contains(parent)){
                             marked.add(parent);
@@ -121,7 +128,9 @@ public class PositionTree<T extends Comparable<T>> {
                         parent.setNorth(child);
                         child.setParent(parent);
 
-                        marked.add(child);
+                        if (!marked.contains(child)){
+                            marked.add(child);
+                        }
 
                         if (!marked.contains(parent)){
                             marked.add(parent);
@@ -132,7 +141,9 @@ public class PositionTree<T extends Comparable<T>> {
                         parent.setSouth(child);
                         child.setParent(parent);
 
-                        marked.add(child);
+                        if (!marked.contains(child)){
+                            marked.add(child);
+                        }
 
                         if (!marked.contains(parent)){
                             marked.add(parent);
@@ -203,7 +214,7 @@ public class PositionTree<T extends Comparable<T>> {
 
                 Collections.sort(adjacent);
 
-              if (!marked.contains(goal)) {
+              if (!marked.contains(this.goal)) {
                     for (Position pos : adjacent) {
 
                         addChild(pos, startingPosition);
