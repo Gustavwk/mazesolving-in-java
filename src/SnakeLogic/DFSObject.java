@@ -135,6 +135,11 @@ public class DFSObject extends Ghost implements GameObject {
 
 return true;
 }
+    @Override
+    public String toString() {
+        return "DFS";
+    }
+
 
     @Override
     public Position getPosition() {

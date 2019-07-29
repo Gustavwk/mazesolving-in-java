@@ -91,6 +91,11 @@ public abstract class Ghost implements GameObject {
                 && (!canMove(current, "north") || visited.contains(maze[current.getX()][current.getY() - 1]));
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public Position getPosition() {
         return position;
     }

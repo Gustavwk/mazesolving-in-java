@@ -6,7 +6,11 @@ import javafx.scene.paint.Color;
 public class Tile extends Item implements GameObject {
 
 
-
+    /**
+     * @param x x Position of the tile
+     * @param y y Position of the tile
+     * @param color The desired color of the tile
+     */
     public Tile(int x, int y, Color color) {
         this.setPosition(new Position(x,y));
         this.color = color;

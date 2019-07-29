@@ -1,38 +1,38 @@
 
-[
-squid:S106m"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
-\
-squid:S106‰"9Replace this use of System.out or System.err by a logger.(ø×–Ğûÿÿÿÿ8—¬”ø¤-
-V
-squid:S106v"9Replace this use of System.out or System.err by a logger.(¥Ùàü8İ÷Øø¤-
-[
-squid:S106a"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
-[
-squid:S106D"9Replace this use of System.out or System.err by a logger.(ış³—şÿÿÿÿ8Üùûø¤-
-csquid:S00112%"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ
-[
-squid:S1069"9Replace this use of System.out or System.err by a logger.(ÁìÛûÿÿÿÿ8ñ¶×ø¤-
-[
-squid:S106y"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ¤ıø¤-
-[
-squid:S106R"9Replace this use of System.out or System.err by a logger.(ñÀÕÒşÿÿÿÿ8Øø×ø¤-
-[
-squid:S106U"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
 W
-squid:S106…"9Replace this use of System.out or System.err by a logger.(Ğ²îˆ8„ÙÙø¤-
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ğ²îˆ8„ÙÙø¤-
+[
+squid:S106C"9Replace this use of System.out or System.err by a logger.(ÁìÛûÿÿÿÿ8ñ¶×ø¤-
+[
+squid:S106_"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
+[
+squid:S106k"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
+[
+squid:S106F"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯Ç¥ø
-W
-squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(û¦»8à¥“ø¤-
-[
-squid:S106<"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
-\
-squid:S106‡"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ñáø¤-
-[
-squid:S106j"9Replace this use of System.out or System.err by a logger.(¾¤İãøÿÿÿÿ8¸ÈØø¤-
-[
-squid:S106I"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
-\
-squid:S106Š"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ñáø¤-
-V
-squid:S106^"9Replace this use of System.out or System.err by a logger.(İÈşÍ8¾£Øø¤-
 wsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰Äë®8¢ÕÎ÷¤-
+[
+squid:S106\"9Replace this use of System.out or System.err by a logger.(ñÀÕÒşÿÿÿÿ8Øø×ø¤-
+W
+squid:S106€"9Replace this use of System.out or System.err by a logger.(¥Ùàü8İ÷Øø¤-
+\
+squid:S106”"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ñáø¤-
+\
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ¤ıø¤-
+\
+squid:S106“"9Replace this use of System.out or System.err by a logger.(ø×–Ğûÿÿÿÿ8—¬”ø¤-
+csquid:S00112)"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ
+[
+squid:S106S"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
+V
+squid:S106h"9Replace this use of System.out or System.err by a logger.(İÈşÍ8¾£Øø¤-
+\
+squid:S106‘"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ñáø¤-
+[
+squid:S106t"9Replace this use of System.out or System.err by a logger.(¾¤İãøÿÿÿÿ8¸ÈØø¤-
+[
+squid:S106w"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8 ‹ıø¤-
+W
+squid:S106’"9Replace this use of System.out or System.err by a logger.(û¦»8à¥“ø¤-
+[
+squid:S106N"9Replace this use of System.out or System.err by a logger.(ış³—şÿÿÿÿ8Üùûø¤-

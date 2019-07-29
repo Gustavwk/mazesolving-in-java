@@ -11,13 +11,14 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
+import javafx.scene.text.TextFlow;
 
 import java.util.*;
 
 public class Controller {
 
     @FXML
-    Label labelStatus;
+    TextFlow textFlow;
     @FXML
     Canvas canvas;
 
@@ -34,6 +35,8 @@ public class Controller {
     private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
     private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
+    private LinkedList<Ghost> ghosts = new LinkedList<>();
+
 
     /**
      * Change "whichMaze" to change the maze!
@@ -46,12 +49,13 @@ public class Controller {
      *
      */
 
-    int whichMaze = 1;
+    int whichMaze = 4;
     private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
     private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.DARKORANGE, goal,maze);
+
 
 
     public void btnStartAction(ActionEvent event)
@@ -60,12 +64,27 @@ public class Controller {
         drawCanvas();
     }
 
+    @FXML
+    public void dataDisplay(ActionEvent event){
+        DataDisplay dataDisplay = new DataDisplay(ghosts);
+        dataDisplay.initialiseData();
+
+        for (String data: dataDisplay.getDataList()) {
+            System.out.println(data); // der skal stå noget andet her
+
+        }
+
+    }
+
 
     @FXML
     public void greedyShowPath(ActionEvent event)
     {
         room.markPath(greedyObject.getGoPath(),items,Color.DARKVIOLET);
         drawCanvas();
+
+
+
     }
     @FXML
     public void dfsShowPath(ActionEvent event)
@@ -88,10 +107,18 @@ public class Controller {
     public void initialize()
     {
 
+
         goal.initMazeCost(maze);
         dfsObject.dfs(goal.getPosition());
         greedyObject.bestFirst(goal.getPosition());
         bfsObject.bfs(bfsObject.getPosition());
+
+        ghosts.add(dfsObject);
+        ghosts.add(greedyObject);
+        ghosts.add(bfsObject);
+
+
+
 
 
 
@@ -122,6 +149,8 @@ public class Controller {
         ranRam.update();
         ranRam.wallCollision(items);
         drawCanvas();
+
+
         if (dfsObject.isPossible()){
             dfsObject.update();
         }

@@ -161,7 +161,10 @@ if (visualPositionIndex != -(bfsPath.size())) {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "BFS";
+    }
 
     public Position getPosition() {
         return position;

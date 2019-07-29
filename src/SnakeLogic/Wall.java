@@ -6,6 +6,10 @@ import javafx.scene.paint.Color;
 public class Wall extends Item implements GameObject {
     private Color color = Color.BLUE;
 
+    /**
+     * @param x x position of the wall
+     * @param y y position of the wall
+     */
     public Wall(int x, int y) {
         this.setPosition(new Position(x,y));
 

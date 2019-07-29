@@ -10,6 +10,8 @@ import java.util.*;
 /**
  * This object can find a way through a maze by calculating the best local step based on how the positions in the maze are weighted according to the goal.
  */
+
+
 public class GreedObject extends Ghost implements GameObject {
 
 
@@ -23,6 +25,7 @@ public class GreedObject extends Ghost implements GameObject {
         this.setGoal(goal);
         this.setMaze(maze);
         this.setPosition(maze[X][Y]);
+
     }
 
     /**
@@ -72,11 +75,13 @@ public class GreedObject extends Ghost implements GameObject {
                     steps++;
                 } else {
                     steps++;
+
                     if (path.isEmpty()){
                         this.setPossible(false);
                         System.out.println("STACK EMPTY - GREEDY / BEST FIRST PATH CANNOT BE FOUND");
                         return false;
                     }
+
                     current = (Position) path.pop();
                     visited.add(current);
                 }
@@ -145,6 +150,11 @@ public class GreedObject extends Ghost implements GameObject {
      * becomes the position on the next index in the list.
      *
      */
+    @Override
+    public String toString() {
+        return "GREED";
+    }
+
 
     @Override
     public void update() {

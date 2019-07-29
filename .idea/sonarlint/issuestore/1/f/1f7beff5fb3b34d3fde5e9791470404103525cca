@@ -1,8 +1,8 @@
 
-isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÀ†¥
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ω—Êü
 Üsquid:S1319"pThe type of the "items" object should be an interface such as "List" rather than the implementation "ArrayList".(‡û…~
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ω—Êü
 ~"squid:ClassVariableVisibilityCheck"QMake items a static final constant or non-public and provide accessors if needed.(‡û…~
-isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÀ†¥
 òsquid:S1186<"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷◊ıƒ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÀ†¥
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÀ†¥
 `squid:S2184x"BCast one of the operands of this addition operation to a "double".(Î±òÛ8Æé∂˛§-

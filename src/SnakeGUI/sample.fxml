@@ -5,11 +5,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.TextFlow?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SnakeGUI.Controller">
    <top>
       <FlowPane prefHeight="37.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
+            <Button mnemonicParsing="false" onAction="#dataDisplay" text="Data Display" />
             <Button mnemonicParsing="false" onAction="#dfsShowPath" text="DFS path">
                <FlowPane.margin>
                   <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
@@ -38,4 +41,11 @@
          </BorderPane.margin>
       </Canvas>
    </center>
+   <right>
+      <Pane prefHeight="359.0" prefWidth="283.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextFlow fx:id="textFlow" layoutY="-1.0" lineSpacing="1.0" prefHeight="360.0" prefWidth="285.0" />
+         </children>
+      </Pane>
+   </right>
 </BorderPane>
