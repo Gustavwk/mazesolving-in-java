@@ -50,3 +50,5 @@ Y
 )src/SnakeLogic/Tests/GreedObjectTest.java,5\3\530609621b242aa798fd49a7305dfc99e5863433
 L
 src/SnakeLogic/Position.java,3\e\3e97b48d128220860dfe273a331215b736bbf13e
+O
+src/SnakeLogic/DataDisplay.java,8\3\83400ef27f84bede8627608355f9b8ad2dc3963e

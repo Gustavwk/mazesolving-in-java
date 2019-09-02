@@ -1,8 +1,8 @@
 
+psquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(êßÊ8½Ğó¢¤-
+lsquid:S1149>"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
 T
 squid:S106L"9Replace this use of System.out or System.err by a logger.( ™Áıÿÿÿÿ
-psquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(êßÊ8½Ğó¢¤-
 V
 squid:S106t"9Replace this use of System.out or System.err by a logger.(„„öõ8¿ı¢ö¤-
-lsquid:S1149>"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ

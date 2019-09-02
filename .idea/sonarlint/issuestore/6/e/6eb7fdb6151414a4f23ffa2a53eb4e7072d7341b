@@ -1,13 +1,13 @@
 
-[
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(×¢©Çùÿÿÿÿ8¡š•õ¤-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
-N
-squid:S106>"9Replace this use of System.out or System.err by a logger.(Øó£&
-lsquid:S11493"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
-jsquid:S1450"SRemove the "west" field and declare it as a local variable in the relevant methods.(ÀÚ–Ú
-ksquid:S1450"TRemove the "south" field and declare it as a local variable in the relevant methods.(ŠÐË¸
 nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
 psquid:S1450"TRemove the "north" field and declare it as a local variable in the relevant methods.(©Ç¡Øþÿÿÿÿ
 jsquid:S1450"SRemove the "east" field and declare it as a local variable in the relevant methods.(þðýˆ
+ksquid:S1450"TRemove the "south" field and declare it as a local variable in the relevant methods.(ŠÐË¸
+jsquid:S1450"SRemove the "west" field and declare it as a local variable in the relevant methods.(ÀÚ–Ú
+[
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(×¢©Çùÿÿÿÿ8¡š•õ¤-
+N
+squid:S106>"9Replace this use of System.out or System.err by a logger.(Øó£&
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+lsquid:S11493"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(æàò¼üÿÿÿÿ
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à²Ãƒøÿÿÿÿ
