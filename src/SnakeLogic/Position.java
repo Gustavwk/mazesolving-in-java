@@ -21,6 +21,9 @@ public class Position implements Comparable<Position> {
     private Position east;
     private Position north;
     private Position parent;
+    private Position child;
+
+    private boolean checked;
 
 
 
@@ -159,6 +162,22 @@ public class Position implements Comparable<Position> {
 
     public void setParent(Position parent) {
         this.parent = parent;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
+    }
+
+    public Position getChild() {
+        return child;
+    }
+
+    public void setChild(Position child) {
+        this.child = child;
     }
 }
 

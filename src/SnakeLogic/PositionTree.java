@@ -104,6 +104,7 @@ public class PositionTree<T extends Comparable<T>> {
 
                         if (!marked.contains(child)){
                         marked.add(child);
+
                         }
 
                         if (!marked.contains(parent)){
@@ -117,6 +118,7 @@ public class PositionTree<T extends Comparable<T>> {
 
                         if (!marked.contains(child)){
                             marked.add(child);
+
                         }
 
                         if (!marked.contains(parent)){
@@ -130,6 +132,7 @@ public class PositionTree<T extends Comparable<T>> {
 
                         if (!marked.contains(child)){
                             marked.add(child);
+
                         }
 
                         if (!marked.contains(parent)){
@@ -143,6 +146,7 @@ public class PositionTree<T extends Comparable<T>> {
 
                         if (!marked.contains(child)){
                             marked.add(child);
+                            
                         }
 
                         if (!marked.contains(parent)){

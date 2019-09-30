@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.text.TextFlow;
@@ -26,15 +25,13 @@ public class Controller {
     private double fieldWidth;
     private int width = 30;
     private int height = 20;
-    private Random random = new Random();
-    private int gameLoopDelay = 500;
+
     private float refreshRate = 300;
-    private KeyCode keyPressed = KeyCode.BACK_SPACE;
+
     private Position startingPoint = new Position(1,1);
-    private Player player = new Player(5,5, Color.WHITE);
-    private RandomRambler ranRam = new RandomRambler(1,1, Color.YELLOW);
-    private ArrayList<Item> items = new ArrayList<Item>();
     private Room room = new Room();
+
+    private ArrayList<Item> items = new ArrayList<Item>();
     private LinkedList<Ghost> ghosts = new LinkedList<>();
 
 
@@ -49,12 +46,13 @@ public class Controller {
      *
      */
 
-    int whichMaze = 4;
+    int whichMaze = 3;
     private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);
     private GreedObject greedyObject = new GreedObject(startingPoint.getX(),startingPoint.getY(),Color.PURPLE, goal,maze);
     private BFSObject bfsObject = new BFSObject(startingPoint.getX(),startingPoint.getY(),Color.DARKORANGE, goal,maze);
+
 
 
 
@@ -124,7 +122,7 @@ public class Controller {
 
         addItems();
         calculateFields();
-        getRandomPosition();
+
 
         new AnimationTimer(){
             long lastUpdate;
@@ -145,21 +143,16 @@ public class Controller {
 
     private void update(long now)
     {
-        player.update();
-        ranRam.update();
-        ranRam.wallCollision(items);
+
         drawCanvas();
 
+        for (Ghost ghost: ghosts) {
+            if (ghost.isPossible()){
+                ghost.update();
+            }
 
-        if (dfsObject.isPossible()){
-            dfsObject.update();
         }
-        if (greedyObject.isPossible()){
-            greedyObject.update();
-        }
-        if (bfsObject.isPossible()){
-            bfsObject.update();
-        }
+
 
 
 
@@ -169,10 +162,6 @@ public class Controller {
     }
 
 
-    private void getRandomPosition() {
-        player.setX(random.nextInt(width));
-        player.setY(random.nextInt(height));
-    }
 
     private void calculateFields() {
         this.fieldHeight = canvas.getHeight() / this.height;
@@ -188,11 +177,12 @@ public class Controller {
 
         }
 
+        for (Ghost ghost: ghosts) {
+            ghost.drawObject(g,fieldWidth,fieldHeight);
+        }
 
-        dfsObject.drawObject(g,fieldWidth,fieldHeight);
-        bfsObject.drawObject(g,fieldWidth,fieldHeight);
-        goal.drawObject(g,fieldWidth,fieldHeight);
-        greedyObject.drawObject(g,fieldWidth,fieldHeight);
+
+
 
 
 
@@ -200,8 +190,5 @@ public class Controller {
     }
 
 
-    public Player getPlayer() {
-        return player;
-    }
 }
 
