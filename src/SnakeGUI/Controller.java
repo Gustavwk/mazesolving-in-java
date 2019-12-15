@@ -46,7 +46,7 @@ public class Controller {
      *
      */
 
-    int whichMaze = 3;
+    int whichMaze = 2;
     private Position[][] maze = room.populate(items,width,height, whichMaze);
     private Goal goal = new Goal(Color.GREEN, 28 ,18,maze,items);
     private DFSObject dfsObject = new DFSObject(startingPoint.getX(),startingPoint.getY(), Color.RED, goal, maze);

@@ -1,6 +1,6 @@
 
 ~squid:UselessImportCheck"NRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Bool'.(™¦èûÿÿÿÿ8ßİˆæÃ-
 squid:S1319&"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(Ãƒ×Ï8¥ÿÅæÃ-
-squid:S1319"qThe type of the "ghost" object should be an interface such as "List" rather than the implementation "LinkedList".(†Ìí 8Ô¹×åÃ-
-Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(™¦èûÿÿÿÿ8ŞİˆæÃ-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(½ÑæŸ
+Xsquid:S1191"5Use classes from the Java API instead of Sun classes.(™¦èûÿÿÿÿ8ŞİˆæÃ-
+squid:S1319"qThe type of the "ghost" object should be an interface such as "List" rather than the implementation "LinkedList".(†Ìí 8Ô¹×åÃ-
